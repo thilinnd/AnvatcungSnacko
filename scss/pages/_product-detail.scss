@@ -182,8 +182,8 @@
   color: #009444;
 }
 .pd-detail__left {
-  background-color: rgba(#ff4500,.14);
-  color: #ff4500;
+  background-color: rgba(#39b54a,.14);
+  color: #39b54a;
 }
 
 // Total 245 characters
@@ -404,12 +404,12 @@
     table {
       width: 100%;
       border-radius: 2px;
-      border: 1px solid #eee;
+      border: 1px solid #f5f5dc;
       border-collapse: collapse;
     }
     tbody {
       tr {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #f5f5dc;
       }
       td {
         font-size: 14px;
@@ -465,7 +465,7 @@
 .pd-tab__rev-score {
   padding: 40px 0;
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: #f5f5dc;
 
   h2 {
     font-size: 16px;
@@ -507,7 +507,7 @@
 
 .review-o {
   padding: rem(16) 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f5f5dc;
 }
 
 .review-o__name {
@@ -571,7 +571,7 @@
   table-layout: fixed;
   text-align: center;
   border-collapse: collapse;
-  border: 1px solid #dee2e6;
+  border: 1px solid #f5f5dc;
 
   th,td {
     padding: 16px 4px;
@@ -580,7 +580,7 @@
     th {
       width: 120px;
       color: $g-brand-secondary-color;
-      background-color: #f0f0f0;
+      background-color: #f5f5dc;
       font-size: 13px;
       span {
         margin-top: 2px;

@@ -115,7 +115,7 @@
 
   .mega-menu-list {
     padding: 20px;
-    border: 1px solid #f6f6f6;
+    border: 1px solid #f5f5dc;
     > ul {
       > li {
         position: relative;// Relative for just span toggle
@@ -196,7 +196,7 @@
 
     // Track
     &::-webkit-scrollbar-track {
-      background: #eee;
+      background: #f5f5dc;
     }
 
     // Handle

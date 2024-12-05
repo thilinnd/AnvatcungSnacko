@@ -29,7 +29,7 @@
 
 .shop-w {
   &--style {
-    border: 1px solid #f1f1f1;
+    border: 1px solid #f5f5dc;
     background-color: $g-white;
     box-shadow: 0 6px 15px 0 rgba(36, 37, 38, 0.08);
   }
@@ -41,7 +41,7 @@
   &__h {
     font-size: 14px;
     padding: 14px 18px;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #f5f5dc;
     color: $g-brand-secondary-color;
     font-weight: 700;
     line-height: 20px;
@@ -134,13 +134,13 @@
 .list__content:hover {
   span {
     color: $g-brand-secondary-color;
-    background-color: #ececec;
+    background-color: #f5f5dc;
     border-radius: .5rem;
   }
 }
 
 .list__content input:checked + span {
-  background-color: #ececec;
+  background-color: #f5f5dc;
   color: $g-brand-secondary-color;
   border-radius: .5rem;
 }
@@ -330,7 +330,7 @@
 .rating__check-star-wrap {
   > i {
     margin-left: 2px;
-    color: #ff4500;
+    color: #39b54a;
     transition: color .4s ease-in-out;
     &:first-child {
       margin-left: 0;
@@ -404,7 +404,7 @@
     display: inline-block;
     height: 40px;
     cursor: pointer;
-    border: 2px solid #e5e5e5;
+    border: 2px solid #f5f5dc;
     font-size: 13px;
     padding: 8px 18px;
     font-weight: 700;
@@ -808,7 +808,7 @@
 
   > li.is-active {
     > a {
-      background-color: #f7f7f7;
+      background-color: #f5f5dc;
     }
   }
 

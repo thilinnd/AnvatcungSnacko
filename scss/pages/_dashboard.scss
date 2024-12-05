@@ -14,11 +14,11 @@
     }
 
     &--border {
-      border:1px solid #eee;
+      border:1px solid #f5f5dc;
     }
 
     &--bg-grey {
-      background-color: #fbfbfb;
+      background-color: #f5f5dc;
     }
 
     &--shadow {
@@ -87,7 +87,7 @@
     list-style: none;
     text-align: center;
     > li {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #f5f5dc;
 
     }
   }
@@ -106,9 +106,9 @@
     margin-bottom: 8px;
   }
   &__w-icon-style-1 {
-    background-color: rgba(#ff4500,.14);
+    background-color: rgba(#39b54a,.14);
     > i {
-      color: #ff4500;
+      color: #39b54a;
     }
   }
 
@@ -232,7 +232,7 @@
     border-collapse: collapse;
 
     thead {
-      background-color: #fbfbfb;
+      background-color: #f5f5dc;
     }
 
     th,td {
@@ -252,7 +252,7 @@
 
     tbody {
       tr {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #f5f5dc;
         &:last-child {
           border-bottom: 0;
         }
@@ -326,7 +326,7 @@
 
   &__header {
     padding-bottom: 14px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f5f5dc;
   }
 
 
@@ -361,14 +361,14 @@
   position: relative;// For Circle
   // Each portion icon line
   border-radius: 3px;
-  border-top: 3px solid #eee;
+  border-top: 3px solid #f5f5dc;
 
   .timeline-circle {
     position: absolute;// Relative to border-bottom
     width: 18px;
     height: 18px;
     background: $g-white;
-    border: 2px solid #eee;
+    border: 2px solid #f5f5dc;
     margin: auto;// Horizontal & Vertical Center
     top: 0;
     left: 0;
@@ -379,7 +379,7 @@
       display: block;
       width: 8px;
       height: 8px;
-      background-color: #eee;
+      background-color: #f5f5dc;
       margin: auto;// Horizontal & Vertical Center
       position: absolute;
       top: 0;
@@ -483,7 +483,7 @@
     border-collapse: collapse;
 
     thead {
-      background-color: #fbfbfb;
+      background-color: #f5f5dc;
     }
 
     th,td {
@@ -504,7 +504,7 @@
 
     tbody {
       tr {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #f5f5dc;
         &:last-child {
           border-bottom: 0;
         }
@@ -602,7 +602,7 @@
 }
 
 .m-order__get {
-  border: 1px solid #eee;
+  border: 1px solid #f5f5dc;
   margin-bottom: 30px;
   background-color: $g-white;
   padding: 24px;
@@ -638,7 +638,7 @@
 
   &--delivered {
     background-color: rgba(255, 69, 0, 0.14);
-    color: #ff4500;
+    color: #39b54a;
   }
 }
 

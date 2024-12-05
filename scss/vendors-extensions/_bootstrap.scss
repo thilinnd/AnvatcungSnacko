@@ -37,24 +37,24 @@
 
 
 .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
-  border-top-color: #f5f5f5;
+  border-top-color: #f5f5dc;
 }
 
 .bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
-  border-right-color: #f5f5f5;
+  border-right-color: #f5f5dc;
 }
 
 .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-  border-bottom-color: #f5f5f5;
+  border-bottom-color: #f5f5dc;
 }
 
 .bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
-  border-left-color: #f5f5f5;
+  border-left-color: #f5f5dc;
 }
 
 .tooltip-inner {
   color: $g-brand-secondary-color;
-  background-color: #f5f5f5;
+  background-color: #f5f5dc;
   border-radius: 2px;
 }
 
