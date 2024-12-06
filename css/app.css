@@ -1933,7 +1933,6 @@ input::-ms-clear {
 --------------------------------------------------------------*/
 .header-wrapper {
   position: relative; 
-  
 }
 
 .header--style-1 {
@@ -1953,7 +1952,9 @@ input::-ms-clear {
 
 /* 6.1 Primary Nav */
 .primary-nav-wrapper--border {
-  border-bottom: 1px solid #f8f8f8; }
+  border-bottom: 1px solid #c9bdb6; 
+  
+}
 
 .primary-nav {
   display: -ms-flexbox;
@@ -1963,6 +1964,7 @@ input::-ms-clear {
   position: relative;
   height: 80px;
   width: 100%;
+  
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-align: center;
@@ -1999,7 +2001,7 @@ input::-ms-clear {
   position: relative;
   height: 80px;
   width: 100%;
-
+  
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-align: center;
@@ -2035,6 +2037,7 @@ input::-ms-clear {
 @media (max-width: 991px) {
   .header--style-3 {
     position: relative;
+    
     background-color: #242424; } }
 
 /*--------------------------------------------------------------
@@ -2043,7 +2046,7 @@ input::-ms-clear {
 /* 7.1 Outer-Footer */
 .outer-footer {
   padding: 80px 0;
-  background-color: #000000; }
+  background-color: #644535; }
   .outer-footer__content-title {
     display: block;
     color: #f5f5dc;
@@ -2125,7 +2128,7 @@ input::-ms-clear {
 
 /* 7.3 Lower-Footer */
 .lower-footer {
-  background-color: #000000;
+  background-color: #644535;
   padding: 20px 0; }
   .lower-footer__content {
     display: -ms-flexbox;
@@ -4855,9 +4858,11 @@ input::-ms-clear {
   line-height: 20px; }
 
 .sidebar--bg-snow {
-  background-color: #f9f9f9; }
+  background-color: #f5f5dc; }
 
 .shop-w--style {
+  
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 0;
   border: 1px solid #f5f5dc;
   background-color: #f5f5dc;
   box-shadow: 0 6px 15px 0 rgba(36, 37, 38, 0.08); }
@@ -4866,6 +4871,7 @@ input::-ms-clear {
   position: relative; }
 
 .shop-w__h {
+  background-color: #f5f5dc;
   font-size: 14px;
   padding: 14px 18px;
   border-bottom: 1px solid #efefef;
@@ -4874,7 +4880,10 @@ input::-ms-clear {
   line-height: 20px; }
 
 .shop-w__wrap {
-  padding: 14px; }
+  padding: 14px;
+  background-color: #f5f5dc;
+s 
+}
 
 .shop-w__toggle.collapsed:before {
   content: "\F067"; }
