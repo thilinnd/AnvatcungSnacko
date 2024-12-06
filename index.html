@@ -21,6 +21,112 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+    <style>
+        /* Styling for the welcome screen */
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/blog/post-24.JPG') no-repeat center center/cover;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 20px;
+            z-index: 1000;
+            transition: opacity 1s ease;
+            opacity: 1;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .welcome-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-message {
+            font-size: 3em;
+            /* Adjusted font size */
+            line-height: 1.2;
+            /* Added line height for better readability */
+            color: #39b54a;
+            font-weight: bold;
+            font-style: italic;
+            animation: splitText 3s ease-in-out forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            /* Added subtle text shadow */
+            letter-spacing: 0.05em;
+            /* Increased letter spacing */
+            padding: 10px;
+            /* Added padding */
+            margin: 20px;
+            /* Added margin */
+            background: linear-gradient(45deg, #39b54a, #b59e39);
+            /* Added gradient color */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .video-container {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 15vw;
+            /* Adjusted to be about 15% of the page */
+            height: auto;
+            /* Automatically adjust height to maintain aspect ratio */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            /* Automatically adjust height to maintain aspect ratio */
+        }
+
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+
+        .close-btn:hover {
+            background-color: darkred;
+        }
+
+
+        /* Split text animation keyframes */
+        @keyframes splitText {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateX(-100%);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2) translateX(0%);
+            }
+
+            100% {
+                transform: scale(1) translateX(0%);
+            }
+        }
+    </style>
 </head>
 
 <body class="config">
@@ -32,8 +138,8 @@
 
     <!--====== Main App ======-->
     <div id="app">
-         <!--====== Main Header ======-->
-         <header class="header--style-1">
+        <!--====== Main Header ======-->
+        <header class="header--style-1">
 
             <!--====== Nav 1 ======-->
             <nav class="primary-nav primary-nav-wrapper--border">
@@ -278,7 +384,7 @@
 
                                                 <!--====== Hạt ======-->
                                                 <div class="mega-menu-content">
-                                                    
+
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="row">
                                                         <div class="col-lg-4 mega-image">
@@ -286,8 +392,7 @@
                                                                 <a>Hạt sấy giòn</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
-                                                                        src="images\header\hat-say-gion.jpg"
-                                                                        alt=""></a>
+                                                                        src="images\header\hat-say-gion.jpg" alt=""></a>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 mega-image">
@@ -295,8 +400,7 @@
                                                                 <a>Đậu sấy giòn</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
-                                                                        src="images\header\dau-say-gion.jpg"
-                                                                        alt=""></a>
+                                                                        src="images\header\dau-say-gion.jpg" alt=""></a>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 mega-image">
@@ -310,7 +414,7 @@
                                                         </div>
                                                     </div>
                                                     <!--====== End - Mega Menu Row ======-->
-                                                    
+
                                                 </div>
                                                 <!--====== End - HẠT ======-->
 
@@ -319,22 +423,26 @@
 
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="container">
-                                                                                               
+
                                                         <!-- Hàng 2: 2 hình -->
                                                         <div class="row">
                                                             <div class="col-lg-6 mega-image">
                                                                 <div class="mega-list-title">
                                                                     <a>Nước ép nho</a>
-                                                                    <a class="u-d-block" href="shop-side-version-2.html">
-                                                                        <img class="u-img-fluid u-d-block" src="images\header\nuoc-ep-tao.jpg" alt="">
+                                                                    <a class="u-d-block"
+                                                                        href="shop-side-version-2.html">
+                                                                        <img class="u-img-fluid u-d-block"
+                                                                            src="images\header\nuoc-ep-tao.jpg" alt="">
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 mega-image">
                                                                 <div class="mega-list-title">
                                                                     <a>Nước ép táo</a>
-                                                                    <a class="u-d-block" href="shop-side-version-2.html">
-                                                                        <img class="u-img-fluid u-d-block" src="images\header\nuoc-ep-nho.jpg" alt="">
+                                                                    <a class="u-d-block"
+                                                                        href="shop-side-version-2.html">
+                                                                        <img class="u-img-fluid u-d-block"
+                                                                            src="images\header\nuoc-ep-nho.jpg" alt="">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -345,31 +453,38 @@
                                                             <div class="col-lg-4 mega-image">
                                                                 <div class="mega-list-title">
                                                                     <a>Nước tăng lực dâu</a>
-                                                                    <a class="u-d-block" href="shop-side-version-2.html">
-                                                                        <img class="u-img-fluid u-d-block" src="images\header\nuoc-dau.jpg" alt="">
+                                                                    <a class="u-d-block"
+                                                                        href="shop-side-version-2.html">
+                                                                        <img class="u-img-fluid u-d-block"
+                                                                            src="images\header\nuoc-dau.jpg" alt="">
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 mega-image">
                                                                 <div class="mega-list-title">
                                                                     <a>Nước tăng lực trái cây</a>
-                                                                    <a class="u-d-block" href="shop-side-version-2.html">
-                                                                        <img class="u-img-fluid u-d-block" src="images\header\nuoc-trai-cay.jpg" alt="">
+                                                                    <a class="u-d-block"
+                                                                        href="shop-side-version-2.html">
+                                                                        <img class="u-img-fluid u-d-block"
+                                                                            src="images\header\nuoc-trai-cay.jpg"
+                                                                            alt="">
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 mega-image">
                                                                 <div class="mega-list-title">
                                                                     <a>Nước tăng lực vải</a>
-                                                                    <a class="u-d-block" href="shop-side-version-2.html">
-                                                                        <img class="u-img-fluid u-d-block" src="images\header\nuoc-vai.jpg" alt="">
+                                                                    <a class="u-d-block"
+                                                                        href="shop-side-version-2.html">
+                                                                        <img class="u-img-fluid u-d-block"
+                                                                            src="images\header\nuoc-vai.jpg" alt="">
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    
+
                                                     <!--====== End - Mega Menu Row ======-->
                                                 </div>
                                                 <!--====== End - Nước ngọt ======-->
@@ -435,8 +550,8 @@
                                     <li>
                                         <a href="blog-left-sidebar.html">BLOG</a>
                                     </li>
-                                    
-                                    
+
+
                                 </ul>
                                 <!--====== End - List ======-->
 
@@ -624,7 +739,7 @@
 
 
         <!--====== App Content ======-->
-        <div class="app-content">
+        <div style="background-color:#f5f5dc;" class="app-content">
 
             <!--====== Primary Slider ======-->
             <div class="s-skeleton s-skeleton--h-600 s-skeleton--bg-grey">
@@ -2536,533 +2651,502 @@
             <!--====== End - Section 10 ======-->
 
             <!--====== Section 11 ======-->
-            <div class="u-s-p-b-90 u-s-m-b-30" ></div>
+            <div class="u-s-p-b-90 u-s-m-b-30"></div>
 
-                <!--====== Section Intro ======-->
-                <div class="section__intro u-s-m-b-46"  style="background-color:#f5f5dc;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary u-s-m-b-12" >PHẢN HỒI CỦA KHÁCH HÀNG</h1>
-                                    <span class="section__span u-c-silver">KHÁCH HÀNG CỦA SNACKO NÓI GÌ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Intro ======-->
-
-                <!--====== Section Content ======-->
-                <div class="section__content"  style="background-color:#f5f5dc;">
-                    <div class="container">
-
-                        <!--====== Testimonial Slider ======-->
-                        <div class="slider-fouc">
-                            <div class="owl-carousel" id="testimonial-slider">
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-                                        <img class="testimonial__img" src="images/about/test-1.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__content-wrap">
-                                        <span class="testimonial__double-quote"><i
-                                                class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Hạt của Snacko vừa giòn vừa thơm, giá cả phải chăng. Nếu may mắn sẽ được
-                                                bạn Sóc giao hàng tận tay nha. Sẽ quay lại ủng hộ Snacko!"</p>
-                                        </blockquote>
-                                        <span class="testimonial__author">Khách Hàng 1</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-                                        <img class="testimonial__img" src="images/about/test-2.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__content-wrap">
-                                        <span class="testimonial__double-quote"><i
-                                                class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Nước và hạt của Snacko đều rất hợp vị mình! Mình còn nhận được thiệp
-                                                viết tay của bạn Sóc nữa. Đáng yêu quá đi mất!"</p>
-                                        </blockquote>
-                                        <span class="testimonial__author">Khách Hàng 2</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-                                        <img class="testimonial__img" src="images/about/test-3.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__content-wrap">
-                                        <span class="testimonial__double-quote"><i
-                                                class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Đây đã là lần thứ 2 mình mua hàng ở Snacko rồi. Lần này mình may mắn
-                                                được bạn Sóc tận tay giao hàng! Vui quá đi thôi."</p>
-                                        </blockquote>
-                                        <span class="testimonial__author">Khách Hàng 3</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-                                        <img class="testimonial__img" src="images/about/test-4.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__content-wrap">
-                                        <span class="testimonial__double-quote"><i
-                                                class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Mua hàng ở Snacko, mình vừa được uống nước ngon, ăn hạt giòn mà vừa được
-                                                gặp bạn Sóc cute này nữa. Quá là tuyệt vời Snacko ơi!"</p>
-                                        </blockquote>
-                                        <span class="testimonial__author">Khách Hàng 4</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--====== End - Testimonial Slider ======-->
-
-                    </div>
-                </div>
-                <!--====== End - Section Content ======-->
-
-            </div>
-            <!--====== End - Section 11 ======-->
-
-        </div>
-        <!--====== End - App Content ======-->
-
-        <!--====== Main Footer ======-->
-        
-        <!--====== Main Footer ======-->
-        <footer>
-            <div class="outer-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="outer-footer__content u-s-m-b-40">
-
-                                <span class="outer-footer__content-title">Liên hệ với chúng tôi</span>
-                                <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
-
-                                    <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, Thành phố Hồ Chí Minh</span></div>
-                                <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
-
-                                    <span>038 xxx xx xx</span></div>
-                                <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
-
-                                    <span>anvatcungsnacko@gmail.com</span></div>
-                                <div class="outer-footer__social">
-                                    <ul>
-                                        <li>
-
-                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li>
-
-                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li>
-
-                                            <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a></li>
-                                        <li>
-
-                                            <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li>
-
-                                            <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="outer-footer__content u-s-m-b-40">
-
-                                        <span class="outer-footer__content-title">Thông tin</span>
-                                        <div class="outer-footer__list-wrap">
-                                            <ul>
-                                                <li>
-
-                                                    <a href="cart.html">Giỏ hàng</a></li>
-                                                <li>
-
-                                                    <a href="dashboard.html">Tài khoản</a></li>
-                    
-                                                <li>
-
-                                                    <a href="dash-payment-option.html">Thanh toán </a></li>
-                                                <li>
-
-                                                    <a href="shop-side-version-2.html">Cửa hàng</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="outer-footer__content u-s-m-b-40">
-                                        <div class="outer-footer__list-wrap">
-
-                                            <span class="outer-footer__content-title">Cửa hàng Snacko</span>
-                                            <ul>
-                                                <li>
-
-                                                    <a href="about.html">Về chúng tôi</a></li>
-                                                <li>
-
-                                                    <a href="contact.html">Liên hệ</a></li>
-                                                <li>
-
-                                                    <a href="index.html">Bản đồ</a></li>
-                                                <li>
-
-                                                    <a href="dash-my-order.html">Giao hàng</a></li>
-                                                <li>
-
-                                                    <a href="shop-side-version-2.html">Cửa hàng</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="outer-footer__content">
-
-                                <span class="outer-footer__content-title">Nhận thông tin mới nhất của Shop</span>
-                                <form class="newsletter">
-                                    <div class="u-s-m-b-15">
-                                        <div class="radio-box newsletter__radio">
-
-                                            <input type="radio" id="male" name="gender">
-                                            <div class="radio-box__state radio-box__state--primary">
-
-                                                <label class="radio-box__label" for="male">Nam</label></div>
-                                        </div>
-                                        <div class="radio-box newsletter__radio">
-
-                                            <input type="radio" id="female" name="gender">
-                                            <div class="radio-box__state radio-box__state--primary">
-
-                                                <label class="radio-box__label" for="female">Nữ</label></div>
-                                        </div>
-                                    </div>
-                                    <div class="newsletter__group">
-
-                                        <label for="newsletter"></label>
-
-                                        <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Nhập email của bạn">
-
-                                        <button class="btn btn--e-brand newsletter__btn" type="submit">Đăng ký</button></div>
-
-                                    <span class="newsletter__text">Đăng ký email để nhận thông tin sớm nhất về khuyến mãi, sản phẩm mới và giảm giá dành riêng cho bạn.</span>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lower-footer">
+            <!--====== Section Intro ======-->
+            <div class="section__intro u-s-m-b-46" style="background-color:#f5f5dc;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="lower-footer__content">
-                                <div class="lower-footer__copyright">
-
-                                    <span>Copyright © 2018</span>
-
-                                    <a href="index.html">Reshop</a>
-
-                                    <span>All Right Reserved</span></div>
-                                <div class="lower-footer__payment">
-                                    <ul>
-                                        <li><i class="fab fa-cc-stripe"></i></li>
-                                        <li><i class="fab fa-cc-paypal"></i></li>
-                                        <li><i class="fab fa-cc-mastercard"></i></li>
-                                        <li><i class="fab fa-cc-visa"></i></li>
-                                        <li><i class="fab fa-cc-discover"></i></li>
-                                        <li><i class="fab fa-cc-amex"></i></li>
-                                    </ul>
-                                </div>
+                            <div class="section__text-wrap">
+                                <h1 class="section__heading u-c-secondary u-s-m-b-12">PHẢN HỒI CỦA KHÁCH HÀNG</h1>
+                                <span class="section__span u-c-silver">KHÁCH HÀNG CỦA SNACKO NÓI GÌ</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!--====== End - Main Footer ======-->
+            <!--====== End - Section Intro ======-->
 
+            <!--====== Section Content ======-->
+            <div class="section__content" style="background-color:#f5f5dc;">
+                <div class="container">
 
-        <!--====== Modal Section ======-->
-
-        <!--====== Quick Look Modal ======-->
-        <div class="modal fade" id="quick-look">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal--shadow">
-                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-5">
-
-                                <!--====== Product Breadcrumb ======-->
-                                <div class="pd-breadcrumb u-s-m-b-30">
-                                    <ul class="pd-breadcrumb__list">
-                                        <li class="has-separator">
-                                            <a href="index.hml">Trang Chủ</a>
-                                        </li>
-                                        <li class="has-separator">
-                                            <a href="shop-side-version-2.html">Electronics</a>
-                                        </li>
-                                        <li class="has-separator">
-                                            <a href="shop-side-version-2.html">DSLR Cameras</a>
-                                        </li>
-                                        <li class="is-marked">
-                                            <a href="shop-side-version-2.html">Nikon Cameras</a>
-                                        </li>
-                                    </ul>
+                    <!--====== Testimonial Slider ======-->
+                    <div class="slider-fouc">
+                        <div class="owl-carousel" id="testimonial-slider">
+                            <div class="testimonial">
+                                <div class="testimonial__img-wrap">
+                                    <img class="testimonial__img" src="images/about/test-1.jpg" alt="">
                                 </div>
-                                <!--====== End - Product Breadcrumb ======-->
-
-                                <!--====== Product Detail ======-->
-                                <div class="pd u-s-m-b-30">
-                                    <div class="pd-wrap">
-                                        <div id="js-product-detail-modal">
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-1.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-2.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-3.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-4.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-5.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="u-s-m-t-15">
-                                        <div id="js-product-detail-modal-thumbnail">
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-1.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-2.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-3.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-4.jpg" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="u-img-fluid" src="images/product/product-d-5.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="testimonial__content-wrap">
+                                    <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
+                                    <blockquote class="testimonial__block-quote">
+                                        <p>"Hạt của Snacko vừa giòn vừa thơm, giá cả phải chăng. Nếu may mắn sẽ được
+                                            bạn Sóc giao hàng tận tay nha. Sẽ quay lại ủng hộ Snacko!"</p>
+                                    </blockquote>
+                                    <span class="testimonial__author">Khách Hàng 1</span>
                                 </div>
-                                <!--====== End - Product Detail ======-->
-
                             </div>
-                            <div class="col-lg-7">
+                            <div class="testimonial">
+                                <div class="testimonial__img-wrap">
+                                    <img class="testimonial__img" src="images/about/test-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial__content-wrap">
+                                    <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
+                                    <blockquote class="testimonial__block-quote">
+                                        <p>"Nước và hạt của Snacko đều rất hợp vị mình! Mình còn nhận được thiệp
+                                            viết tay của bạn Sóc nữa. Đáng yêu quá đi mất!"</p>
+                                    </blockquote>
+                                    <span class="testimonial__author">Khách Hàng 2</span>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="testimonial__img-wrap">
+                                    <img class="testimonial__img" src="images/about/test-3.jpg" alt="">
+                                </div>
+                                <div class="testimonial__content-wrap">
+                                    <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
+                                    <blockquote class="testimonial__block-quote">
+                                        <p>"Đây đã là lần thứ 2 mình mua hàng ở Snacko rồi. Lần này mình may mắn
+                                            được bạn Sóc tận tay giao hàng! Vui quá đi thôi."</p>
+                                    </blockquote>
+                                    <span class="testimonial__author">Khách Hàng 3</span>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="testimonial__img-wrap">
+                                    <img class="testimonial__img" src="images/about/test-4.jpg" alt="">
+                                </div>
+                                <div class="testimonial__content-wrap">
+                                    <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
+                                    <blockquote class="testimonial__block-quote">
+                                        <p>"Mua hàng ở Snacko, mình vừa được uống nước ngon, ăn hạt giòn mà vừa được
+                                            gặp bạn Sóc cute này nữa. Quá là tuyệt vời Snacko ơi!"</p>
+                                    </blockquote>
+                                    <span class="testimonial__author">Khách Hàng 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====== End - Testimonial Slider ======-->
 
-                                <!--====== Product Right Side Details ======-->
-                                <div class="pd-detail">
-                                    <div>
-                                        <span class="pd-detail__name">Nikon Camera 4k Lens Zoom Pro</span>
-                                    </div>
-                                    <div>
-                                        <div class="pd-detail__inline">
-                                            <span class="pd-detail__price">$6.99</span>
-                                            <span class="pd-detail__discount">(GIẢM 76%)</span><del
-                                                class="pd-detail__del">$28.97</del>
-                                        </div>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <div class="pd-detail__rating gl-rating-style"><i class="fas fa-star"></i><i
-                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                            <span class="pd-detail__review u-s-m-l-4">
-                                                <a href="product-detail.html">23 Đánh Giá</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <div class="pd-detail__inline">
-                                            <span class="pd-detail__stock">200 in stock</span>
-                                            <span class="pd-detail__left">Only 2 left</span>
-                                        </div>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <span class="pd-detail__preview-desc">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text ever since the 1500s, when an unknown printer took a
-                                            galley of type and scrambled it to make a type specimen book.</span>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <div class="pd-detail__inline">
-                                            <span class="pd-detail__click-wrap"><i class="far fa-heart u-s-m-r-6"></i>
-                                                <a href="signin.html">Thêm Vào Yêu Thích</a>
-                                                <span class="pd-detail__click-count">(222)</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <div class="pd-detail__inline">
-                                            <span class="pd-detail__click-wrap"><i
-                                                    class="far fa-envelope u-s-m-r-6"></i>
-                                                <a href="signin.html">Gửi Email Khi Giảm Giá</a>
-                                                <span class="pd-detail__click-count">(20)</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <ul class="pd-social-list">
-                                            <li>
-                                                <a class="s-fb--color-hover" href="#"><i
-                                                        class="fab fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a class="s-insta--color-hover" href="#"><i
-                                                        class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a class="s-wa--color-hover" href="#"><i
-                                                        class="fab fa-whatsapp"></i></a>
-                                            </li>
-                                            <li>
-                                                <a class="s-gplus--color-hover" href="#"><i
-                                                        class="fab fa-google-plus-g"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <form class="pd-detail__form">
-                                            <div class="pd-detail-inline-2">
-                                                <div class="u-s-m-b-15">
+                </div>
+            </div>
+            <!--====== End - Section Content ======-->
 
-                                                    <!--====== Input Counter ======-->
-                                                    <div class="input-counter">
-                                                        <span class="input-counter__minus fas fa-minus"></span>
-                                                        <input
-                                                            class="input-counter__text input-counter--text-primary-style"
-                                                            type="text" value="1" data-min="1" data-max="1000">
-                                                        <span class="input-counter__plus fas fa-plus"></span>
-                                                    </div>
-                                                    <!--====== End - Input Counter ======-->
+        </div>
+        <!--====== End - Section 11 ======-->
 
-                                                </div>
-                                                <div class="u-s-m-b-15">
-                                                    <button class="btn btn--e-brand-b-2" type="submit">Thêm Vào Giỏ
-                                                        Hàng</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="u-s-m-b-15">
-                                        <span class="pd-detail__label u-s-m-b-8">Chính Sách Sản Phẩm:</span>
-                                        <ul class="pd-detail__policy-list">
-                                            <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-                                                <span>Bảo Vệ Người Mua.</span>
+    </div>
+    <!--====== End - App Content ======-->
+
+    <!--====== Main Footer ======-->
+
+    <!--====== Main Footer ======-->
+    <footer>
+        <div class="outer-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="outer-footer__content u-s-m-b-40">
+
+                            <span class="outer-footer__content-title">Liên hệ với chúng tôi</span>
+                            <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+
+                                <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, Thành phố Hồ Chí Minh</span>
+                            </div>
+                            <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+
+                                <span>038 xxx xx xx</span>
+                            </div>
+                            <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+
+                                <span>anvatcungsnacko@gmail.com</span>
+                            </div>
+                            <div class="outer-footer__social">
+                                <ul>
+                                    <li>
+
+                                        <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+
+                                        <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+
+                                        <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                    <li>
+
+                                        <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+
+                                        <a class="s-gplus--color-hover" href="#"><i
+                                                class="fab fa-google-plus-g"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="outer-footer__content u-s-m-b-40">
+
+                                    <span class="outer-footer__content-title">Thông tin</span>
+                                    <div class="outer-footer__list-wrap">
+                                        <ul>
+                                            <li>
+
+                                                <a href="cart.html">Giỏ hàng</a>
                                             </li>
-                                            <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-                                                <span>Hoàn lại toàn bộ tiền nếu không nhận được hàng.</span>
+                                            <li>
+
+                                                <a href="dashboard.html">Tài khoản</a>
                                             </li>
-                                            <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-                                                <span>Chấp nhận trả hàng nếu sản phẩm không như mô tả.</span>
+
+                                            <li>
+
+                                                <a href="dash-payment-option.html">Thanh toán </a>
+                                            </li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Cửa hàng</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <!--====== End - Product Right Side Details ======-->
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="outer-footer__content u-s-m-b-40">
+                                    <div class="outer-footer__list-wrap">
 
+                                        <span class="outer-footer__content-title">Cửa hàng Snacko</span>
+                                        <ul>
+                                            <li>
+
+                                                <a href="about.html">Về chúng tôi</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="contact.html">Liên hệ</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="index.html">Bản đồ</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="dash-my-order.html">Giao hàng</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Cửa hàng</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="outer-footer__content">
+
+                            <span class="outer-footer__content-title">Nhận thông tin mới nhất của Shop</span>
+                            <form class="newsletter">
+                                <div class="u-s-m-b-15">
+                                    <div class="radio-box newsletter__radio">
+
+                                        <input type="radio" id="male" name="gender">
+                                        <div class="radio-box__state radio-box__state--primary">
+
+                                            <label class="radio-box__label" for="male">Nam</label>
+                                        </div>
+                                    </div>
+                                    <div class="radio-box newsletter__radio">
+
+                                        <input type="radio" id="female" name="gender">
+                                        <div class="radio-box__state radio-box__state--primary">
+
+                                            <label class="radio-box__label" for="female">Nữ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="newsletter__group">
+
+                                    <label for="newsletter"></label>
+
+                                    <input class="input-text input-text--only-white" type="text" id="newsletter"
+                                        placeholder="Nhập email của bạn">
+
+                                    <button class="btn btn--e-brand newsletter__btn" type="submit">Đăng ký</button>
+                                </div>
+
+                                <span class="newsletter__text">Đăng ký email để nhận thông tin sớm nhất về khuyến mãi,
+                                    sản phẩm mới và giảm giá dành riêng cho bạn.</span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="lower-footer__content">
+                            <div class="lower-footer__copyright">
+
+                                <span>Copyright © 2018</span>
+
+                                <a href="index.html">Reshop</a>
+
+                                <span>All Right Reserved</span>
+                            </div>
+                            <div class="lower-footer__payment">
+                                <ul>
+                                    <li><i class="fab fa-cc-stripe"></i></li>
+                                    <li><i class="fab fa-cc-paypal"></i></li>
+                                    <li><i class="fab fa-cc-mastercard"></i></li>
+                                    <li><i class="fab fa-cc-visa"></i></li>
+                                    <li><i class="fab fa-cc-discover"></i></li>
+                                    <li><i class="fab fa-cc-amex"></i></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--====== End - Quick Look Modal ======-->
+    </footer>
+    <!--====== End - Main Footer ======-->
 
-        <!--====== Thêm Vào Giỏ Hàng Modal ======-->
-        <div class="modal fade" id="add-to-cart">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal-radius modal-shadow">
-                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="success u-s-m-b-30">
-                                    <div class="success__text-wrap"><i class="fas fa-check"></i>
-                                        <span>Sản phẩm đã được thêm vào giỏ hàng!</span>
-                                    </div>
-                                    <div class="success__img-wrap">
-                                        <img class="u-img-fluid" src="images/product/electronic/product1.jpg" alt="">
-                                    </div>
-                                    <div class="success__info-wrap">
-                                        <span class="success__name">Beats Bomb Wireless Headphone</span>
-                                        <span class="success__quantity">Số lượng: 1</span>
-                                        <span class="success__price">$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="s-option">
-                                    <span class="s-option__text">1 sản phẩm trong giỏ hàng của bạn</span>
-                                    <div class="s-option__link-box">
-                                        <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal">TIẾP
-                                            TỤC MUA SẮM</a>
-                                        <a class="s-option__link btn--e-white-brand-shadow" href="cart.html">XEM GIỎ
-                                            HÀNG</a>
-                                        <a class="s-option__link btn--e-brand-shadow" href="checkout.html">TIẾN HÀNH
-                                            THANH TOÁN</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--====== End - Thêm Vào Giỏ Hàng Modal ======-->
 
-        <!--====== Newsletter Subscribe Modal ======-->
-        <div class="modal fade new-l" id="newsletter-modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal--shadow">
-                    <button class="btn new-l__dismiss fas fa-times" type="button" data-dismiss="modal"></button>
-                    <div class="modal-body">
-                        <div class="row u-s-m-x-0">
-                            <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
-                                <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
-                                    <img class="u-img-fluid u-d-block" src="images/newsletter/newsletter.jpg"
-                                        alt=""></a>
+    <!--====== Modal Section ======-->
+
+    <!--====== Quick Look Modal ======-->
+    <div class="modal fade" id="quick-look">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal--shadow">
+                <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-5">
+
+                            <!--====== Product Breadcrumb ======-->
+                            <div class="pd-breadcrumb u-s-m-b-30">
+                                <ul class="pd-breadcrumb__list">
+                                    <li class="has-separator">
+                                        <a href="index.hml">Trang Chủ</a>
+                                    </li>
+                                    <li class="has-separator">
+                                        <a href="shop-side-version-2.html">Electronics</a>
+                                    </li>
+                                    <li class="has-separator">
+                                        <a href="shop-side-version-2.html">DSLR Cameras</a>
+                                    </li>
+                                    <li class="is-marked">
+                                        <a href="shop-side-version-2.html">Nikon Cameras</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="col-lg-6 new-l__col-2">
-                                <div class="new-l__section u-s-m-t-30">
-                                    <div class="u-s-m-b-8 new-l--center">
-                                        <h3 class="new-l__h3">Bản Tin</h3>
-                                    </div>
-                                    <div class="u-s-m-b-30 new-l--center">
-                                        <p class="new-l__p1">Đăng ký Email để nhận thông tin về sản phẩm mới, khuyến mãi
-                                            và nhiều thông tin khác.</p>
-                                    </div>
-                                    <form class="new-l__form">
-                                        <div class="u-s-m-b-15">
-                                            <input class="news-l__input" type="text" placeholder="Email Của Bạn">
+                            <!--====== End - Product Breadcrumb ======-->
+
+                            <!--====== Product Detail ======-->
+                            <div class="pd u-s-m-b-30">
+                                <div class="pd-wrap">
+                                    <div id="js-product-detail-modal">
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-1.jpg" alt="">
                                         </div>
-                                        <div class="u-s-m-b-15">
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-2.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-4.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-t-15">
+                                    <div id="js-product-detail-modal-thumbnail">
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-1.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-2.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-4.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/product/product-d-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--====== End - Product Detail ======-->
 
-                                            <button class="btn btn--e-brand-b-2" type="submit">Đăng Ký!</button>
+                        </div>
+                        <div class="col-lg-7">
+
+                            <!--====== Product Right Side Details ======-->
+                            <div class="pd-detail">
+                                <div>
+                                    <span class="pd-detail__name">Nikon Camera 4k Lens Zoom Pro</span>
+                                </div>
+                                <div>
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__price">$6.99</span>
+                                        <span class="pd-detail__discount">(GIẢM 76%)</span><del
+                                            class="pd-detail__del">$28.97</del>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        <span class="pd-detail__review u-s-m-l-4">
+                                            <a href="product-detail.html">23 Đánh Giá</a></span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__stock">200 in stock</span>
+                                        <span class="pd-detail__left">Only 2 left</span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <span class="pd-detail__preview-desc">Lorem Ipsum is simply dummy text of the
+                                        printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s, when an unknown printer took a
+                                        galley of type and scrambled it to make a type specimen book.</span>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__click-wrap"><i class="far fa-heart u-s-m-r-6"></i>
+                                            <a href="signin.html">Thêm Vào Yêu Thích</a>
+                                            <span class="pd-detail__click-count">(222)</span></span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__click-wrap"><i class="far fa-envelope u-s-m-r-6"></i>
+                                            <a href="signin.html">Gửi Email Khi Giảm Giá</a>
+                                            <span class="pd-detail__click-count">(20)</span></span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <ul class="pd-social-list">
+                                        <li>
+                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-insta--color-hover" href="#"><i
+                                                    class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-gplus--color-hover" href="#"><i
+                                                    class="fab fa-google-plus-g"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <form class="pd-detail__form">
+                                        <div class="pd-detail-inline-2">
+                                            <div class="u-s-m-b-15">
+
+                                                <!--====== Input Counter ======-->
+                                                <div class="input-counter">
+                                                    <span class="input-counter__minus fas fa-minus"></span>
+                                                    <input class="input-counter__text input-counter--text-primary-style"
+                                                        type="text" value="1" data-min="1" data-max="1000">
+                                                    <span class="input-counter__plus fas fa-plus"></span>
+                                                </div>
+                                                <!--====== End - Input Counter ======-->
+
+                                            </div>
+                                            <div class="u-s-m-b-15">
+                                                <button class="btn btn--e-brand-b-2" type="submit">Thêm Vào Giỏ
+                                                    Hàng</button>
+                                            </div>
                                         </div>
                                     </form>
-                                    <div class="u-s-m-b-15 new-l--center">
-                                        <p class="new-l__p2">Bằng cách nhấn Đăng Ký, bạn đồng ý nhận các ưu đãi và
-                                            khuyến<br />mãi khác của Snacko. Bạn có thể hủy đăng ký bất cứ lúc nào.</p>
-                                    </div>
-                                    <div class="u-s-m-b-15 new-l--center">
-                                        <a class="new-l__link" data-dismiss="modal">Không, cảm ơn</a>
-                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <span class="pd-detail__label u-s-m-b-8">Chính Sách Sản Phẩm:</span>
+                                    <ul class="pd-detail__policy-list">
+                                        <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Bảo Vệ Người Mua.</span>
+                                        </li>
+                                        <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Hoàn lại toàn bộ tiền nếu không nhận được hàng.</span>
+                                        </li>
+                                        <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Chấp nhận trả hàng nếu sản phẩm không như mô tả.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--====== End - Product Right Side Details ======-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== End - Quick Look Modal ======-->
+
+    <!--====== Thêm Vào Giỏ Hàng Modal ======-->
+    <div class="modal fade" id="add-to-cart">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-radius modal-shadow">
+                <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="success u-s-m-b-30">
+                                <div class="success__text-wrap"><i class="fas fa-check"></i>
+                                    <span>Sản phẩm đã được thêm vào giỏ hàng!</span>
+                                </div>
+                                <div class="success__img-wrap">
+                                    <img class="u-img-fluid" src="images/product/electronic/product1.jpg" alt="">
+                                </div>
+                                <div class="success__info-wrap">
+                                    <span class="success__name">Beats Bomb Wireless Headphone</span>
+                                    <span class="success__quantity">Số lượng: 1</span>
+                                    <span class="success__price">$170.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="s-option">
+                                <span class="s-option__text">1 sản phẩm trong giỏ hàng của bạn</span>
+                                <div class="s-option__link-box">
+                                    <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal">TIẾP
+                                        TỤC MUA SẮM</a>
+                                    <a class="s-option__link btn--e-white-brand-shadow" href="cart.html">XEM GIỎ
+                                        HÀNG</a>
+                                    <a class="s-option__link btn--e-brand-shadow" href="checkout.html">TIẾN HÀNH
+                                        THANH TOÁN</a>
                                 </div>
                             </div>
                         </div>
@@ -3070,9 +3154,55 @@
                 </div>
             </div>
         </div>
-        <!--====== End - Newsletter Subscribe Modal ======-->
+    </div>
+    <!--====== End - Thêm Vào Giỏ Hàng Modal ======-->
 
-        <!--====== End - Modal Section ======-->
+    <!--====== Newsletter Subscribe Modal ======-->
+    <div class="modal fade new-l" id="newsletter-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal--shadow">
+                <button class="btn new-l__dismiss fas fa-times" type="button" data-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div class="row u-s-m-x-0">
+                        <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
+                            <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
+                                <img class="u-img-fluid u-d-block" src="images/newsletter/newsletter.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-6 new-l__col-2">
+                            <div class="new-l__section u-s-m-t-30">
+                                <div class="u-s-m-b-8 new-l--center">
+                                    <h3 class="new-l__h3">Bản Tin</h3>
+                                </div>
+                                <div class="u-s-m-b-30 new-l--center">
+                                    <p class="new-l__p1">Đăng ký Email để nhận thông tin về sản phẩm mới, khuyến mãi
+                                        và nhiều thông tin khác.</p>
+                                </div>
+                                <form class="new-l__form">
+                                    <div class="u-s-m-b-15">
+                                        <input class="news-l__input" type="text" placeholder="Email Của Bạn">
+                                    </div>
+                                    <div class="u-s-m-b-15">
+
+                                        <button class="btn btn--e-brand-b-2" type="submit">Đăng Ký!</button>
+                                    </div>
+                                </form>
+                                <div class="u-s-m-b-15 new-l--center">
+                                    <p class="new-l__p2">Bằng cách nhấn Đăng Ký, bạn đồng ý nhận các ưu đãi và
+                                        khuyến<br />mãi khác của Snacko. Bạn có thể hủy đăng ký bất cứ lúc nào.</p>
+                                </div>
+                                <div class="u-s-m-b-15 new-l--center">
+                                    <a class="new-l__link" data-dismiss="modal">Không, cảm ơn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== End - Newsletter Subscribe Modal ======-->
+
+    <!--====== End - Modal Section ======-->
 
     </div>
     <!--====== End - Main App ======-->

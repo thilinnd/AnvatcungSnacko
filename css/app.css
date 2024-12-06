@@ -193,8 +193,6 @@ Box Module
 /* App Content exclude Header & Footer */
 @media (min-width: 576px) {
   html.boxed .app-content {
-    
-    background-color:#f5f5dc;
     margin: 0 auto;
     overflow: hidden; } }
 
