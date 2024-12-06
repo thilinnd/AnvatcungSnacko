@@ -458,7 +458,7 @@
               zoomWindowWidth: 540,
               zoomWindowHeight: 540,
               zoomWindowOffetx: 10,
-              borderColour: '#e9e9e9',
+              borderColour: '#f7e7ce',
               cursor: 'pointer'
           };
             // Fires after first initialization
