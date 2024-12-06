@@ -193,6 +193,8 @@ Box Module
 /* App Content exclude Header & Footer */
 @media (min-width: 576px) {
   html.boxed .app-content {
+    
+    background-color:#f5f5dc;
     margin: 0 auto;
     overflow: hidden; } }
 
@@ -4862,7 +4864,6 @@ input::-ms-clear {
 
 .shop-w--style {
   
-  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 0;
   border: 1px solid #f5f5dc;
   background-color: #f5f5dc;
   box-shadow: 0 6px 15px 0 rgba(36, 37, 38, 0.08); }

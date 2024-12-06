@@ -4386,6 +4386,8 @@
   padding-right: 5.625rem; }
 
 .u-s-p-b-90 {
+  
+  background-color: #f5f5dc;
   padding-bottom: 5.625rem; }
 
 .u-s-p-l-90 {
@@ -4397,7 +4399,7 @@
 
 .u-s-p-y-90 {
   background-color: #f5f5dc;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 0;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
   padding-top: 5.625rem;
   padding-bottom: 5.625rem; }
 
