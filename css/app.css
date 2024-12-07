@@ -1559,6 +1559,7 @@ input::-ms-clear {
   * Behind the scenes checkbox has a opacity 0 but it will be checked.
  */
 .check-box [type="checkbox"] {
+  background-color: #f5f5dc;
   position: absolute;
   left: 0;
   top: 0;
