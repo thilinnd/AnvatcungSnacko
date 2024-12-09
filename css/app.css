@@ -707,7 +707,6 @@ body {
 }
 .btn--e-brand:hover {
   background-color: #4a9354; /* Darker background on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
@@ -2120,8 +2119,8 @@ input::-ms-clear {
   font-size: 12px;
   top: 50%;
   border: none;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  transform: translateY(-50%);
+}
 
 .newsletter__text {
   margin-top: 10px;
