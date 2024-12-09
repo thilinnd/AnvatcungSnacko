@@ -2,6 +2,8 @@
 <html class="no-js" lang="en">
 
 
+
+
 <head>
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -12,6 +14,8 @@
     <title>Snacko - Nghỉ giải lao, bào snack ko?</title>
 
 
+
+
     <!--====== Google Font ======-->
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -20,12 +24,18 @@
     
 
 
+
+
     <!--====== Vendor Css ======-->
     <link rel="stylesheet" href="css/vendor.css">
 
 
+
+
     <!--====== Utility-Spacing ======-->
     <link rel="stylesheet" href="css/utility.css">
+
+
 
 
     <!--====== App ======-->
@@ -33,38 +43,6 @@
     <!--========== Video ========-->
     <link rel="stylesheet" href="css/index.css">
     <style> 
-  /* Styling for the welcome screen */ 
-  .welcome-screen { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: url('images/blog/post-24.JPG') no-repeat center center/cover; 
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: flex-end; 
-    padding: 20px; 
-    z-index: 1000; 
-    transition: opacity 1s ease; 
-    opacity: 1; 
-    font-family: 'Roboto', sans-serif; } 
-    .welcome-screen.hidden { opacity: 0; pointer-events: none; } 
-.welcome-message {
-    font-size: 3em; /* Adjusted font size */
-    line-height: 1.2; /* Added line height for better readability */
-    color: #39b54a;
-    font-weight: bold;
-    font-style: italic;
-    animation: splitText 3s ease-in-out forwards;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added subtle text shadow */
-    letter-spacing: 0.05em; /* Increased letter spacing */
-    padding: 10px; /* Added padding */
-    margin: 20px; /* Added margin */
-    background: linear-gradient(45deg, #39b54a, #b59e39); /* Added gradient color */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 .video-container {
     position: fixed;
     bottom: 10px;
@@ -79,10 +57,14 @@
 }
 
 
+
+
 .video-container video {
     width: 100%;
     height: auto; /* Automatically adjust height to maintain aspect ratio */
 }
+
+
 
 
 .close-btn {
@@ -99,18 +81,15 @@
 }
 
 
+
+
 .close-btn:hover {
     background-color: darkred;
 }
-
-
-    /* Split text animation keyframes */ 
-    @keyframes splitText { 
-        0% { opacity: 0; transform: scale(0.5) translateX(-100%); } 
-        50% { opacity: 1; transform: scale(1.2) translateX(0%); } 
-        100% { transform: scale(1) translateX(0%); } } 
     </style>
 </head>
+
+
 
 
 <body class="config">
@@ -119,11 +98,7 @@
             <img class="preloader__img" src="images/preloader.png" alt="">
         </div>
     </div>
-     </div> 
-     <!-- Màn hình chào mừng --> 
-      <div class="welcome-screen" id="welcome-screen"> 
-        <div class="welcome-message">Chào mừng quý khách đến với Snacko</div> 
-    </div>
+     </div>
     <!-- Video section --> 
      <div class="video-container" id="video-container"> 
         <video controls> 
@@ -142,21 +117,27 @@
     <div style = "background-color: #f5f5dc;" id="app">
 
 
+
+
          <!--====== Main Header ======-->
          <header class="header--style-1">
+
 
             <!--====== Nav 1 ======-->
             <nav class="primary-nav primary-nav-wrapper--border">
                 <div class="container">
 
+
                     <!--====== Primary Nav ======-->
                     <div class="primary-nav">
+
 
                         <!--====== Main Logo ======-->
                         <a class="main-logo" href="index.html">
                             <img src="images/logo/logo.png" alt="">
                         </a>
                         <!--====== End - Main Logo ======-->
+
 
                         <!--====== Search Form ======-->
                         <form class="main-form">
@@ -167,14 +148,17 @@
                         </form>
                         <!--====== End - Search Form ======-->
 
+
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation">
                             <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs"
                                 type="button"></button>
 
+
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
+
 
                                 <!--====== List ======-->
                                 <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
@@ -183,6 +167,7 @@
                                         <a>
                                             <i class="far fa-user-circle"></i>
                                         </a>
+
 
                                         <!--====== Dropdown ======-->
                                         <span class="js-menu-toggle"></span>
@@ -214,12 +199,14 @@
                                         </ul>
                                         <!--====== End - Dropdown ======-->
 
+
                                     </li>
                                     <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"
                                         title="Cài Đặt">
                                         <a>
                                             <i class="fas fa-user-cog"></i>
                                         </a>
+
 
                                         <!--====== Dropdown ======-->
                                         <span class="js-menu-toggle"></span>
@@ -228,6 +215,7 @@
                                                 <a>Ngôn Ngữ
                                                     <i class="fas fa-angle-down u-s-m-l-6"></i>
                                                 </a>
+
 
                                                 <!--====== Dropdown ======-->
                                                 <span class="js-menu-toggle"></span>
@@ -247,11 +235,13 @@
                                                 </ul>
                                                 <!--====== End - Dropdown ======-->
 
+
                                             </li>
                                             <li class="has-dropdown has-dropdown--ul-right-100">
                                                 <a>Tiền Tệ
                                                     <i class="fas fa-angle-down u-s-m-l-6"></i>
                                                 </a>
+
 
                                                 <!--====== Dropdown ======-->
                                                 <span class="js-menu-toggle"></span>
@@ -268,9 +258,11 @@
                                                 </ul>
                                                 <!--====== End - Dropdown ======-->
 
+
                                             </li>
                                         </ul>
                                         <!--====== End - Dropdown ======-->
+
 
                                     </li>
                                     <li data-tooltip="tooltip" data-placement="left" title="Liên hệ">
@@ -286,38 +278,48 @@
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
+
 
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
 
+
                     </div>
                     <!--====== End - Primary Nav ======-->
+
 
                 </div>
             </nav>
             <!--====== End - Nav 1 ======-->
 
+
             <!--====== Nav 2 ======-->
             <nav class="secondary-nav-wrapper">
                 <div class="container">
 
+
                     <!--====== Secondary Nav ======-->
                     <div class="secondary-nav">
+
 
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation1">
                             <button class="btn btn--icon toggle-mega-text toggle-button" type="button">M</button>
 
+
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
+
 
                                 <!--====== List ======-->
                                 <ul class="ah-list">
                                     <li class="has-dropdown">
                                         <span class="mega-text">Menu</span>
+
 
                                         <!--====== Mega Menu ======-->
                                         <span class="js-menu-toggle"></span>
@@ -349,8 +351,10 @@
                                                     </ul>
                                                 </div>
 
+
                                                 <!--====== Bánh gấu ======-->
                                                 <div class="mega-menu-content js-active">
+
 
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="row">
@@ -385,6 +389,7 @@
                                                     <!--====== End - Mega Menu Row ======-->
                                                 </div>
                                                 <!--====== End - Bánh gấu ======-->
+
 
                                                 <!--====== Hạt ======-->
                                                 <div class="mega-menu-content">
@@ -424,8 +429,10 @@
                                                 </div>
                                                 <!--====== End - HẠT ======-->
 
+
                                                 <!--====== Nước ngọt ======-->
                                                 <div class="mega-menu-content js-active">
+
 
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="container">
@@ -449,6 +456,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
 
                                                         <!-- Hàng 1: 3 hình -->
                                                         <div class="row">
@@ -478,17 +486,13 @@
                                                             </div>
                                                         </div>
 
+
                                                     </div>
                                                     
                                                     <!--====== End - Mega Menu Row ======-->
                                                 </div>
                                                 <!--====== End - Nước ngọt ======-->
 
-                                                <!--====== No Sub Categories ======-->
-                                                <div class="mega-menu-content">
-                                                    <h5>No Categories</h5>
-                                                </div>
-                                                <!--====== End - No Sub Categories ======-->
 
                                                 <!--====== No Sub Categories ======-->
                                                 <div class="mega-menu-content">
@@ -496,40 +500,56 @@
                                                 </div>
                                                 <!--====== End - No Sub Categories ======-->
 
-                                                <!--====== No Sub Categories ======-->
-                                                <div class="mega-menu-content">
-                                                    <h5>No Categories</h5>
-                                                </div>
-                                                <!--====== End - No Sub Categories ======-->
 
                                                 <!--====== No Sub Categories ======-->
                                                 <div class="mega-menu-content">
                                                     <h5>No Categories</h5>
                                                 </div>
                                                 <!--====== End - No Sub Categories ======-->
+
+
+                                                <!--====== No Sub Categories ======-->
+                                                <div class="mega-menu-content">
+                                                    <h5>No Categories</h5>
+                                                </div>
+                                                <!--====== End - No Sub Categories ======-->
+
+
+                                                <!--====== No Sub Categories ======-->
+                                                <div class="mega-menu-content">
+                                                    <h5>No Categories</h5>
+                                                </div>
+                                                <!--====== End - No Sub Categories ======-->
+
 
                                             </div>
                                         </div>
                                         <!--====== End - Mega Menu ======-->
 
+
                                     </li>
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
 
+
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
+
 
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation2">
                             <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog"
                                 type="button"></button>
 
+
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
+
 
                                 <!--====== List ======-->
                                 <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
@@ -550,11 +570,14 @@
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
 
+
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
+
 
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation3">
@@ -563,9 +586,11 @@
                                 type="button"></button>
                             <span class="total-item-round">2</span>
 
+
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
+
 
                                 <!--====== List ======-->
                                 <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
@@ -585,12 +610,15 @@
                                             <span class="total-item-round">2</span>
                                         </a>
 
+
                                         <!--====== Dropdown ======-->
                                         <span class="js-menu-toggle"></span>
                                         <div class="mini-cart">
 
+
                                             <!--====== Mini Product Container ======-->
                                             <div class="mini-product-container gl-scroll u-s-m-b-15">
+
 
                                                 <!--====== Card for mini cart ======-->
                                                 <div class="card-mini-product">
@@ -617,6 +645,7 @@
                                                 </div>
                                                 <!--====== End - Card for mini cart ======-->
 
+
                                                 <!--====== Card for mini cart ======-->
                                                 <div class="card-mini-product">
                                                     <div class="mini-product">
@@ -640,6 +669,7 @@
                                                     <a class="mini-product__delete-link far fa-trash-alt"></a>
                                                 </div>
                                                 <!--====== End - Card for mini cart ======-->
+
 
                                                 <!--====== Card for mini cart ======-->
                                                 <div class="card-mini-product">
@@ -666,6 +696,7 @@
                                                 </div>
                                                 <!--====== End - Card for mini cart ======-->
 
+
                                                 <!--====== Card for mini cart ======-->
                                                 <div class="card-mini-product">
                                                     <div class="mini-product">
@@ -691,8 +722,10 @@
                                                 </div>
                                                 <!--====== End - Card for mini cart ======-->
 
+
                                             </div>
                                             <!--====== End - Mini Product Container ======-->
+
 
                                             <!--====== Mini Product Statistics ======-->
                                             <div class="mini-product-stat">
@@ -709,33 +742,45 @@
                                             </div>
                                             <!--====== End - Mini Product Statistics ======-->
 
+
                                         </div>
                                         <!--====== End - Dropdown ======-->
+
 
                                     </li>
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
+
 
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
 
+
                     </div>
                     <!--====== End - Secondary Nav ======-->
+
 
                 </div>
             </nav>
             <!--====== End - Nav 2 ======-->
+
 
         </header>
         <!--====== End - Main Header ======-->
 
 
 
+
+
+
         <!--====== App Content ======-->
         <div class="app-content">
+
+
 
 
                     <!--====== Primary Slider ======-->
@@ -798,6 +843,8 @@
             <div class="u-s-p-y-60">
 
 
+
+
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
                     <div class="container">
@@ -812,6 +859,8 @@
                     </div>
                 </div>
                 <!--====== End - Section Intro ======-->
+
+
 
 
                 <!--====== Section Content ======-->
@@ -855,13 +904,19 @@
                 </div>
 
 
+
+
                 <!--====== Section Content ======-->
             </div>
             <!--====== End - Section 1 ======-->
 
 
+
+
             <!--====== Section 2 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Intro ======-->
@@ -878,6 +933,8 @@
                     </div>
                 </div>
                 <!--====== End - Section Intro ======-->
+
+
 
 
                 <!--====== Section Content ======-->
@@ -905,6 +962,8 @@
                                 </div>
                                 <div class="filter__grid-wrapper u-s-m-t-30">
                                     <div class="row">
+
+
 
 
                                         <!--Bánh Gấu Nhân Kem-->
@@ -960,6 +1019,8 @@
                                         </div>
 
 
+
+
                                         <!--Bánh Gấu Nhân Cà Phê-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
@@ -1009,6 +1070,8 @@
                                                 <span class="product-o__price">10,000đ</span>
                                             </div>
                                         </div>
+
+
 
 
                                         <!--Bánh Gấu Nhân Chùm Ngây-->
@@ -1062,6 +1125,8 @@
                                         </div>
 
 
+
+
                                         <!--Đậu Mix & Nho Khô-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item sportgadget">
@@ -1111,6 +1176,8 @@
                                                 <span class="product-o__price">7,000đ</span>
                                             </div>
                                         </div>
+
+
 
 
                                         <!--Đậu Mix & Hạt-->
@@ -1165,6 +1232,8 @@
                                         </div>
 
 
+
+
                                         <!--Hạt Mix & Nho Khô-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item sportgadget">
@@ -1215,6 +1284,8 @@
                                                 <span class="product-o__price">7,000đ</span>
                                             </div>
                                         </div>
+
+
 
 
                                         <!--T-Rexx Vị Trái Cây-->
@@ -1269,6 +1340,8 @@
                                         </div>
 
 
+
+
                                         <!--T-Rexx Vị Vải-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item smartphone">
@@ -1319,6 +1392,8 @@
                                                 <span class="product-o__price">5,000đ</span>
                                             </div>
                                         </div>
+
+
 
 
                                         <!--T-Rexx Vị Dâu-->
@@ -1373,6 +1448,8 @@
                                         </div>
 
 
+
+
                                         <!--Nước Ép Táo Sundays-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item smartphone">
@@ -1423,6 +1500,8 @@
                                                 <span class="product-o__price">5,000đ</span>
                                             </div>
                                         </div>
+
+
 
 
                                         <!--Nước Ép Nho Sundays-->
@@ -1492,12 +1571,18 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 2 ======-->
 
 
+
+
             <!--====== Section 3 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Intro ======-->
@@ -1518,6 +1603,8 @@
                 <!--====== End - Section Intro ======-->
 
 
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
@@ -1530,7 +1617,7 @@
                                             <img class="aspect__img" src="images/product/electronic/product12.jpg"
                                                 alt=""></a>
                                         <div class="product-o__special-count-wrap">
-                                            <div class="countdown countdown--style-special" data-countdown="2024/12/12">
+                                            <div class="countdown countdown--style-special" data-countdown="2024/12/15">
                                             </div>
                                         </div>
                                         <div class="product-o__action-wrap">
@@ -1578,7 +1665,7 @@
                                             <img class="aspect__img" src="images/product/electronic/product13.jpg"
                                                 alt=""></a>
                                         <div class="product-o__special-count-wrap">
-                                            <div class="countdown countdown--style-special" data-countdown="2024/12/12">
+                                            <div class="countdown countdown--style-special" data-countdown="2024/12/15">
                                             </div>
                                         </div>
                                         <div class="product-o__action-wrap">
@@ -1624,12 +1711,18 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 3 ======-->
 
 
+
+
             <!--====== Section 4 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Intro ======-->
@@ -1648,11 +1741,15 @@
                 <!--====== End - Section Intro ======-->
 
 
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="slider-fouc">
                             <div class="owl-carousel product-slider" data-item="4">
+
+
 
 
                                 <!--Bánh Gấu Nhân Kem-->
@@ -1703,6 +1800,8 @@
                                 </div>
 
 
+
+
                                 <!--Bánh Gấu Nhân Cà Phê-->
                                 <div class="u-s-m-b-30">
                                     <div class="product-o product-o--hover-on">
@@ -1749,6 +1848,8 @@
                                         <span class="product-o__price">10,000đ</span>
                                     </div>
                                 </div>
+
+
 
 
                                 <!--Bánh Gấu Nhân Chùm Ngây-->
@@ -1799,6 +1900,8 @@
                                 </div>
 
 
+
+
                                 <!--Đậu Mix & Nho Khô-->
                                 <div class="u-s-m-b-30">
                                     <div class="product-o product-o--hover-on">
@@ -1847,6 +1950,8 @@
                                 </div>
 
 
+
+
                                 <!--Đậu Mix & Hạt-->
                                 <div class="u-s-m-b-30">
                                     <div class="product-o product-o--hover-on">
@@ -1893,6 +1998,8 @@
                                         <span class="product-o__price">7,000đ</span>
                                     </div>
                                 </div>
+
+
 
 
                                 <!--Hạt Mix & Nho Khô-->
@@ -1948,49 +2055,60 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 4 ======-->
+
+
 
 
             <!--====== Section 5 ======-->
             <div class="banner-bg">
 
 
+
+
                 <!--====== Section Content ======-->
-                <div class="section__content">
+                <div class="section__content" style="position: relative; background: rgba(255, 255, 255, 0.9);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="banner-bg__countdown">
-                                    <div class="countdown countdown--style-banner" data-countdown="2024/12/12"></div>
+                                    <div class="countdown countdown--style-banner" data-countdown="2024/12/15"></div>
                                 </div>
                                 <div class="banner-bg__wrap">
                                     <div class="banner-bg__text-1">
                                         <span class="u-c-secondary">ƯU ĐÃI</span>
-                                        <span class="u-c-white">ĐẶC BIỆT</span>
+                                        <span class="u-c-white" style="color: red !important;">ĐẶC BIỆT</span>
                                     </div>
                                     <div class="banner-bg__text-2">
-                                        <span class="u-c-white">Đừng</span>
+                                        <span class="u-c-white" style="color: red !important;">Đừng</span>
                                         <span class="u-c-secondary">Bỏ Lỡ!</span>
                                     </div>
-                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary">Miễn phí vận
-                                        chuyển UEH cơ sở B và 1km gần đó!</span>
-                                    <a class="banner-bg__shop-now btn--e-secondary" href="shop-grid-left.html">Mua
-                                        Ngay</a>
+                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary" style="color: red !important; font-size: larger; font-weight: bold !important;">Miễn phí vận chuyển UEH cơ sở B và 1km gần đó!</span>
+                                    <a class="about__link btn--e-secondary" href="shop-grid-left.html" target="_blank" style="display: inline-block; padding: 10px 20px; border-radius: 5px; background-color: #39b54a; color: white; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#2e8b57'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='#39b54a'; this.style.transform='translateY(0)';">Mua ngay</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <!--====== End - Section Content ======-->
+
+
 
 
             </div>
             <!--====== End - Section 5 ======-->
 
 
+
+
             <!--====== Section 6 ======-->
             <div class="u-s-p-y-60">
+
+
 
 
                 <!--====== Section Intro ======-->
@@ -2009,10 +2127,14 @@
                 <!--====== End - Section Intro ======-->
 
 
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
+
+
 
 
                             <!--Bánh Gấu Nhân Kem-->
@@ -2061,6 +2183,8 @@
                             </div>
 
 
+
+
                             <!--Bánh Gấu Nhân Cà Phê-->
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="product-o product-o--hover-on u-h-100">
@@ -2107,6 +2231,8 @@
                             </div>
 
 
+
+
                             <!--Bánh Gấu Nhân Chùm Ngây-->
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="product-o product-o--hover-on u-h-100">
@@ -2151,6 +2277,8 @@
                                     <span class="product-o__price">10,000đ</span>
                                 </div>
                             </div>
+
+
 
 
                             <!--Đậu Mix & Nho Khô-->
@@ -2203,12 +2331,18 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 6 ======-->
 
 
+
+
             <!--====== Section 7 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Content ======-->
@@ -2277,12 +2411,18 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 7 ======-->
 
 
+
+
             <!--====== Section 8 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Content ======-->
@@ -2373,6 +2513,8 @@
                                         <li class="column-product__item">
                                             <div class="product-l">
                                                 <div class="product-l__img-wrap">
+
+
 
 
                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
@@ -2485,12 +2627,18 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 8 ======-->
 
 
+
+
             <!--====== Section 9 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Content ======-->
@@ -2532,14 +2680,22 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 9 ======-->
 
 
 
 
+
+
+
+
             <!--====== Section 10 ======-->
             <div class="u-s-p-b-60">
+
+
 
 
                 <!--====== Section Intro ======-->
@@ -2558,6 +2714,8 @@
                 <!--====== End - Section Intro ======-->
 
 
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
@@ -2567,11 +2725,15 @@
                                     <div class="bp-mini__thumbnail">
 
 
+
+
                                         <!--====== Image Code ======-->
                                         <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block"
                                             href="blog-detail.html">
                                             <img class="aspect__img" src="images/blog/post-1.jpg" alt=""></a>
                                         <!--====== End - Image Code ======-->
+
+
 
 
                                     </div>
@@ -2614,11 +2776,15 @@
                                     <div class="bp-mini__thumbnail">
 
 
+
+
                                         <!--====== Image Code ======-->
                                         <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block"
                                             href="blog-detail.html">
                                             <img class="aspect__img" src="images/blog/post-2.jpg" alt=""></a>
                                         <!--====== End - Image Code ======-->
+
+
 
 
                                     </div>
@@ -2660,11 +2826,15 @@
                                     <div class="bp-mini__thumbnail">
 
 
+
+
                                         <!--====== Image Code ======-->
                                         <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block"
                                             href="blog-detail.html">
                                             <img class="aspect__img" src="images/blog/post-3.jpg" alt=""></a>
                                         <!--====== End - Image Code ======-->
+
+
 
 
                                     </div>
@@ -2706,12 +2876,18 @@
                 <!--====== End - Section Content ======-->
 
 
+
+
             </div>
             <!--====== End - Section 10 ======-->
 
 
+
+
             <!--====== Section 11 ======-->
             <div class="u-s-p-b-90 u-s-m-b-30">
+
+
 
 
                 <!--====== Section Intro ======-->
@@ -2730,9 +2906,13 @@
                 <!--====== End - Section Intro ======-->
 
 
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
+
+
 
 
                         <!--====== Testimonial Slider ======-->
@@ -2799,20 +2979,27 @@
                         <!--====== End - Testimonial Slider ======-->
 
 
+
+
                     </div>
                 </div>
                 <!--====== End - Section Content ======-->
+
+
 
 
             </div>
             <!--====== End - Section 11 ======-->
 
 
+
+
         </div>
         <!--====== End - App Content ======-->
 
 
-        
+
+
         <!--====== Main Footer ======-->
         <footer>
             <div class="outer-footer">
@@ -2820,34 +3007,38 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="outer-footer__content u-s-m-b-40">
-
-                                <span class="outer-footer__content-title">Liên hệ với chúng tôi</span>
+                                <span class="outer-footer__content-title">Liên Hệ</span>
                                 <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
-
-                                    <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, Thành phố Hồ Chí Minh</span></div>
+                                    <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, Hồ Chí Minh</span>
+                                </div>
                                 <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
-
-                                    <span>038 xxx xx xx</span></div>
+                                    <span>(+84) 38 643 9956</span>
+                                </div>
                                 <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
-
-                                    <span>anvatcungsnacko@gmail.com</span></div>
+                                    <span>anvatcungsnacko@gmail.com</span>
+                                </div>
                                 <div class="outer-footer__social">
                                     <ul>
                                         <li>
-
-                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <a class="s-fb--color-hover"
+                                                href="https://www.facebook.com/anvatcung.snacko"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                        </li>
                                         <li>
-
-                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
                                         <li>
-
-                                            <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a></li>
+                                            <a class="s-youtube--color-hover" href="#"><i
+                                                    class="fab fa-youtube"></i></a>
+                                        </li>
                                         <li>
-
-                                            <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <a class="s-insta--color-hover" href="#"><i
+                                                    class="fab fa-instagram"></i></a>
+                                        </li>
                                         <li>
-
-                                            <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            <a class="s-gplus--color-hover" href="#"><i
+                                                    class="fab fa-google-plus-g"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -2856,23 +3047,24 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="outer-footer__content u-s-m-b-40">
-
-                                        <span class="outer-footer__content-title">Thông tin</span>
+                                        <span class="outer-footer__content-title">Thông Tin</span>
                                         <div class="outer-footer__list-wrap">
                                             <ul>
                                                 <li>
-
-                                                    <a href="cart.html">Giỏ hàng</a></li>
+                                                    <a href="cart.html">Giỏ Hàng</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="dashboard.html">Tài khoản</a></li>
-                    
+                                                    <a href="dashboard.html">Tài Khoản</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="dash-payment-option.html">Thanh toán </a></li>
+                                                    <a href="shop-grid-left.html">Nhà Sản Xuất</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="shop-side-version-2.html">Cửa hàng</a></li>
+                                                    <a href="dash-payment-option.html">Thanh Toán</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop-grid-left.html">Cửa Hàng</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2880,24 +3072,23 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="outer-footer__content u-s-m-b-40">
                                         <div class="outer-footer__list-wrap">
-
-                                            <span class="outer-footer__content-title">Cửa hàng Snacko</span>
+                                            <span class="outer-footer__content-title">Snacko</span>
                                             <ul>
                                                 <li>
-
-                                                    <a href="about.html">Về chúng tôi</a></li>
+                                                    <a href="about.html">Về Snacko</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="contact.html">Liên hệ</a></li>
+                                                    <a href="contact.html">Liên Hệ</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="index.html">Bản đồ</a></li>
+                                                    <a href="index.html">Bản Đồ</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="dash-my-order.html">Giao hàng</a></li>
+                                                    <a href="dash-my-order.html">Giao Hàng</a>
+                                                </li>
                                                 <li>
-
-                                                    <a href="shop-side-version-2.html">Cửa hàng</a></li>
+                                                    <a href="shop-grid-left.html">Cửa Hàng</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2906,34 +3097,30 @@
                         </div>
                         <div class="col-lg-4 col-md-12">
                             <div class="outer-footer__content">
-
-                                <span class="outer-footer__content-title">Nhận thông tin mới nhất của Shop</span>
+                                <span class="outer-footer__content-title">Bản Tin Điện Tử</span>
                                 <form class="newsletter">
                                     <div class="u-s-m-b-15">
                                         <div class="radio-box newsletter__radio">
-
                                             <input type="radio" id="male" name="gender">
                                             <div class="radio-box__state radio-box__state--primary">
-
-                                                <label class="radio-box__label" for="male">Nam</label></div>
+                                                <label class="radio-box__label" for="male">Nam</label>
+                                            </div>
                                         </div>
                                         <div class="radio-box newsletter__radio">
-
                                             <input type="radio" id="female" name="gender">
                                             <div class="radio-box__state radio-box__state--primary">
-
-                                                <label class="radio-box__label" for="female">Nữ</label></div>
+                                                <label class="radio-box__label" for="female">Nữ</label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="newsletter__group">
-
                                         <label for="newsletter"></label>
-
-                                        <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Nhập email của bạn">
-
-                                        <button class="btn btn--e-brand newsletter__btn" type="submit">Đăng ký</button></div>
-
-                                    <span class="newsletter__text">Đăng ký email để nhận thông tin sớm nhất về khuyến mãi, sản phẩm mới và giảm giá dành riêng cho bạn.</span>
+                                        <input class="input-text input-text--only-white" type="text" id="newsletter"
+                                            placeholder="Nhập Email Của Bạn">
+                                        <button class="btn btn--e-brand newsletter__btn" type="submit">ĐĂNG KÝ</button>
+                                    </div>
+                                    <span class="newsletter__text">Đăng ký để nhận thông tin về khuyến mãi, sản phẩm mới
+                                        và phiếu giảm giá.</span>
                                 </form>
                             </div>
                         </div>
@@ -2946,12 +3133,10 @@
                         <div class="col-lg-12">
                             <div class="lower-footer__content">
                                 <div class="lower-footer__copyright">
-
-                                    <span>Copyright © 2018</span>
-
-                                    <a href="index.html">Reshop</a>
-
-                                    <span>All Right Reserved</span></div>
+                                    <span>Copyright © 2024</span>
+                                    <a href="index.html">Snacko</a>
+                                    <span>All Right Reserved</span>
+                                </div>
                                 <div class="lower-footer__payment">
                                     <ul>
                                         <li><i class="fab fa-cc-stripe"></i></li>
@@ -2968,11 +3153,13 @@
                 </div>
             </div>
         </footer>
-        <!--====== End - Main Footer ======-->
+
 
 
 
         <!--====== Modal Section ======-->
+
+
 
 
         <!--====== Quick Look Modal ======-->
@@ -2983,6 +3170,8 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-lg-5">
+
+
 
 
                                 <!--====== Product Breadcrumb ======-->
@@ -3003,6 +3192,8 @@
                                     </ul>
                                 </div>
                                 <!--====== End - Product Breadcrumb ======-->
+
+
 
 
                                 <!--====== Product Detail ======-->
@@ -3049,8 +3240,12 @@
                                 <!--====== End - Product Detail ======-->
 
 
+
+
                             </div>
                             <div class="col-lg-7">
+
+
 
 
                                 <!--====== Product Right Side Details ======-->
@@ -3129,6 +3324,8 @@
                                                 <div class="u-s-m-b-15">
 
 
+
+
                                                     <!--====== Input Counter ======-->
                                                     <div class="input-counter">
                                                         <span class="input-counter__minus fas fa-minus"></span>
@@ -3138,6 +3335,8 @@
                                                         <span class="input-counter__plus fas fa-plus"></span>
                                                     </div>
                                                     <!--====== End - Input Counter ======-->
+
+
 
 
                                                 </div>
@@ -3166,6 +3365,8 @@
                                 <!--====== End - Product Right Side Details ======-->
 
 
+
+
                             </div>
                         </div>
                     </div>
@@ -3173,6 +3374,8 @@
             </div>
         </div>
         <!--====== End - Quick Look Modal ======-->
+
+
 
 
         <!--====== Thêm Vào Giỏ Hàng Modal ======-->
@@ -3218,6 +3421,8 @@
         <!--====== End - Thêm Vào Giỏ Hàng Modal ======-->
 
 
+
+
         <!--====== Newsletter Subscribe Modal ======-->
         <div class="modal fade new-l" id="newsletter-modal">
             <div class="modal-dialog modal-dialog-centered">
@@ -3246,6 +3451,8 @@
                                         <div class="u-s-m-b-15">
 
 
+
+
                                             <button class="btn btn--e-brand-b-2" type="submit">Đăng Ký!</button>
                                         </div>
                                     </form>
@@ -3266,11 +3473,17 @@
         <!--====== End - Newsletter Subscribe Modal ======-->
 
 
+
+
         <!--====== End - Modal Section ======-->
+
+
 
 
     </div>
     <!--====== End - Main App ======-->
+
+
 
 
     <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
@@ -3286,38 +3499,34 @@
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 
+
+
     <!--====== Vendor Js ======-->
     <script src="js/vendor.js"></script>
+
+
 
 
     <!--====== jQuery Shopnav plugin ======-->
     <script src="js/jquery.shopnav.js"></script>
 
 
+
+
     <!--====== App ======-->
-    <script src="js/app.js"></script>
-    <script> 
-    window.addEventListener('load', function() 
-    { 
-    const welcomeScreen = document.getElementById('welcome-screen'); 
-    const mainContent = document.querySelector('.main-content'); 
-    const videoContainer = document.getElementById('video-container'); 
-    setTimeout(() => { welcomeScreen.classList.add('hidden'); setTimeout(() => { 
-        welcomeScreen.style.display = 'none'; 
-        mainContent.style.display = 'block'; 
-        setTimeout(() => { videoContainer.style.display = 'block'; }, 1000); 
-        // Wait for 1 seconds to show the video
-         }, 1000); 
-         // Wait for fade-out effect
-          }, 3000); 
-          // Duration of welcome screen display 
-          }); 
-          </script>
-    
+    <script src="js/app.js"></script>    
 </body>
 
 
+
+
 </html>
+
+
+
+
+
+
 
 
 

@@ -1409,19 +1409,19 @@
 
                                                 <label class="gl-label" for="reg-fname">TÊN *</label>
 
-                                                <input class="input-text input-text--primary-style" type="text" id="reg-fname" placeholder="TÊN"></div>
+                                                <input class="input-text input-text--primary-style" type="text" id="reg-fname" placeholder="TÊN" style="border: 2px solid #39b54a;"></div>
                                             <div class="u-s-m-b-30">
 
                                                 <label class="gl-label" for="reg-lname">HỌ *</label>
 
-                                                <input class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="HỌ"></div>
+                                                <input class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="HỌ" style="border: 2px solid #39b54a;"></div>
                                             <div class="gl-inline">
                                                 <div class="u-s-m-b-30">
 
                                                     <!--====== Date of Birth Select-Box ======-->
 
                                                     <span class="gl-label">NGÀY SINH</span>
-                                                    <div class="gl-dob"><select class="select-box select-box--primary-style">
+                                                    <div class="gl-dob"><select class="select-box select-box--primary-style" style="border: 2px solid #39b54a;">
                                                             <option selected>Tháng</option>
                                                             <option value="male">Tháng 1</option>
                                                             <option value="male">Tháng 2</option>
@@ -1435,7 +1435,7 @@
                                                             <option value="male">Tháng 10</option>
                                                             <option value="male">Tháng 11</option>
                                                             <option value="male">Tháng 12</option>
-                                                        </select><select class="select-box select-box--primary-style">
+                                                        </select><select class="select-box select-box--primary-style" style="border: 2px solid #39b54a;">
                                                             <option selected>Ngày</option>
                                                             <option value="01">01</option>
                                                             <option value="02">02</option>
@@ -1468,7 +1468,7 @@
                                                             <option value="04">29</option>
                                                             <option value="04">30</option>
                                                             <option value="04">31</option>
-                                                        </select><select class="select-box select-box--primary-style">
+                                                        </select><select class="select-box select-box--primary-style" style="border: 2px solid #39b54a;">
                                                             <option selected>Năm</option>
                                                             <option value="1991">1995</option>
                                                             <option value="1992">1996</option>
@@ -1486,8 +1486,8 @@
                                                 </div>
                                                 <div class="u-s-m-b-30">
 
-                                                    <label class="gl-label" for="GIỚI TÍNH">GIỚI TÍNH</label><select class="select-box select-box--primary-style u-w-100" id="GIỚI TÍNH">
-                                                        <option selected>Chọn</option>
+                                                    <label class="gl-label" for="GIỚI TÍNH">GIỚI TÍNH</label><select class="select-box select-box--primary-style u-w-100" id="GIỚI TÍNH" style="border: 2px solid #39b54a;">
+                                                        <option selected >Chọn</option>
                                                         <option value="male">Nam</option>
                                                         <option value="male">Nữ</option>
                                                     </select></div>
@@ -1496,23 +1496,22 @@
 
                                                 <label class="gl-label" for="reg-email">E-MAIL *</label>
 
-                                                <input class="input-text input-text--primary-style" type="text" id="reg-email" placeholder="Nhập E-mail"></div>
+                                                <input class="input-text input-text--primary-style" type="text" id="reg-email" placeholder="Nhập E-mail" style="border: 2px solid #39b54a;"></div>
                                             <div class="u-s-m-b-30">
 
                                                 <label class="gl-label" for="reg-password">MẬT KHẨU *</label>
 
-                                                <input class="input-text input-text--primary-style" type="text" id="reg-password" placeholder="Nhập mật khẩu"></div>
-                                            <div class="u-s-m-b-15">
-
-                                                <button class="btn btn--e-transparent-brand-b-2" type="button" onclick="navigateToSuccess()">TẠO</button>
-
-                                                <script>
-                                                  function navigateToSuccess() {
-                                                    window.location.href = 'signup-success.html';
-                                                  }
-                                                </script>                                                                                         
-
-                                            <a class="gl-link" href="https://thilinnd.github.io/AnvatcungSnacko/contact.html">Trở về cửa hàng</a>
+                                                <input class="input-text input-text--primary-style" type="text" id="reg-password" placeholder="Nhập mật khẩu" style="border: 2px solid #39b54a;"></div>
+                                                <div class="u-s-m-b-15">
+                                                    <button class="btn btn--e-transparent-brand-b-2" type="button" onclick="navigateToSuccess()" style="background-color: #39b54a; color: white; padding: 10px 20px; border: none; border-radius: 5px; transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#2e8b57'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='#39b54a'; this.style.transform='translateY(0)';">TẠO</button>
+                                                
+                                                    <script>
+                                                        function navigateToSuccess() {
+                                                            window.location.href = 'signup-success.html';
+                                                        }
+                                                    </script>
+                                                </div>                                                                                                                                     
+                                                <a class="gl-link" href="https://thilinnd.github.io/AnvatcungSnacko/contact.html" style="color: #39b54a; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#d73925';" onmouseout="this.style.color='#39b54a';">Trở về cửa hàng</a>
                                         </form>
                                     </div>
                                 </div>
@@ -1748,3 +1747,4 @@
     </noscript>
 </body>
 </html>
+

@@ -8,6 +8,35 @@
  * p means padding. e.g. `u-s-m-t-22` means apply top margin 22 pixels that by default converted to rem unit.
  */
 /* Margin with value `auto`. */
+
+.image-container {
+  width: 100%;
+  max-width: 600px; /* Giới hạn chiều rộng tối đa của hình ảnh */
+  margin: 0 auto; /* Canh giữa hình ảnh */
+}
+
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Bóng đổ đậm hơn */
+}
+ .table-p__box::before {
+      content: ""; /* Tạo phần tử giả */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; /* Bo góc cho nền */
+      background-color: #ffffff37; /* Màu nền mờ */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Hiệu ứng bóng */
+      z-index: -1; /* Đưa phần tử giả xuống dưới */
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Hiệu ứng khi hover */
+  }
+
+
 .u-s-m-t-auto {
   margin-top: auto; }
 
