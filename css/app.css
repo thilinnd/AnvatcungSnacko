@@ -1602,10 +1602,12 @@ input::-ms-clear {
       z-index: 0;
       transition: all .5s ease;
       position: absolute;
+      border-radius: 50%;
       left: 0;
       top: 0; }
     .check-box__label:before {
-      background-color: #f5f5dc; }
+      border: 2px solid transparent;
+      border-color: #39b54a}
     .check-box__label:after {
       -webkit-transform: scale(0.6);
               transform: scale(0.6); }
