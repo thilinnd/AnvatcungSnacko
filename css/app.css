@@ -891,7 +891,7 @@ body {
   .input-counter--text-primary-style {
     color: #644535;
     transition: all 0.6s linear;
-    border: #644535 1px solid transparent;
+    border: #644535 1px solid;
     background-color: #f5f5dc; }
     .input-counter--text-primary-style:focus {
       background-color: transparent;
