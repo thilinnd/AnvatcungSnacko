@@ -41,7 +41,7 @@
     <div id="app">
 
 
-       <!--====== Main Header ======-->
+     <!--====== Main Header ======-->
      <header class="header--style-1">
 
 
@@ -526,140 +526,51 @@
                                     </a>
                                 </li>
                                 <li class="has-dropdown">
-                                    <a class="mini-cart-shop-link" href="javascript:void(0);" onclick="updateMiniCart()">
+                                    <a class="mini-cart-shop-link" href="javascript:void(0);" onmouseover="updateMiniCart()" onmouseout="hideMiniCart()">
                                         <i class="fas fa-shopping-bag"></i>
-                                        <span class="total-item-round">2</span> <!-- This is where the item count will appear -->
+                                        <span class="total-item-round" id="mini-cart-count">0</span> <!-- Số lượng sản phẩm sẽ xuất hiện ở đây -->
                                     </a>
+                                    <div id="mini-cart" style="display: none; position: absolute; top: 50px; right: 10px; background-color: white; border: 1px solid #ccc; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); padding: 10px; z-index: 1000;"></div>
+                                   
+                                    <script>
+                                        // Hàm để hiển thị mini cart
+                                        function showMiniCart() {
+                                            document.getElementById('mini-cart').style.display = 'block';
+                                        }
+                                   
+                                        // Hàm để ẩn mini cart
+                                        function hideMiniCart() {
+                                            document.getElementById('mini-cart').style.display = 'none';
+                                        }
+                                    </script>
+                                   
+                                   
                                     <!--====== Dropdown ======-->
                                     <span class="js-menu-toggle"></span>
                                     <div class="mini-cart">
 
 
-                                        <!--====== Mini Product Container ======-->
-                                        <div class="mini-product-container gl-scroll u-s-m-b-15">
+                                       <!--====== Mini Product Container ======-->
+<div id="mini-cart" class="mini-product-container gl-scroll u-s-m-b-15">
+    <!-- Nội dung sản phẩm động sẽ được cập nhật ở đây -->
+</div>
+<!--====== End - Mini Product Container ======-->
 
 
-                                            <!--====== Card for mini cart ======-->
-                                            <div class="card-mini-product">
-                                                <div class="mini-product">
-                                                    <div class="mini-product__image-wrapper">
-                                                        <a class="mini-product__link" href="product-detail.html">
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/electronic/product3.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="mini-product__info-wrapper">
-                                                        <span class="mini-product__category">
-                                                            <a href="shop-grid-left.html">Electronics</a>
-                                                        </span>
-                                                        <span class="mini-product__name">
-                                                            <a href="product-detail.html">Yellow Wireless
-                                                                Headphone</a>
-                                                        </span>
-                                                        <span class="mini-product__quantity">1 x</span>
-                                                        <span class="mini-product__price">$8</span>
-                                                    </div>
-                                                </div>
-                                                <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                            </div>
-                                            <!--====== End - Card for mini cart ======-->
+<!--====== Mini Product Statistics ======-->
+<div class="mini-product-stat">
+    <div class="mini-total">
+        <span class="subtotal-text">TỔNG CỘNG</span>
+        <span class="subtotal-value" id="total-cart">0đ</span> <!-- Thêm id để cập nhật tổng cộng -->
+    </div>
+    <div class="mini-action">
+        <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH THANH TOÁN</a>
+        <a class="mini-link btn--e-transparent-secondary-b-2" href="cart.html">XEM GIỎ HÀNG</a>
+    </div>
+</div>
+<!--====== End - Mini Product Statistics ======-->
 
 
-                                            <!--====== Card for mini cart ======-->
-                                            <div class="card-mini-product">
-                                                <div class="mini-product">
-                                                    <div class="mini-product__image-wrapper">
-                                                        <a class="mini-product__link" href="product-detail.html">
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/electronic/product18.jpg"
-                                                                alt=""></a>
-                                                    </div>
-                                                    <div class="mini-product__info-wrapper">
-                                                        <span class="mini-product__category">
-                                                            <a href="shop-grid-left.html">Electronics</a>
-                                                        </span>
-                                                        <span class="mini-product__name">
-                                                            <a href="product-detail.html">Nikon DSLR Camera 4k</a>
-                                                        </span>
-                                                        <span class="mini-product__quantity">1 x</span>
-                                                        <span class="mini-product__price">$8</span>
-                                                    </div>
-                                                </div>
-                                                <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                            </div>
-                                            <!--====== End - Card for mini cart ======-->
-
-
-                                            <!--====== Card for mini cart ======-->
-                                            <div class="card-mini-product">
-                                                <div class="mini-product">
-                                                    <div class="mini-product__image-wrapper">
-                                                        <a class="mini-product__link" href="product-detail.html">
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/women/product8.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="mini-product__info-wrapper">
-                                                        <span class="mini-product__category">
-                                                            <a href="shop-grid-left.html">Women Clothing</a>
-                                                        </span>
-                                                        <span class="mini-product__name">
-                                                            <a href="product-detail.html">New Dress D Nice
-                                                                Elegant</a>
-                                                        </span>
-                                                        <span class="mini-product__quantity">1 x</span>
-                                                        <span class="mini-product__price">$8</span>
-                                                    </div>
-                                                </div>
-                                                <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                            </div>
-                                            <!--====== End - Card for mini cart ======-->
-
-
-                                            <!--====== Card for mini cart ======-->
-                                            <div class="card-mini-product">
-                                                <div class="mini-product">
-                                                    <div class="mini-product__image-wrapper">
-                                                        <a class="mini-product__link" href="product-detail.html">
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/men/product8.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="mini-product__info-wrapper">
-                                                        <span class="mini-product__category">
-                                                            <a href="shop-grid-left.html">Men Clothing</a>
-                                                        </span>
-                                                        <span class="mini-product__name">
-                                                            <a href="product-detail.html">New Fashion D Nice
-                                                                Elegant</a>
-                                                        </span>
-                                                        <span class="mini-product__quantity">1 x</span>
-                                                        <span class="mini-product__price">$8</span>
-                                                    </div>
-                                                </div>
-                                                <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                            </div>
-                                            <!--====== End - Card for mini cart ======-->
-
-
-                                        </div>
-                                        <!--====== End - Mini Product Container ======-->
-
-
-                                        <!--====== Mini Product Statistics ======-->
-                                        <div class="mini-product-stat">
-                                            <div class="mini-total">
-                                                <span class="subtotal-text">TỔNG CỘNG</span>
-                                                <span class="subtotal-value">$16</span>
-                                            </div>
-                                            <div class="mini-action">
-                                                <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH
-                                                    THANH TOÁN</a>
-                                                <a class="mini-link btn--e-transparent-secondary-b-2"
-                                                    href="cart.html">XEM GIỎ HÀNG</a>
-                                            </div>
-                                        </div>
-                                        <!--====== End - Mini Product Statistics ======-->
 
 
                                     </div>
@@ -751,12 +662,25 @@
                     </table>
                 </div>
             </div>
+            <div class="col-lg-12">
+                <div class="route-box">
+                    <div class="route-box__g1">
+                        <a class="route-box__link" href="shop-grid-left.html"><i
+                                class="fas fa-long-arrow-alt-left"></i>
+                            <span>TIẾP TỤC MUA SẮM</span></a>
+                    </div>
+                    <div class="route-box__g2">
+                        <a class="route-box__link" href="empty-cart.html"><i class="fas fa-trash"></i>
+                            <span>XÓA GIỎ HÀNG</span></a>
+                        <a class="route-box__link" href="cart.html"><i class="fas fa-sync"></i>
+                            <span>CẬP NHẬT GIỎ HÀNG</span></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <!--====== End - Section Content ======-->
-
-
 </div>
 
 
@@ -836,7 +760,7 @@
                                                     <!--====== End - Select Box ======-->
                                                 </div>
                                                 <div class="u-s-m-b-30">
-                                                    <label class="gl-label" for="shipping-zip">Mã bưu chính *</label>
+                                                    <label class="gl-label" for="shipping-zip">Mã bưu chính</label>
                                                     <input class="input-text input-text--primary-style" type="text" id="shipping-zip" placeholder="Mã bưu chính" style="border: 1px solid #644535;" >
                                                 </div>
                                                 <div class="u-s-m-b-30">
@@ -864,7 +788,7 @@
                 <tbody>
                     <tr>
                         <td>PHÍ VẬN CHUYỂN</td>
-                        <td id="shippingFee">10,000đ</td>
+                        <td id="shippingFee">0đ</td>
                     </tr>
                     <tr>
                         <td>THUẾ</td>
