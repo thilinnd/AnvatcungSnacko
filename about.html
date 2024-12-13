@@ -26,10 +26,42 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+
+    <style>
+        .team-member__wrap {
+            position: relative;
+        }
+        .team-member__wrap:hover .team-member__info {
+            display: block;
+        }
+        .team-member__info {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            width: max-content;
+        }
+        .about__info {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+            text-align: justify;
+        }
+        .about__p-wrap {
+            max-width: 800px;
+        }
+    </style>
 </head>
 
 
-<body class="config">
+<body class="config" style = "background-color: #f5f5dc;">
     <div class="preloader is-active">
         <div class="preloader__wrap">
             <img class="preloader__img" src="images/preloader.png" alt="">
@@ -38,7 +70,7 @@
 
 
     <!--====== Main App ======-->
-    <div id="app">
+    <div id="app" style="background-">
 
 
           <!--====== Main Header ======-->
@@ -749,9 +781,9 @@
             <div class="col-lg-12">
                 <div class="about">
                     <div class="about__container">
-                        <div class="about__info" style="display: flex; flex-direction: column; height: 100%;">
+                        <div class="about__info" style="display: flex; flex-direction: column; height: 100%; align-items: center; text-align: justify;">
                             <h2 class="about__h2">Chào mừng đến với Snacko</h2>
-                            <div class="about__p-wrap">
+                            <div class="about__p-wrap" style="max-width: 800px;">
                                 <p class="about__p">
                                     <div style="margin-top: 5px;">
                                         <p>🌟 TIỆM ĂN VẶT SNACKO 🌰🍹</p>
@@ -807,16 +839,17 @@
                         <div class="aspect aspect--bg-grey-fb aspect--square">
                             <img class="aspect__img team-member__img" src="images/blog/avatar-2.png" alt="">
                         </div>
-                        <div class="team-member__social-wrap">
-                            <ul class="team-member__social-list">
-                                <li><a class="s-fb--bgcolor-hover" href="https://www.facebook.com/van.lam.hai.234/"><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
+                        <div class="team-member__social-wrap" style="color: #644535">
+                            <div class="team-member__info">
+                                <span class="team-member__name">Lâm Hải Vân</span>
+                                <span class="team-member__job-title">Thành viên</span>
+                                <p> <a style="font-weight:bold"> SĐT: </a> 123-456-7890</p>
+                                <p> <a style="font-weight:bold"> Email: </a> lamhaivan@gmail.com</p>
+                                <p> <a style="font-weight:bold"> Facebook: </a> lamhaivan.facebook.com</p>
+                            </div> 
                         </div>
                     </div>
-                    <div class="team-member__info">
-                        <span class="team-member__name">Lâm Hải Vân</span>
-                        <span class="team-member__job-title">Thành viên</span>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Member 2 -->
@@ -827,15 +860,18 @@
                             <img class="aspect__img team-member__img" src="images/blog/avatar-9.png" alt="">
                         </div>
                         <div class="team-member__social-wrap">
-                            <ul class="team-member__social-list">
-                                <li><a class="s-fb--bgcolor-hover" href="https://www.facebook.com/my.nguyentra.3150"><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
+                            <div class="team-member__social-wrap" style="color: #644535">
+                                <div class="team-member__info">
+                                    <span class="team-member__name">Nguyễn Trà My</span>
+                                    <span class="team-member__job-title">Thành viên</span>
+                                    <p> <a style="font-weight:bold"> SĐT: </a> 123-456-7890</p>
+                                    <p> <a style="font-weight:bold"> Email: </a> nguyentramy@gmail.com</p>
+                                    <p> <a style="font-weight:bold"> Facebook: </a> nguyentramy.facebook.com</p>
+                                </div> 
+                            </div>
                         </div>
                     </div>
-                    <div class="team-member__info">
-                        <span class="team-member__name">Nguyễn Trà My</span>
-                        <span class="team-member__job-title">Thành viên</span>
-                    </div>
+                    
                 </div>
             </div>
            
@@ -846,16 +882,17 @@
                         <div class="aspect aspect--bg-grey-fb aspect--square">
                             <img class="aspect__img team-member__img" src="images/blog/avatar-6.jpg" alt="">
                         </div>
-                        <div class="team-member__social-wrap">
-                            <ul class="team-member__social-list">
-                                <li><a class="s-fb--bgcolor-hover" href="https://www.facebook.com/tran.minhlam.7545"><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
+                        <div class="team-member__social-wrap" style="color: #644535">
+                            <div class="team-member__info">
+                                <span class="team-member__name">Đinh Thục Anh</span>
+                                <span class="team-member__job-title">Thành viên</span>
+                                <p> <a style="font-weight:bold"> SĐT: </a> 123-456-7890</p>
+                                <p> <a style="font-weight:bold"> Email: </a> anhdinh@gmail.com</p>
+                                <p> <a style="font-weight:bold"> Facebook: </a> anhdinh.facebook.com</p>
+                            </div> 
                         </div>
                     </div>
-                    <div class="team-member__info">
-                        <span class="team-member__name">Đinh Thục Anh</span>
-                        <span class="team-member__job-title">Thành viên</span>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Member 4 -->
@@ -865,16 +902,17 @@
                         <div class="aspect aspect--bg-grey-fb aspect--square">
                             <img class="aspect__img team-member__img" src="images/blog/avatar-7.jpg" alt="">
                         </div>
-                        <div class="team-member__social-wrap">
-                            <ul class="team-member__social-list">
-                                <li><a class="s-fb--bgcolor-hover" href="https://www.facebook.com/iammai0711"><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
+                        <div class="team-member__social-wrap" style="color: #644535">
+                            <div class="team-member__info">
+                                <span class="team-member__name">Trần Đào Xuân Mai</span>
+                                <span class="team-member__job-title">Thành viên</span>
+                                <p> <a style="font-weight:bold"> SĐT: </a> 123-456-7890</p>
+                                <p> <a style="font-weight:bold"> Email: </a> maitran@gmail.com</p>
+                                <p> <a style="font-weight:bold"> Facebook: </a> maitran.facebook.com</p>
+                            </div> 
                         </div>
                     </div>
-                    <div class="team-member__info">
-                        <span class="team-member__name">Trần Đào Xuân Mai</span>
-                        <span class="team-member__job-title">Thành viên</span>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Member 5 -->
@@ -884,16 +922,17 @@
                         <div class="aspect aspect--bg-grey-fb aspect--square">
                             <img class="aspect__img team-member__img" src="images/blog/avatar-8.png" alt="">
                         </div>
-                        <div class="team-member__social-wrap">
-                            <ul class="team-member__social-list">
-                                <li><a class="s-fb--bgcolor-hover" href="https://www.facebook.com/profile.php?id=100035294781745"><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
+                        <div class="team-member__social-wrap" style="color: #644535">
+                            <div class="team-member__info">
+                                <span class="team-member__name">Đặng Như Ngọc</span>
+                                <span class="team-member__job-title">Thành viên</span>
+                                <p> <a style="font-weight:bold"> SĐT: </a> 123-456-7890</p>
+                                <p> <a style="font-weight:bold"> Email: </a> ngocdang@gmail.com</p>
+                                <p> <a style="font-weight:bold"> Facebook: </a> ngocdang.facebook.com</p>
+                            </div> 
                         </div>
                     </div>
-                    <div class="team-member__info">
-                        <span class="team-member__name">Đặng Như Ngọc</span>
-                        <span class="team-member__job-title">Thành viên</span>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Member 6 -->
@@ -903,16 +942,17 @@
                         <div class="aspect aspect--bg-grey-fb aspect--square">
                             <img class="aspect__img team-member__img" src="images/blog/avatar-10.png" alt="">
                         </div>
-                        <div class="team-member__social-wrap">
-                            <ul class="team-member__social-list">
-                                <li><a class="s-fb--bgcolor-hover" href="https://www.facebook.com/hi.thylinggg"><i class="fab fa-facebook-f"></i></a></li>
-                            </ul>
+                        <div class="team-member__social-wrap" style="color: #644535">
+                            <div class="team-member__info">
+                                <span class="team-member__name">Vương Thùy Linh</span>
+                                <span class="team-member__job-title">Nhóm trưởng</span>
+                                <p> <a style="font-weight:bold"> SĐT: </a> 123-456-7890</p>
+                                <p> <a style="font-weight:bold"> Email: </a> linhvuong@gmail.com</p>
+                                <p> <a style="font-weight:bold"> Facebook: </a> linhvuong.facebook.com</p>
+                            </div> 
                         </div>
                     </div>
-                    <div class="team-member__info">
-                        <span class="team-member__name">Vương Thùy Linh</span>
-                        <span class="team-member__job-title">Nhóm trưởng</span>
-                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
+
+
+
 <head>
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -10,18 +13,88 @@
     <link href="images/icon.png" rel="shortcut icon">
     <title>Snacko - Nghỉ giải lao, bào snack ko?</title>
 
+
+
+
     <!--====== Google Font ======-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+
+
+
 
     <!--====== Vendor Css ======-->
     <link rel="stylesheet" href="css/vendor.css">
 
+
+
+
     <!--====== Utility-Spacing ======-->
     <link rel="stylesheet" href="css/utility.css">
 
+
+
+
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+    <!--========== Video ========-->
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .video-container {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 15vw;
+            /* Adjusted to be about 15% of the page */
+            height: auto;
+            /* Automatically adjust height to maintain aspect ratio */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+
+
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            /* Automatically adjust height to maintain aspect ratio */
+        }
+
+
+
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+
+
+
+        .close-btn:hover {
+            background-color: darkred;
+        }
+    </style>
 </head>
+
+
+
 
 <body class="config">
     <div class="preloader is-active">
@@ -29,24 +102,49 @@
             <img class="preloader__img" src="images/preloader.png" alt="">
         </div>
     </div>
-
+    </div>
+    <!-- Video section -->
+    <div class="video-container" id="video-container">
+        <video controls>
+            <source src="images/blog/video-1.mp4" type="video/mp4">
+        </video> <button class="close-btn" onclick="closeVideo()">X</button>
+    </div>
+    <!-- Slider to adjust video size -->
+    <input type="range" id="size-slider" min="150" max="800" value="150"
+        style="position: fixed; bottom: 20px; left: 180px;">
+    <script> const videoContainer = document.getElementById('video-container');
+        const sizeSlider = document.getElementById('size-slider');
+        sizeSlider.addEventListener('input', function () {
+            const newSize = sizeSlider.value + 'px';
+            videoContainer.style.width = newSize;
+        });
+        function closeVideo() { videoContainer.style.display = 'none'; } 
+    </script>
     <!--====== Main App ======-->
-    <div id="app" style="background-color: #f5f5dc">
+    <div style="background-color: #f5f5dc;" id="app">
+
+
+
 
         <!--====== Main Header ======-->
-        <header class="header--style-1 header--box-shadow">
+        <header class="header--style-1">
+
 
             <!--====== Nav 1 ======-->
             <nav class="primary-nav primary-nav-wrapper--border">
                 <div class="container">
 
+
                     <!--====== Primary Nav ======-->
                     <div class="primary-nav">
 
+
                         <!--====== Main Logo ======-->
                         <a class="main-logo" href="index.html">
-                            <img src="images/logo/logo.png" alt=""></a>
+                            <img src="images/logo/logo.png" alt="">
+                        </a>
                         <!--====== End - Main Logo ======-->
+
 
                         <!--====== Search Form ======-->
                         <form class="main-form">
@@ -57,128 +155,178 @@
                         </form>
                         <!--====== End - Search Form ======-->
 
+
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation">
-                            <button class="btn btn--icon toggle-button fas fa-cogs" type="button"></button>
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs"
+                                type="button"></button>
+
 
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
+
 
                                 <!--====== List ======-->
                                 <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
                                     <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"
                                         title="Tài Khoản">
-                                        <a><i class="far fa-user-circle"></i></a>
+                                        <a>
+                                            <i class="far fa-user-circle"></i>
+                                        </a>
+
 
                                         <!--====== Dropdown ======-->
                                         <span class="js-menu-toggle"></span>
                                         <ul style="width:120px">
                                             <li>
-                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
-                                                    <span>Tài Khoản</span></a>
+                                                <a href="dashboard.html">
+                                                    <i class="fas fa-user-circle u-s-m-r-6"></i>
+                                                    <span>Tài Khoản</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
-                                                    <span>Đăng Ký</span></a>
+                                                <a href="signup.html">
+                                                    <i class="fas fa-user-plus u-s-m-r-6"></i>
+                                                    <span>Đăng Ký</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
-                                                    <span>Đăng Nhập</span></a>
+                                                <a href="signin.html">
+                                                    <i class="fas fa-lock u-s-m-r-6"></i>
+                                                    <span>Đăng Nhập</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
-                                                    <span>Đăng Xuất</span></a>
+                                                <a href="signup.html">
+                                                    <i class="fas fa-lock-open u-s-m-r-6"></i>
+                                                    <span>Đăng Xuất</span>
+                                                </a>
                                             </li>
                                         </ul>
                                         <!--====== End - Dropdown ======-->
 
+
                                     </li>
                                     <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"
                                         title="Cài Đặt">
-                                        <a><i class="fas fa-user-cog"></i></a>
+                                        <a>
+                                            <i class="fas fa-user-cog"></i>
+                                        </a>
+
 
                                         <!--====== Dropdown ======-->
                                         <span class="js-menu-toggle"></span>
                                         <ul style="width:120px">
                                             <li class="has-dropdown has-dropdown--ul-right-100">
-                                                <a>Ngôn Ngữ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+                                                <a>Ngôn Ngữ
+                                                    <i class="fas fa-angle-down u-s-m-l-6"></i>
+                                                </a>
+
 
                                                 <!--====== Dropdown ======-->
                                                 <span class="js-menu-toggle"></span>
                                                 <ul style="width:120px">
                                                     <li>
-                                                        <a class="u-c-brand">TIẾNG VIỆT</a>
+                                                        <a class="u-c-brand">ENGLISH</a>
                                                     </li>
                                                     <li>
-                                                        <a>ENGLISH</a>
+                                                        <a>ARABIC</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>FRANCAIS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>ESPANOL</a>
                                                     </li>
                                                 </ul>
                                                 <!--====== End - Dropdown ======-->
 
+
                                             </li>
                                             <li class="has-dropdown has-dropdown--ul-right-100">
-                                                <a>Tiền Tệ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+                                                <a>Tiền Tệ
+                                                    <i class="fas fa-angle-down u-s-m-l-6"></i>
+                                                </a>
+
 
                                                 <!--====== Dropdown ======-->
                                                 <span class="js-menu-toggle"></span>
                                                 <ul style="width:225px">
                                                     <li>
-                                                        <a class="u-c-brand">đ - VND</a>
+                                                        <a class="u-c-brand">$ - US DOLLAR</a>
                                                     </li>
                                                     <li>
-                                                        <a>$ - US DOLLAR</a>
+                                                        <a>£ - BRITISH POUND STERLING</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>€ - EURO</a>
                                                     </li>
                                                 </ul>
                                                 <!--====== End - Dropdown ======-->
+
 
                                             </li>
                                         </ul>
                                         <!--====== End - Dropdown ======-->
 
+
                                     </li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Liên Hệ">
-                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a>
+                                    <li data-tooltip="tooltip" data-placement="left" title="Liên hệ">
+                                        <a href="tel:+0900901904">
+                                            <i class="fas fa-phone-volume"></i>
+                                        </a>
                                     </li>
                                     <li data-tooltip="tooltip" data-placement="left" title="Mail">
-                                        <a href="mailto:anvatcungsnacko@gmail.com"><i class="far fa-envelope"></i></a>
+                                        <a href="mailto:contact@domain.com">
+                                            <i class="far fa-envelope"></i>
+                                        </a>
                                     </li>
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
+
 
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
 
+
                     </div>
                     <!--====== End - Primary Nav ======-->
+
 
                 </div>
             </nav>
             <!--====== End - Nav 1 ======-->
 
+
             <!--====== Nav 2 ======-->
             <nav class="secondary-nav-wrapper">
                 <div class="container">
 
+
                     <!--====== Secondary Nav ======-->
                     <div class="secondary-nav">
 
+
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation1">
-
                             <button class="btn btn--icon toggle-mega-text toggle-button" type="button">M</button>
+
 
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
 
+
                                 <!--====== List ======-->
                                 <ul class="ah-list">
                                     <li class="has-dropdown">
                                         <span class="mega-text">Menu</span>
+
 
                                         <!--====== Mega Menu ======-->
                                         <span class="js-menu-toggle"></span>
@@ -210,13 +358,15 @@
                                                     </ul>
                                                 </div>
 
+
                                                 <!--====== Bánh gấu ======-->
                                                 <div class="mega-menu-content js-active">
+
 
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="row">
                                                         <div class="col-lg-4 mega-image">
-                                                            <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                            <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                 <a>Bánh gấu truyền thống</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
@@ -225,7 +375,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 mega-image">
-                                                            <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                            <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                 <a>Bánh gấu Matcha</a>
                                                                 <a class="u-d-block" href="">
                                                                     <img class="u-img-fluid u-d-block"
@@ -233,8 +383,8 @@
                                                                         alt=""></a>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-4 mega-image" style="text-align: center; color: #644535">
-                                                            <div class="mega-list-title">
+                                                        <div class="col-lg-4 mega-image">
+                                                            <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                 <a>Bánh gấu Socola</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
@@ -247,13 +397,14 @@
                                                 </div>
                                                 <!--====== End - Bánh gấu ======-->
 
+
                                                 <!--====== Hạt ======-->
                                                 <div class="mega-menu-content">
 
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="row">
                                                         <div class="col-lg-4 mega-image">
-                                                            <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                            <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                 <a>Hạt sấy giòn</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
@@ -261,7 +412,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 mega-image">
-                                                            <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                            <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                 <a>Đậu sấy giòn</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
@@ -269,7 +420,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 mega-image">
-                                                            <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                            <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                 <a>Hạt sấy mix nho khô</a>
                                                                 <a class="u-d-block" href="shop-side-version-2.html">
                                                                     <img class="u-img-fluid u-d-block"
@@ -283,8 +434,10 @@
                                                 </div>
                                                 <!--====== End - HẠT ======-->
 
+
                                                 <!--====== Nước ngọt ======-->
                                                 <div class="mega-menu-content js-active">
+
 
                                                     <!--====== Mega Menu Row ======-->
                                                     <div class="container">
@@ -292,7 +445,7 @@
                                                         <!-- Hàng 2: 2 hình -->
                                                         <div class="row">
                                                             <div class="col-lg-6 mega-image">
-                                                                <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                                <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                     <a>Nước ép nho</a>
                                                                     <a class="u-d-block"
                                                                         href="shop-side-version-2.html">
@@ -302,7 +455,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 mega-image">
-                                                                <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                                <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                     <a>Nước ép táo</a>
                                                                     <a class="u-d-block"
                                                                         href="shop-side-version-2.html">
@@ -313,10 +466,11 @@
                                                             </div>
                                                         </div>
 
+
                                                         <!-- Hàng 1: 3 hình -->
                                                         <div class="row">
                                                             <div class="col-lg-4 mega-image">
-                                                                <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                                <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                     <a>Nước tăng lực dâu</a>
                                                                     <a class="u-d-block"
                                                                         href="shop-side-version-2.html">
@@ -326,7 +480,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 mega-image">
-                                                                <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                                <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                     <a>Nước tăng lực trái cây</a>
                                                                     <a class="u-d-block"
                                                                         href="shop-side-version-2.html">
@@ -337,7 +491,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 mega-image">
-                                                                <div class="mega-list-title" style="text-align: center; color: #644535">
+                                                                <div class="mega-list-title" style="text-align: center; color:#644535">
                                                                     <a>Nước tăng lực vải</a>
                                                                     <a class="u-d-block"
                                                                         href="shop-side-version-2.html">
@@ -348,17 +502,13 @@
                                                             </div>
                                                         </div>
 
+
                                                     </div>
 
                                                     <!--====== End - Mega Menu Row ======-->
                                                 </div>
                                                 <!--====== End - Nước ngọt ======-->
 
-                                                <!--====== No Sub Categories ======-->
-                                                <div class="mega-menu-content">
-                                                    <h5>No Categories</h5>
-                                                </div>
-                                                <!--====== End - No Sub Categories ======-->
 
                                                 <!--====== No Sub Categories ======-->
                                                 <div class="mega-menu-content">
@@ -366,41 +516,56 @@
                                                 </div>
                                                 <!--====== End - No Sub Categories ======-->
 
-                                                <!--====== No Sub Categories ======-->
-                                                <div class="mega-menu-content">
-                                                    <h5>No Categories</h5>
-                                                </div>
-                                                <!--====== End - No Sub Categories ======-->
 
                                                 <!--====== No Sub Categories ======-->
                                                 <div class="mega-menu-content">
                                                     <h5>No Categories</h5>
                                                 </div>
                                                 <!--====== End - No Sub Categories ======-->
+
+
+                                                <!--====== No Sub Categories ======-->
+                                                <div class="mega-menu-content">
+                                                    <h5>No Categories</h5>
+                                                </div>
+                                                <!--====== End - No Sub Categories ======-->
+
+
+                                                <!--====== No Sub Categories ======-->
+                                                <div class="mega-menu-content">
+                                                    <h5>No Categories</h5>
+                                                </div>
+                                                <!--====== End - No Sub Categories ======-->
+
 
                                             </div>
                                         </div>
                                         <!--====== End - Mega Menu ======-->
 
+
                                     </li>
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
+
 
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
 
+
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation2">
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog"
+                                type="button"></button>
 
-                            <button class="btn btn--icon toggle-button fas fa-cog" type="button"></button>
 
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
-
                                 <span class="ah-close">✕ Đóng</span>
+
 
                                 <!--====== List ======-->
                                 <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
@@ -416,14 +581,19 @@
                                     <li>
                                         <a href="blog-left-sidebar.html">BLOG</a>
                                     </li>
+
+
                                 </ul>
                                 <!--====== End - List ======-->
+
 
                             </div>
                             <!--====== End - Menu ======-->
 
+
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
+
 
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation3">
@@ -432,57 +602,39 @@
                                 type="button"></button>
                             <span class="total-item-round">2</span>
 
+
                             <!--====== Menu ======-->
                             <div class="ah-lg-mode">
                                 <span class="ah-close">✕ Đóng</span>
 
+
                                 <!--====== List ======-->
                                 <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
-                                    <li data-tooltip="tooltip" data-placement="left" title="Trang Chủ">
+                                    <li data-tooltip="tooltip" data-placement="left" title="Trang chủ">
                                         <a href="index.html">
                                             <i class="fas fa-home u-c-brand"></i>
                                         </a>
                                     </li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Yêu Thích">
+                                    <li data-tooltip="tooltip" data-placement="left" title="Mục yêu thích">
                                         <a href="wishlist.html">
                                             <i class="far fa-heart"></i>
                                         </a>
                                     </li>
-
                                     <li class="has-dropdown">
-                                        <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
-                                            <span class="total-item-round">2</span></a>
+                                        <a class="mini-cart-shop-link">
+                                            <i class="fas fa-shopping-bag"></i>
+                                            <span class="total-item-round">2</span>
+                                        </a>
+
 
                                         <!--====== Dropdown ======-->
                                         <span class="js-menu-toggle"></span>
                                         <div class="mini-cart">
 
+
                                             <!--====== Mini Product Container ======-->
                                             <div class="mini-product-container gl-scroll u-s-m-b-15">
 
-                                                <!--====== Card for mini cart ======-->
-                                                <div class="card-mini-product">
-                                                    <div class="mini-product">
-                                                        <div class="mini-product__image-wrapper">
-                                                            <a class="mini-product__link" href="product-detail.html">
-                                                                <img class="u-img-fluid"
-                                                                    src="images/product/electronic/product3.jpg"
-                                                                    alt=""></a>
-                                                        </div>
-                                                        <div class="mini-product__info-wrapper">
-                                                            <span class="mini-product__category">
-                                                                <a href="shop-side-version-2.html">Bánh Gấu</a>
-                                                            </span>
-                                                            <span class="mini-product__name">
-                                                                <a href="product-detail.html">Bánh Gấu Matcha</a>
-                                                            </span>
-                                                            <span class="mini-product__quantity">1 x</span>
-                                                            <span class="mini-product__price">10,000đ</span>
-                                                        </div>
-                                                    </div>
-                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                                </div>
-                                                <!--====== End - Card for mini cart ======-->
 
                                                 <!--====== Card for mini cart ======-->
                                                 <div class="card-mini-product">
@@ -490,23 +642,25 @@
                                                         <div class="mini-product__image-wrapper">
                                                             <a class="mini-product__link" href="product-detail.html">
                                                                 <img class="u-img-fluid"
-                                                                    src="images/product/electronic/product4.jpg"
-                                                                    alt=""></a>
+                                                                    src="images/product/electronic/product3.jpg" alt="">
+                                                            </a>
                                                         </div>
                                                         <div class="mini-product__info-wrapper">
                                                             <span class="mini-product__category">
-                                                                <a href="shop-side-version-2.html">Hạt Mix</a>
+                                                                <a href="shop-side-version-2.html">Electronics</a>
                                                             </span>
                                                             <span class="mini-product__name">
-                                                                <a href="product-detail.html">Đậu Mix & Nho Khô</a>
+                                                                <a href="product-detail.html">Yellow Wireless
+                                                                    Headphone</a>
                                                             </span>
                                                             <span class="mini-product__quantity">1 x</span>
-                                                            <span class="mini-product__price">7,000đ</span>
+                                                            <span class="mini-product__price">$8</span>
                                                         </div>
                                                     </div>
                                                     <a class="mini-product__delete-link far fa-trash-alt"></a>
                                                 </div>
                                                 <!--====== End - Card for mini cart ======-->
+
 
                                                 <!--====== Card for mini cart ======-->
                                                 <div class="card-mini-product">
@@ -514,32 +668,86 @@
                                                         <div class="mini-product__image-wrapper">
                                                             <a class="mini-product__link" href="product-detail.html">
                                                                 <img class="u-img-fluid"
-                                                                    src="images/product/electronic/product8.jpg"
+                                                                    src="images/product/electronic/product18.jpg"
                                                                     alt=""></a>
                                                         </div>
                                                         <div class="mini-product__info-wrapper">
                                                             <span class="mini-product__category">
-                                                                <a href="shop-side-version-2.html">Nước Ép</a>
+                                                                <a href="shop-side-version-2.html">Electronics</a>
                                                             </span>
                                                             <span class="mini-product__name">
-                                                                <a href="product-detail.html">T-Rexx Vị Vải</a>
+                                                                <a href="product-detail.html">Nikon DSLR Camera 4k</a>
                                                             </span>
                                                             <span class="mini-product__quantity">1 x</span>
-                                                            <span class="mini-product__price">5,000đ</span>
+                                                            <span class="mini-product__price">$8</span>
                                                         </div>
                                                     </div>
                                                     <a class="mini-product__delete-link far fa-trash-alt"></a>
                                                 </div>
                                                 <!--====== End - Card for mini cart ======-->
+
+
+                                                <!--====== Card for mini cart ======-->
+                                                <div class="card-mini-product">
+                                                    <div class="mini-product">
+                                                        <div class="mini-product__image-wrapper">
+                                                            <a class="mini-product__link" href="product-detail.html">
+                                                                <img class="u-img-fluid"
+                                                                    src="images/product/women/product8.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="mini-product__info-wrapper">
+                                                            <span class="mini-product__category">
+                                                                <a href="shop-side-version-2.html">Women Clothing</a>
+                                                            </span>
+                                                            <span class="mini-product__name">
+                                                                <a href="product-detail.html">New Dress D Nice
+                                                                    Elegant</a>
+                                                            </span>
+                                                            <span class="mini-product__quantity">1 x</span>
+                                                            <span class="mini-product__price">$8</span>
+                                                        </div>
+                                                    </div>
+                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                </div>
+                                                <!--====== End - Card for mini cart ======-->
+
+
+                                                <!--====== Card for mini cart ======-->
+                                                <div class="card-mini-product">
+                                                    <div class="mini-product">
+                                                        <div class="mini-product__image-wrapper">
+                                                            <a class="mini-product__link" href="product-detail.html">
+                                                                <img class="u-img-fluid"
+                                                                    src="images/product/men/product8.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="mini-product__info-wrapper">
+                                                            <span class="mini-product__category">
+                                                                <a href="shop-side-version-2.html">Men Clothing</a>
+                                                            </span>
+                                                            <span class="mini-product__name">
+                                                                <a href="product-detail.html">New Fashion D Nice
+                                                                    Elegant</a>
+                                                            </span>
+                                                            <span class="mini-product__quantity">1 x</span>
+                                                            <span class="mini-product__price">$8</span>
+                                                        </div>
+                                                    </div>
+                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                </div>
+                                                <!--====== End - Card for mini cart ======-->
+
 
                                             </div>
                                             <!--====== End - Mini Product Container ======-->
 
+
                                             <!--====== Mini Product Statistics ======-->
                                             <div class="mini-product-stat">
                                                 <div class="mini-total">
-                                                    <span class="subtotal-text">TẠM TÍNH</span>
-                                                    <span class="subtotal-value">47,000đ</span>
+                                                    <span class="subtotal-text">TỔNG CỘNG</span>
+                                                    <span class="subtotal-value">$16</span>
                                                 </div>
                                                 <div class="mini-action">
                                                     <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH
@@ -550,31 +758,46 @@
                                             </div>
                                             <!--====== End - Mini Product Statistics ======-->
 
+
                                         </div>
                                         <!--====== End - Dropdown ======-->
+
 
                                     </li>
                                 </ul>
                                 <!--====== End - List ======-->
 
+
                             </div>
                             <!--====== End - Menu ======-->
+
 
                         </div>
                         <!--====== End - Dropdown Main plugin ======-->
 
+
                     </div>
                     <!--====== End - Secondary Nav ======-->
+
 
                 </div>
             </nav>
             <!--====== End - Nav 2 ======-->
 
+
         </header>
         <!--====== End - Main Header ======-->
 
+
+
+
+
+
         <!--====== App Content ======-->
         <div class="app-content">
+
+
+
 
             <!--====== Primary Slider ======-->
             <div class="s-skeleton s-skeleton--h-600 s-skeleton--bg-grey">
@@ -667,6 +890,9 @@
             <!--====== Section 1 ======-->
             <div class="u-s-p-y-60">
 
+
+
+
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
                     <div class="container">
@@ -682,12 +908,15 @@
                 </div>
                 <!--====== End - Section Intro ======-->
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 u-s-m-b-30">
-                                <a class="collection" href="shop-side-version-2.html">
+                                <a class="collection" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--square">
                                         <img class="aspect__img collection__img" src="images/collection/coll-1.jpg"
                                             alt="">
@@ -695,7 +924,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-7 col-md-7 u-s-m-b-30">
-                                <a class="collection" href="shop-side-version-2.html">
+                                <a class="collection" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--1286-890">
                                         <img class="aspect__img collection__img" src="images/collection/coll-2.jpg"
                                             alt="">
@@ -703,7 +932,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-7 col-md-7 u-s-m-b-30">
-                                <a class="collection" href="shop-side-version-2.html">
+                                <a class="collection" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--1286-890">
                                         <img class="aspect__img collection__img" src="images/collection/coll-3.jpg"
                                             alt="">
@@ -711,7 +940,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-5 col-md-5 u-s-m-b-30">
-                                <a class="collection" href="shop-side-version-2.html">
+                                <a class="collection" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--square">
                                         <img class="aspect__img collection__img" src="images/collection/coll-4.jpg"
                                             alt="">
@@ -722,12 +951,21 @@
                     </div>
                 </div>
 
+
+
+
                 <!--====== Section Content ======-->
             </div>
             <!--====== End - Section 1 ======-->
 
+
+
+
             <!--====== Section 2 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-16">
@@ -743,6 +981,9 @@
                     </div>
                 </div>
                 <!--====== End - Section Intro ======-->
+
+
+
 
                 <!--====== Section Content ======-->
                 <div class="section__content">
@@ -770,7 +1011,10 @@
                                 <div class="filter__grid-wrapper u-s-m-t-30">
                                     <div class="row">
 
-                                        <!--Bánh Gấu Truyền Thống-->
+
+
+
+                                        <!--Bánh Gấu Nhân Kem-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
                                             <div class="product-o product-o--hover-on product-o--radius">
@@ -807,9 +1051,9 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                                    <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                                 <span class="product-o__name">
-                                                    <a href="product-detail.html">Bánh Gấu Truyền Thống</a></span>
+                                                    <a href="product-detail.html">Bánh Gấu Nhân Kem</a></span>
                                                 <div class="product-o__rating gl-rating-style">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -822,7 +1066,10 @@
                                             </div>
                                         </div>
 
-                                        <!--Bánh Gấu Socola-->
+
+
+
+                                        <!--Bánh Gấu Nhân Cà Phê-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
                                             <div class="product-o product-o--hover-on product-o--radius">
@@ -859,9 +1106,9 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                                    <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                                 <span class="product-o__name">
-                                                    <a href="product-detail.html">Bánh Gấu Socola</a></span>
+                                                    <a href="product-detail.html">Bánh Gấu Nhân Cà Phê</a></span>
                                                 <div class="product-o__rating gl-rating-style">
                                                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                                                     <i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
@@ -872,7 +1119,10 @@
                                             </div>
                                         </div>
 
-                                        <!--Bánh Gấu Matcha-->
+
+
+
+                                        <!--Bánh Gấu Nhân Chùm Ngây-->
                                         <div
                                             class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
                                             <div class="product-o product-o--hover-on product-o--radius">
@@ -909,9 +1159,9 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                                    <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                                 <span class="product-o__name">
-                                                    <a href="product-detail.html">Bánh Gấu Matcha</a></span>
+                                                    <a href="product-detail.html">Bánh Gấu Nhân Chùm Ngây</a></span>
                                                 <div class="product-o__rating gl-rating-style">
                                                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                                                     <i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
@@ -921,6 +1171,9 @@
                                                 <span class="product-o__price">10,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--Đậu Mix & Nho Khô-->
                                         <div
@@ -959,7 +1212,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                                    <a href="shop-grid-left.html">Hạt Mix</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">Đậu Mix & Nho Khô</a></span>
                                                 <div class="product-o__rating gl-rating-style">
@@ -971,6 +1224,9 @@
                                                 <span class="product-o__price">7,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--Đậu Mix & Hạt-->
                                         <div
@@ -1010,7 +1266,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                                    <a href="shop-grid-left.html">Hạt Mix</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">Đậu Mix & Hạt</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1022,6 +1278,9 @@
                                                 <span class="product-o__price">7,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--Hạt Mix & Nho Khô-->
                                         <div
@@ -1061,7 +1320,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                                    <a href="shop-grid-left.html">Hạt Mix</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">Hạt Mix & Nho Khô</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1073,6 +1332,9 @@
                                                 <span class="product-o__price">7,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--T-Rexx Vị Trái Cây-->
                                         <div
@@ -1112,7 +1374,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Nước Ép</a></span>
+                                                    <a href="shop-grid-left.html">Nước Ép</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">T-Rexx Vị Trái Cây</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1124,6 +1386,9 @@
                                                 <span class="product-o__price">5,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--T-Rexx Vị Vải-->
                                         <div
@@ -1163,7 +1428,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Nước Ép</a></span>
+                                                    <a href="shop-grid-left.html">Nước Ép</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">T-Rexx Vị Vải</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1175,6 +1440,9 @@
                                                 <span class="product-o__price">5,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--T-Rexx Vị Dâu-->
                                         <div
@@ -1214,7 +1482,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Nước Ép</a></span>
+                                                    <a href="shop-grid-left.html">Nước Ép</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">T-Rexx Vị Dâu</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1226,6 +1494,9 @@
                                                 <span class="product-o__price">5,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--Nước Ép Táo Sundays-->
                                         <div
@@ -1265,7 +1536,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Nước Ép</a></span>
+                                                    <a href="shop-grid-left.html">Nước Ép</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">Nước Ép Táo Sundays</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1277,6 +1548,9 @@
                                                 <span class="product-o__price">5,000đ</span>
                                             </div>
                                         </div>
+
+
+
 
                                         <!--Nước Ép Nho Sundays-->
                                         <div
@@ -1316,7 +1590,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-o__category">
-                                                    <a href="shop-side-version-2.html">Nước Ép</a></span>
+                                                    <a href="shop-grid-left.html">Nước Ép</a></span>
                                                 <span class="product-o__name">
                                                     <a href="product-detail.html">Nước Ép Nho Sundays</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i
@@ -1333,7 +1607,10 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="load-more">
-                                    <button class="btn btn--e-brand" type="button">Xem Thêm</button>
+                                    <a href="shop-grid-left.html">
+                                        <button class="btn btn--e-brand" type="button">Xem Thêm</button>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -1341,11 +1618,20 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 2 ======-->
 
+
+
+
             <!--====== Section 3 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
@@ -1364,6 +1650,9 @@
                 </div>
                 <!--====== End - Section Intro ======-->
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
@@ -1376,7 +1665,7 @@
                                             <img class="aspect__img" src="images/product/electronic/product12.jpg"
                                                 alt=""></a>
                                         <div class="product-o__special-count-wrap">
-                                            <div class="countdown countdown--style-special" data-countdown="2025/05/01">
+                                            <div class="countdown countdown--style-special" data-countdown="2024/12/15">
                                             </div>
                                         </div>
                                         <div class="product-o__action-wrap">
@@ -1404,7 +1693,7 @@
                                         </div>
                                     </div>
                                     <span class="product-o__category">
-                                        <a href="shop-side-version-2.html">Electronics</a></span>
+                                        <a href="shop-grid-left.html">Electronics</a></span>
                                     <span class="product-o__name">
                                         <a href="product-detail.html">Combo Đầu Gấu</a></span>
                                     <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i
@@ -1424,7 +1713,7 @@
                                             <img class="aspect__img" src="images/product/electronic/product13.jpg"
                                                 alt=""></a>
                                         <div class="product-o__special-count-wrap">
-                                            <div class="countdown countdown--style-special" data-countdown="2025/05/01">
+                                            <div class="countdown countdown--style-special" data-countdown="2024/12/15">
                                             </div>
                                         </div>
                                         <div class="product-o__action-wrap">
@@ -1452,7 +1741,7 @@
                                         </div>
                                     </div>
                                     <span class="product-o__category">
-                                        <a href="shop-side-version-2.html">Electronics</a></span>
+                                        <a href="shop-grid-left.html">Electronics</a></span>
                                     <span class="product-o__name">
                                         <a href="product-detail.html">Combo 5 Hạt</a></span>
                                     <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i
@@ -1469,11 +1758,20 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 3 ======-->
 
+
+
+
             <!--====== Section 4 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
@@ -1490,13 +1788,19 @@
                 </div>
                 <!--====== End - Section Intro ======-->
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="slider-fouc">
                             <div class="owl-carousel product-slider" data-item="4">
 
-                                <!--Bánh Gấu Truyền Thống-->
+
+
+
+                                <!--Bánh Gấu Nhân Kem-->
                                 <div class="u-s-m-b-30">
                                     <div class="product-o product-o--hover-on">
                                         <div class="product-o__wrap">
@@ -1531,9 +1835,9 @@
                                             </div>
                                         </div>
                                         <span class="product-o__category">
-                                            <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                            <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                         <span class="product-o__name">
-                                            <a href="product-detail.html">Bánh Gấu Truyền Thống</a></span>
+                                            <a href="product-detail.html">Bánh Gấu Nhân Kem</a></span>
                                         <div class="product-o__rating gl-rating-style"><i class="far fa-star"></i><i
                                                 class="far fa-star"></i><i class="far fa-star"></i><i
                                                 class="far fa-star"></i><i class="far fa-star"></i>
@@ -1543,7 +1847,10 @@
                                     </div>
                                 </div>
 
-                                <!--Bánh Gấu Socola-->
+
+
+
+                                <!--Bánh Gấu Nhân Cà Phê-->
                                 <div class="u-s-m-b-30">
                                     <div class="product-o product-o--hover-on">
                                         <div class="product-o__wrap">
@@ -1578,9 +1885,9 @@
                                             </div>
                                         </div>
                                         <span class="product-o__category">
-                                            <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                            <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                         <span class="product-o__name">
-                                            <a href="product-detail.html">Bánh Gấu Socola</a></span>
+                                            <a href="product-detail.html">Bánh Gấu Nhân Cà Phê</a></span>
                                         <div class="product-o__rating gl-rating-style"><i class="far fa-star"></i><i
                                                 class="far fa-star"></i><i class="far fa-star"></i><i
                                                 class="far fa-star"></i><i class="far fa-star"></i>
@@ -1590,7 +1897,10 @@
                                     </div>
                                 </div>
 
-                                <!--Bánh Gấu Matcha-->
+
+
+
+                                <!--Bánh Gấu Nhân Chùm Ngây-->
                                 <div class="u-s-m-b-30">
                                     <div class="product-o product-o--hover-on">
                                         <div class="product-o__wrap">
@@ -1625,9 +1935,9 @@
                                             </div>
                                         </div>
                                         <span class="product-o__category">
-                                            <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                            <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                         <span class="product-o__name">
-                                            <a href="product-detail.html">Bánh Gấu Matcha</a></span>
+                                            <a href="product-detail.html">Bánh Gấu Nhân Chùm Ngây</a></span>
                                         <div class="product-o__rating gl-rating-style"><i class="far fa-star"></i><i
                                                 class="far fa-star"></i><i class="far fa-star"></i><i
                                                 class="far fa-star"></i><i class="far fa-star"></i>
@@ -1636,6 +1946,9 @@
                                         <span class="product-o__price">10,000đ</span>
                                     </div>
                                 </div>
+
+
+
 
                                 <!--Đậu Mix & Nho Khô-->
                                 <div class="u-s-m-b-30">
@@ -1672,7 +1985,7 @@
                                             </div>
                                         </div>
                                         <span class="product-o__category">
-                                            <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                            <a href="shop-grid-left.html">Hạt Mix</a></span>
                                         <span class="product-o__name">
                                             <a href="product-detail.html">Đậu Mix & Nho Khô</a></span>
                                         <div class="product-o__rating gl-rating-style"><i class="far fa-star"></i><i
@@ -1683,6 +1996,9 @@
                                         <span class="product-o__price">7,000đ</span>
                                     </div>
                                 </div>
+
+
+
 
                                 <!--Đậu Mix & Hạt-->
                                 <div class="u-s-m-b-30">
@@ -1719,7 +2035,7 @@
                                             </div>
                                         </div>
                                         <span class="product-o__category">
-                                            <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                            <a href="shop-grid-left.html">Hạt Mix</a></span>
                                         <span class="product-o__name">
                                             <a href="product-detail.html">Đậu Mix & Hạt</a></span>
                                         <div class="product-o__rating gl-rating-style"><i class="far fa-star"></i><i
@@ -1730,6 +2046,9 @@
                                         <span class="product-o__price">7,000đ</span>
                                     </div>
                                 </div>
+
+
+
 
                                 <!--Hạt Mix & Nho Khô-->
                                 <div class="u-s-m-b-30">
@@ -1766,7 +2085,7 @@
                                             </div>
                                         </div>
                                         <span class="product-o__category">
-                                            <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                            <a href="shop-grid-left.html">Hạt Mix</a></span>
                                         <span class="product-o__name">
                                             <a href="product-detail.html">Hạt Mix & Nho Khô</a></span>
                                         <div class="product-o__rating gl-rating-style"><i class="far fa-star"></i><i
@@ -1783,8 +2102,14 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 4 ======-->
+
+
+
 
             <!--====== Section 5 ======-->
             <div class="banner-bg">
@@ -1830,8 +2155,14 @@
             </div>
             <!--====== End - Section 5 ======-->
 
+
+
+
             <!--====== Section 6 ======-->
             <div class="u-s-p-y-60">
+
+
+
 
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
@@ -1848,12 +2179,18 @@
                 </div>
                 <!--====== End - Section Intro ======-->
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
 
-                            <!--Bánh Gấu Truyền Thống-->
+
+
+
+                            <!--Bánh Gấu Nhân Kem-->
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="product-o product-o--hover-on u-h-100">
                                     <div class="product-o__wrap">
@@ -1886,9 +2223,9 @@
                                         </div>
                                     </div>
                                     <span class="product-o__category">
-                                        <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                        <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                     <span class="product-o__name">
-                                        <a href="product-detail.html">Bánh Gấu Truyền Thống</a></span>
+                                        <a href="product-detail.html">Bánh Gấu Nhân Kem</a></span>
                                     <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
@@ -1898,7 +2235,10 @@
                                 </div>
                             </div>
 
-                            <!--Bánh Gấu Socola-->
+
+
+
+                            <!--Bánh Gấu Nhân Cà Phê-->
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="product-o product-o--hover-on u-h-100">
                                     <div class="product-o__wrap">
@@ -1931,9 +2271,9 @@
                                         </div>
                                     </div>
                                     <span class="product-o__category">
-                                        <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                        <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                     <span class="product-o__name">
-                                        <a href="product-detail.html">Bánh Gấu Socola</a></span>
+                                        <a href="product-detail.html">Bánh Gấu Nhân Cà Phê</a></span>
                                     <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
@@ -1943,7 +2283,10 @@
                                 </div>
                             </div>
 
-                            <!--Bánh Gấu Matcha-->
+
+
+
+                            <!--Bánh Gấu Nhân Chùm Ngây-->
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="product-o product-o--hover-on u-h-100">
                                     <div class="product-o__wrap">
@@ -1976,9 +2319,9 @@
                                         </div>
                                     </div>
                                     <span class="product-o__category">
-                                        <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                        <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                     <span class="product-o__name">
-                                        <a href="product-detail.html">Bánh Gấu Matcha</a></span>
+                                        <a href="product-detail.html">Bánh Gấu Nhân Chùm Ngây</a></span>
                                     <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
@@ -1987,6 +2330,9 @@
                                     <span class="product-o__price">10,000đ</span>
                                 </div>
                             </div>
+
+
+
 
                             <!--Đậu Mix & Nho Khô-->
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
@@ -2021,7 +2367,7 @@
                                         </div>
                                     </div>
                                     <span class="product-o__category">
-                                        <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                        <a href="shop-grid-left.html">Hạt Mix</a></span>
                                     <span class="product-o__name">
                                         <a href="product-detail.html">Đậu Mix & Nho Khô</a></span>
                                     <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i
@@ -2037,18 +2383,27 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 6 ======-->
 
+
+
+
             <!--====== Section 7 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-6 u-s-m-b-30">
-                                <a class="promotion" href="shop-side-version-2.html">
+                                <a class="promotion" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--square">
                                         <img class="aspect__img promotion__img" src="images/promo/promo-img-1.jpg"
                                             alt="">
@@ -2067,7 +2422,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 u-s-m-b-30">
-                                <a class="promotion" href="shop-side-version-2.html">
+                                <a class="promotion" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--square">
                                         <img class="aspect__img promotion__img" src="images/promo/promo-img-2.jpg"
                                             alt="">
@@ -2086,7 +2441,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 u-s-m-b-30">
-                                <a class="promotion" href="shop-side-version-2.html">
+                                <a class="promotion" href="shop-grid-left.html">
                                     <div class="aspect aspect--bg-grey aspect--square">
                                         <img class="aspect__img promotion__img" src="images/promo/promo-img-3.jpg"
                                             alt="">
@@ -2108,11 +2463,20 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 7 ======-->
 
+
+
+
             <!--====== Section 8 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Content ======-->
                 <div class="section__content">
@@ -2133,9 +2497,9 @@
                                                 </div>
                                                 <div class="product-l__info-wrap">
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                                        <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                                     <span class="product-l__name">
-                                                        <a href="product-detail.html">Bánh Gấu Truyền Thống</a></span>
+                                                        <a href="product-detail.html">Bánh Gấu Nhân Kem</a></span>
                                                     <span class="product-l__price">10,000đ</span>
                                                 </div>
                                             </div>
@@ -2150,9 +2514,9 @@
                                                 </div>
                                                 <div class="product-l__info-wrap">
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                                        <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                                     <span class="product-l__name">
-                                                        <a href="product-detail.html">Bánh Gấu Socola</a></span>
+                                                        <a href="product-detail.html">Bánh Gấu Nhân Cà Phê</a></span>
                                                     <span class="product-l__price">10,000đ</span>
                                                 </div>
                                             </div>
@@ -2167,9 +2531,9 @@
                                                 </div>
                                                 <div class="product-l__info-wrap">
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Bánh Gấu</a></span>
+                                                        <a href="shop-grid-left.html">Bánh Gấu</a></span>
                                                     <span class="product-l__name">
-                                                        <a href="product-detail.html">Bánh Gấu Matcha</a></span>
+                                                        <a href="product-detail.html">Bánh Gấu Nhân Chùm Ngây</a></span>
                                                     <span class="product-l__price">10,000</span>
                                                 </div>
                                             </div>
@@ -2192,7 +2556,7 @@
                                                 </div>
                                                 <div class="product-l__info-wrap">
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                                        <a href="shop-grid-left.html">Hạt Mix</a></span>
                                                     <span class="product-l__name">
                                                         <a href="product-detail.html">Đậu Mix & Nho Khô</a></span>
                                                     <span class="product-l__price">7,000đ</span>
@@ -2202,6 +2566,10 @@
                                         <li class="column-product__item">
                                             <div class="product-l">
                                                 <div class="product-l__img-wrap">
+
+
+
+
                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
                                                         href="product-detail.html">
                                                         <img class="aspect__img"
@@ -2209,7 +2577,7 @@
                                                 </div>
                                                 <div class="product-l__info-wrap">
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                                        <a href="shop-grid-left.html">Hạt Mix</a></span>
                                                     <span class="product-l__name">
                                                         <a href="product-detail.html">Đậu Mix & Hạt</a></span>
                                                     <span class="product-l__price">7,000đ</span>
@@ -2226,7 +2594,7 @@
                                                 </div>
                                                 <div class="product-l__info-wrap">
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Hạt Mix</a></span>
+                                                        <a href="shop-grid-left.html">Hạt Mix</a></span>
                                                     <span class="product-l__name">
                                                         <a href="product-detail.html">Hạt Mix & Nho Khô</a></span>
                                                     <span class="product-l__price">7,000đ</span>
@@ -2254,7 +2622,7 @@
                                                             class="fas fa-star"></i><i class="far fa-star"></i><i
                                                             class="far fa-star"></i></div>
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Electronics</a></span>
+                                                        <a href="shop-grid-left.html">Electronics</a></span>
                                                     <span class="product-l__name">
                                                         <a href="product-detail.html">Combo Đầu Gấu</a></span>
                                                     <span class="product-l__price">25,000đ</span>
@@ -2275,7 +2643,7 @@
                                                             class="fas fa-star"></i><i class="far fa-star"></i><i
                                                             class="far fa-star"></i></div>
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Electronics</a></span>
+                                                        <a href="shop-grid-left.html">Electronics</a></span>
                                                     <span class="product-l__name">
                                                         <a href="product-detail.html">Combo Hạt Nhài</a></span>
                                                     <span class="product-l__price">18,000đ</span>
@@ -2296,7 +2664,7 @@
                                                             class="fas fa-star"></i><i class="far fa-star"></i><i
                                                             class="far fa-star"></i></div>
                                                     <span class="product-l__category">
-                                                        <a href="shop-side-version-2.html">Electronics</a></span>
+                                                        <a href="shop-grid-left.html">Electronics</a></span>
                                                     <span class="product-l__name">
                                                         <a href="product-detail.html">2 Hạt 3 Nước</a></span>
                                                     <span class="product-l__price">25,000đ</span>
@@ -2311,11 +2679,20 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 8 ======-->
 
+
+
+
             <!--====== Section 9 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Content ======-->
                 <div class="section__content">
@@ -2355,12 +2732,24 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 9 ======-->
 
 
+
+
+
+
+
+
             <!--====== Section 10 ======-->
             <div class="u-s-p-b-60">
+
+
+
 
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
@@ -2377,6 +2766,9 @@
                 </div>
                 <!--====== End - Section Intro ======-->
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
@@ -2385,11 +2777,17 @@
                                 <div class="bp-mini bp-mini--img u-h-100">
                                     <div class="bp-mini__thumbnail">
 
+
+
+
                                         <!--====== Image Code ======-->
                                         <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block"
                                             href="blog-detail.html">
                                             <img class="aspect__img" src="images/blog/post-1.jpg" alt=""></a>
                                         <!--====== End - Image Code ======-->
+
+
+
 
                                     </div>
                                     <div class="bp-mini__content">
@@ -2430,11 +2828,17 @@
                                 <div class="bp-mini bp-mini--img u-h-100">
                                     <div class="bp-mini__thumbnail">
 
+
+
+
                                         <!--====== Image Code ======-->
                                         <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block"
                                             href="blog-detail.html">
                                             <img class="aspect__img" src="images/blog/post-2.jpg" alt=""></a>
                                         <!--====== End - Image Code ======-->
+
+
+
 
                                     </div>
                                     <div class="bp-mini__content">
@@ -2474,11 +2878,17 @@
                                 <div class="bp-mini bp-mini--img u-h-100">
                                     <div class="bp-mini__thumbnail">
 
+
+
+
                                         <!--====== Image Code ======-->
                                         <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block"
                                             href="blog-detail.html">
                                             <img class="aspect__img" src="images/blog/post-3.jpg" alt=""></a>
                                         <!--====== End - Image Code ======-->
+
+
+
 
                                     </div>
                                     <div class="bp-mini__content">
@@ -2518,11 +2928,20 @@
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 10 ======-->
 
+
+
+
             <!--====== Section 11 ======-->
             <div class="u-s-p-b-90 u-s-m-b-30">
+
+
+
 
                 <!--====== Section Intro ======-->
                 <div class="section__intro u-s-m-b-46">
@@ -2539,9 +2958,15 @@
                 </div>
                 <!--====== End - Section Intro ======-->
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
+
+
+
 
                         <!--====== Testimonial Slider ======-->
                         <div class="slider-fouc">
@@ -2606,15 +3031,27 @@
                         </div>
                         <!--====== End - Testimonial Slider ======-->
 
+
+
+
                     </div>
                 </div>
                 <!--====== End - Section Content ======-->
 
+
+
+
             </div>
             <!--====== End - Section 11 ======-->
 
+
+
+
         </div>
         <!--====== End - App Content ======-->
+
+
+
 
         <!--====== Main Footer ======-->
         <footer>
@@ -2673,10 +3110,13 @@
                                                     <a href="dashboard.html">Tài Khoản</a>
                                                 </li>
                                                 <li>
+                                                    <a href="shop-grid-left.html">Nhà Sản Xuất</a>
+                                                </li>
+                                                <li>
                                                     <a href="dash-payment-option.html">Thanh Toán</a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-side-version-2.html">Cửa Hàng</a>
+                                                    <a href="shop-grid-left.html">Cửa Hàng</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2700,7 +3140,7 @@
                                                     <a href="dash-my-order.html">Giao Hàng</a>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-side-version-2.html">Cửa Hàng</a>
+                                                    <a href="shop-grid-left.html">Cửa Hàng</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2767,7 +3207,13 @@
             </div>
         </footer>
 
+
+
+
         <!--====== Modal Section ======-->
+
+
+
 
         <!--====== Quick Look Modal ======-->
         <div class="modal fade" id="quick-look">
@@ -2778,6 +3224,9 @@
                         <div class="row">
                             <div class="col-lg-5">
 
+
+
+
                                 <!--====== Product Breadcrumb ======-->
                                 <div class="pd-breadcrumb u-s-m-b-30">
                                     <ul class="pd-breadcrumb__list">
@@ -2785,14 +3234,20 @@
                                             <a href="index.hml">Trang Chủ</a>
                                         </li>
                                         <li class="has-separator">
-                                            <a href="shop-side-version-2.html">Bánh Gấu</a>
+                                            <a href="shop-grid-left.html">Electronics</a>
                                         </li>
                                         <li class="has-separator">
-                                            <a href="shop-side-version-2.html">Bánh Gấu Truyền Thống</a>
+                                            <a href="shop-grid-left.html">DSLR Cameras</a>
+                                        </li>
+                                        <li class="is-marked">
+                                            <a href="shop-grid-left.html">Nikon Cameras</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <!--====== End - Product Breadcrumb ======-->
+
+
+
 
                                 <!--====== Product Detail ======-->
                                 <div class="pd u-s-m-b-30">
@@ -2837,19 +3292,25 @@
                                 </div>
                                 <!--====== End - Product Detail ======-->
 
+
+
+
                             </div>
                             <div class="col-lg-7">
+
+
+
 
                                 <!--====== Product Right Side Details ======-->
                                 <div class="pd-detail">
                                     <div>
-                                        <span class="pd-detail__name">Bánh Gấu Truyền Thống</span>
+                                        <span class="pd-detail__name">Nikon Camera 4k Lens Zoom Pro</span>
                                     </div>
                                     <div>
                                         <div class="pd-detail__inline">
-                                            <span class="pd-detail__price">10,000đ</span>
-                                            <span class="pd-detail__discount">(GIẢM 50%)</span><del
-                                                class="pd-detail__del">15,000đ</del>
+                                            <span class="pd-detail__price">$6.99</span>
+                                            <span class="pd-detail__discount">(GIẢM 76%)</span><del
+                                                class="pd-detail__del">$28.97</del>
                                         </div>
                                     </div>
                                     <div class="u-s-m-b-15">
@@ -2857,25 +3318,25 @@
                                                 class="fas fa-star"></i><i class="fas fa-star"></i><i
                                                 class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                                             <span class="pd-detail__review u-s-m-l-4">
-                                                <a href="product-detail.html">10 Đánh Giá</a></span>
+                                                <a href="product-detail.html">23 Đánh Giá</a></span>
                                         </div>
                                     </div>
                                     <div class="u-s-m-b-15">
                                         <div class="pd-detail__inline">
-                                            <span class="pd-detail__stock">200 sản phẩm còn lại</span>
+                                            <span class="pd-detail__stock">200 in stock</span>
+                                            <span class="pd-detail__left">Only 2 left</span>
                                         </div>
                                     </div>
                                     <div class="u-s-m-b-15">
-                                        <span class="pd-detail__preview-desc">🍪 Vị bánh truyền thống tuổi thơ đã quá
-                                            quen thuộc với các tín đồ ăn vặt. Vỏ bánh giòn, Truyền Thống béo ngậy, mùi
-                                            vani
-                                            thơm nhẹ. Nghe có vẻ đơn giản nhưng khiến khách iu của tụi mình mê đắm
-                                            đúi.</span>
+                                        <span class="pd-detail__preview-desc">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy text ever since the 1500s, when an unknown printer took a
+                                            galley of type and scrambled it to make a type specimen book.</span>
                                     </div>
                                     <div class="u-s-m-b-15">
                                         <div class="pd-detail__inline">
                                             <span class="pd-detail__click-wrap"><i class="far fa-heart u-s-m-r-6"></i>
-                                                <a href="signin.html">Thêm vào Yêu Thích</a>
+                                                <a href="signin.html">Thêm Vào Yêu Thích</a>
                                                 <span class="pd-detail__click-count">(222)</span></span>
                                         </div>
                                     </div>
@@ -2883,7 +3344,7 @@
                                         <div class="pd-detail__inline">
                                             <span class="pd-detail__click-wrap"><i
                                                     class="far fa-envelope u-s-m-r-6"></i>
-                                                <a href="signin.html">Email tôi khi giảm giá</a>
+                                                <a href="signin.html">Gửi Email Khi Giảm Giá</a>
                                                 <span class="pd-detail__click-count">(20)</span></span>
                                         </div>
                                     </div>
@@ -2892,6 +3353,17 @@
                                             <li>
                                                 <a class="s-fb--color-hover" href="#"><i
                                                         class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="s-insta--color-hover" href="#"><i
+                                                        class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="s-wa--color-hover" href="#"><i
+                                                        class="fab fa-whatsapp"></i></a>
                                             </li>
                                             <li>
                                                 <a class="s-gplus--color-hover" href="#"><i
@@ -2904,9 +3376,11 @@
                                             <div class="pd-detail-inline-2">
                                                 <div class="u-s-m-b-15">
 
+
+
+
                                                     <!--====== Input Counter ======-->
-                                                    <div class="input-counter"
-                                                        style="border: 1px solid #644535; border-radius: 25px;">
+                                                    <div class="input-counter">
                                                         <span class="input-counter__minus fas fa-minus"></span>
                                                         <input
                                                             class="input-counter__text input-counter--text-primary-style"
@@ -2914,6 +3388,9 @@
                                                         <span class="input-counter__plus fas fa-plus"></span>
                                                     </div>
                                                     <!--====== End - Input Counter ======-->
+
+
+
 
                                                 </div>
                                                 <div class="u-s-m-b-15">
@@ -2927,18 +3404,21 @@
                                         <span class="pd-detail__label u-s-m-b-8">Chính Sách Sản Phẩm:</span>
                                         <ul class="pd-detail__policy-list">
                                             <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-                                                <span>Bảo vệ người mua.</span>
+                                                <span>Bảo Vệ Người Mua.</span>
                                             </li>
                                             <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-                                                <span>Hoàn tiền nếu bạn không nhận được hàng.</span>
+                                                <span>Hoàn lại toàn bộ tiền nếu không nhận được hàng.</span>
                                             </li>
                                             <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-                                                <span>Chấp nhận trả hàng nếu sản phẩm không giống mô tả.</span>
+                                                <span>Chấp nhận trả hàng nếu sản phẩm không như mô tả.</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <!--====== End - Product Right Side Details ======-->
+
+
+
 
                             </div>
                         </div>
@@ -2947,6 +3427,9 @@
             </div>
         </div>
         <!--====== End - Quick Look Modal ======-->
+
+
+
 
         <!--====== Thêm Vào Giỏ Hàng Modal ======-->
         <div class="modal fade" id="add-to-cart">
@@ -2990,6 +3473,9 @@
         </div>
         <!--====== End - Thêm Vào Giỏ Hàng Modal ======-->
 
+
+
+
         <!--====== Newsletter Subscribe Modal ======-->
         <div class="modal fade new-l" id="newsletter-modal">
             <div class="modal-dialog modal-dialog-centered">
@@ -2998,7 +3484,7 @@
                     <div class="modal-body">
                         <div class="row u-s-m-x-0">
                             <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
-                                <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
+                                <a class="new-l__img-wrap u-d-block" href="shop-grid-left.html">
                                     <img class="u-img-fluid u-d-block" src="images/newsletter/newsletter.jpg"
                                         alt=""></a>
                             </div>
@@ -3016,6 +3502,9 @@
                                             <input class="news-l__input" type="text" placeholder="Email Của Bạn">
                                         </div>
                                         <div class="u-s-m-b-15">
+
+
+
 
                                             <button class="btn btn--e-brand-b-2" type="submit">Đăng Ký!</button>
                                         </div>
@@ -3036,10 +3525,19 @@
         </div>
         <!--====== End - Newsletter Subscribe Modal ======-->
 
+
+
+
         <!--====== End - Modal Section ======-->
+
+
+
 
     </div>
     <!--====== End - Main App ======-->
+
+
+
 
     <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
     <script>
@@ -3053,33 +3551,26 @@
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
+
+
+
     <!--====== Vendor Js ======-->
     <script src="js/vendor.js"></script>
+
+
+
 
     <!--====== jQuery Shopnav plugin ======-->
     <script src="js/jquery.shopnav.js"></script>
 
+
+
+
     <!--====== App ======-->
     <script src="js/app.js"></script>
-
-    <!--====== Noscript ======-->
-    <noscript>
-        <div class="app-setting">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="app-setting__wrap">
-                            <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
-                            <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a
-                                JavaScript-capable browser.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </noscript>
 </body>
 
+
+
+
 </html>
-
-
