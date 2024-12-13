@@ -14,12 +14,6 @@ function renderCartPage() {
     const cartTotal = document.getElementById('cart-total');
 
 
-    // Nếu giỏ hàng trống, hiển thị thông báo
-    if (cart.length === 0) {
-        cartTable.innerHTML = '<tr><td colspan="5">Giỏ hàng trống.</td></tr>';
-        cartTotal.textContent = 'Tổng cộng: 0đ';
-        return;
-    }
 
 
     // Xóa nội dung cũ
@@ -214,11 +208,6 @@ window.addEventListener('storage', () => {
 document.addEventListener('DOMContentLoaded', () => {
     renderCartPage();
 });
-// Hàm để cập nhật giỏ hàng trong localStorage
-function updateCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateMiniCart(); // Gọi hàm updateMiniCart mỗi khi giỏ hàng được cập nhật
-}
 
 
 // Hàm để render mini cart (mini-cart.html)
@@ -235,10 +224,6 @@ function updateMiniCart() {
         miniCartTotal.textContent = '0đ';
         return;
     }
-
-
-    // Xóa nội dung cũ
-    miniCart.innerHTML = '';
 
 
     // Lặp qua từng sản phẩm trong giỏ hàng và hiển thị thông tin
@@ -320,8 +305,4 @@ function updateMiniCart() {
     miniCartCount.textContent = cart.length;
     miniCartTotal.textContent = `${total.toLocaleString()}đ`; // Cập nhật tổng tiền giỏ hàng
 }
-
-
-
-
 
