@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="images/favicon.png" rel="shortcut icon">
-    <title>Ludus - Electronics, Apparel, Computers, Books, DVDs & more</title>
+    <title>Ăn vặt cùng Snacko - Hạt, nước & Bánh gấu</title>
 
     <!--====== Google Font ======-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
@@ -20,7 +20,7 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
-    
+    <style> .image-container { display: flex; flex-wrap: wrap; gap: 10px; /* khoảng cách giữa các hình ảnh */ } .image-container img { width: calc(50% - 10px); /* mỗi hình chiếm 50% chiều rộng trừ khoảng cách giữa các hình */ max-width: 100%; /* đảm bảo hình ảnh không vượt quá khung chứa */ } @media (max-width: 600px) { .image-container img { width: calc(100% - 10px); /* trên thiết bị nhỏ, mỗi hình chiếm 100% chiều rộng */ } } </style>
 </head>
 <body class="config">
     <div class="preloader is-active">
@@ -32,7 +32,7 @@
     <!--====== Main App ======-->
     <div id="app">
 
-       
+        
         <!--====== Main Header ======-->
         <header class="header--style-1">
 
@@ -607,21 +607,30 @@
         <!--====== End - Main Header ======-->
 
 
-
-
         <!--====== App Content ======-->
         <div class="app-content">
 
             <!--====== Section 1 ======-->
             <div class="u-s-p-y-90">
-                <div class="container" style="display: flex;">
-                    <div class="row" style="display: flex; width: 100%;">
-                        <div class="col-lg-3 col-md-4 col-sm-12" style="flex: 0 0 25%; max-width: 25%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="blog-w-master">
                                 <div class="u-s-m-b-60">
+                                    <div class="blog-w">
+
+                                        <span class="blog-w__h">TÌM KIẾM</span>
+                                        <form class="blog-search-form">
+
+                                            <label for="post-search"></label>
+
+                                            <input class="input-text input-text--primary-style" type="text" id="post-search" placeholder="Tìm kiếm" style="background-color: #fff; border-color: #865c47; border-radius: 25px; border-style: solid; border-width: 0.666667px;">
+                                            <button class="btn btn--icon fas fa-search" type="submit"></button></form>
+                                    </div>
                                 </div>
                                 <div class="u-s-m-b-60">
                                     <div class="blog-w">
+
                                         <span class="blog-w__h">PHÂN LOẠI</span>
                                         <ul class="blog-w__list">
                                             <li>
@@ -649,13 +658,13 @@
                                         <ul class="blog-w__list">
                                             <li>
 
-                                                <a href="blog-left-sidebar.html">Tháng 9 2024</a></li>
+                                                <a href="blog-left-sidebar.html">September 2024</a></li>
                                             <li>
 
-                                                <a href="blog-left-sidebar.html">Tháng 10 2024 </a></li>
+                                                <a href="blog-left-sidebar.html">October 2024 </a></li>
                                             <li>
 
-                                                <a href="blog-left-sidebar.html">Tháng 11 2024 (4)</a></li>
+                                                <a href="blog-left-sidebar.html">November 2024 (4)</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -670,7 +679,7 @@
 
                                                         <span>23</span>
 
-                                                        <span>Tháng 11</span>
+                                                        <span>November</span>
 
                                                         <span>2024</span></div>
 
@@ -687,7 +696,7 @@
 
                                                         <span>13</span>
 
-                                                        <span>Tháng 11</span>
+                                                        <span>November</span>
 
                                                         <span>2024</span></div>
 
@@ -704,7 +713,7 @@
 
                                                         <span>12</span>
 
-                                                        <span>Tháng 11</span>
+                                                        <span>November</span>
 
                                                         <span>2024</span></div>
 
@@ -794,309 +803,372 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-8 col-sm-12" style="flex: 0 0 75%; max-width: 75%;">
-                <div class="detail-post">
-                    <div class="bp-detail">
-                        <div class="bp-detail__thumbnail">
-                            <!--====== Image Code ======-->
-                            <div class="aspect aspect--bg-grey aspect--1366-768">
+                        <div class="col-lg-9 col-md-8 col-sm-12">
+                            <div class="bp bp--img u-s-m-b-30">
+                                <div class="bp__wrap">
+                                    <div class="bp__thumbnail">
 
-                                <img class="aspect__img" src="images/blog/post-4.jpg" alt="Hình post"></div>
-                            <!--====== End - Image Code ======-->
-                        </div>
-                        <div class="bp-detail__info-wrap">
-                            <div class="bp-detail__stat">
-                                <span class="bp-detail__stat-wrap">
-                                    <span class="bp-detail__publish-date">
-                                        <a href="blog-right-sidebar.html">
-                                            <span>21 Tháng 11 2024</span>
-                                        </a>
-                                    </span>
-                                </span>
-                        
-                                <span class="bp-detail__stat-wrap">
-                                    <span class="bp-detail__author">
-                                        <a href="blog-right-sidebar.html">MaiTran</a>
-                                    </span>
-                                </span>
-                        
-                                <span class="bp-detail__stat-wrap">
-                                    <span class="bp-detail__category">
-                                        <a href="blog-right-sidebar.html">Bánh gấu</a>
-                                        <a href="blog-right-sidebar.html">Hạt</a>
-                                        <a href="blog-right-sidebar.html">Nước</a>
-                                    </span>
-                                </span>
-                            </div>
-                        
-                            <span class="bp-detail__h1">
-                                <a href="blog-detail.html">Các vị của bánh gấu</a>
-                            </span>
-                            
-                            <div class="blog-t-w">
-                                <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-right-sidebar.html">Menu</a>
-                                <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-right-sidebar.html">Bánh gấu</a>
-                                <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-right-sidebar.html">Giảm giá</a>
-                            </div>
-                            
-                            <p class="bp-detail__p">
-                                Ngoại trừ 3 vị hạt thơm ngon cũng các bịch nước ngọt nào, thì nay Snacko đã thêm vào menu một sản phẩm được các bạn trẻ ua chuộng đó chính bánh gấu.
-                                <br><em>💥 BÙNG NỔ CÙNG 3 VỊ BÁNH GẤU MIX CỰC ĐÃAA 💥</em></br>
-                                <a href="#">3 vị "Truyền thống", "Cà phê" và "Chùm ngây"</a>
-                            </p>
-                        
-                            <div class="image-container">
-                                <img src="images/blog/post-19.jpg" class="responsive-img" alt="Post 19">
-                            </div>
-                            
-                            <p class="bp-detail__p">
-                                <br><span style="font-weight: bold; color: red;">Vị bánh truyền thống</span> đã quá quen thuộc với các tín đồ ăn vặt. Vỏ bánh giòn, nhân kem béo ngậy, mùi vani thơm nhẹ. Nghe có vẻ đơn giản nhưng khiến khách iu của tụi mình mê đắm đúi.</br>
-                            </p>
-                            
-                            <div class="image-container">
-                                <img src="images/blog/post-20.jpg" class="responsive-img" alt="Post 20">
-                            </div>
-                            
-                            <p class="bp-detail__p">
-                                <br><span style="font-weight: bold; color: brown;">Vị bánh cà phê</span> cũng không kém phần đặc biệt. Mùi cà phê thoang thoảng nhẹ nhàng kết hợp cùng nhân kem ngọt nhẹ tạo nên tổng thể siêu hài hòa, siêu cuốn.</br>
-                            </p>
-                            
-                            <div class="image-container">
-                                <img src="images/blog/post-18.jpg" class="responsive-img" alt="Post 18">
-                            </div>
-                            
-                            <p class="bp-detail__p">
-                                <br><span style="font-weight: bold; color: green;">Vị bánh chùm ngây</span> giải ngấy cực đỉnh. Màu vỏ xanh vô cùng xinh xắn, bắt mắt, miếng bánh đầu có thể khiến các bạn hơi ngần ngại nhưng Shock đảm bảo ăn tới miếng thứ ba thì mê không lối thoát.</br>
-                                <br> Vậy còn chần chừ gì nữa hãy đến <span style="font-weight: bold; color: tomato;"><a href="https://www.facebook.com/anvatcung.snacko">Snacko</a></span> mua bánh gấu ngay thôi!!! </br>
-                            </p>
-                        
-                            <div class="post-center-wrap">
-                                <ul class="bp-detail__social-list">
-                                    <li>
-                                        <a class="s-fb--color" href="https://www.facebook.com/anvatcung.snacko"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a class="s-gplus--color" href="https://thilinnd.github.io/AnvatcungSnacko/index.html"><i class="fab fa-google-plus-g"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="gl-l-r bp-detail__postnp">
-                                <div>
-                                    <a href="blog-detail.html">Bài đăng trước đó</a>
-                                </div>
-                                <div>
-                                    <a href="blog-detail.html">Bài đăng tiếp theo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                <!--====== End - Detail Post ======-->
-            <div class="u-s-p-b-60">
-                <div class="d-meta">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="d-meta__comment-arena">
+                                        <!--====== Image Code ======-->
 
-                                    <span class="d-meta__text u-s-m-b-36" style="display: block; text-align: center;">Cảm nghĩ của các khách yêu</span>
-                                    <div class="d-meta__comments u-s-m-b-30">
-                                        <ol>
-                                            <li>
+                                        <a class="aspect aspect--bg-grey aspect--1366-768 u-d-block" href="blog-detail.html">
 
-                                                <!--====== Comment ======-->
-                                                <div class="d-meta__p-comment" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px;">
-
-                                                    <div class="p-comment__wrap1">
-                                                        <div class="aspect aspect--square p-comment__img-wrap">
-
-                                                            <img src="images/blog/avatar.jpg" alt="" style="width: 80px; height: 80px;"></div>
-                                                    </div>
-                                                    <div class="p-comment__wrap2">
-
-                                                        <span class="p-comment__author">VanLam</span>
-
-                                                        <span class="p-comment__timestamp">
-
-                                                            <a href="#">
-
-                                                                <span>22 Tháng 11 2024 lúc 3:55pm</span></a></span>
-                                                        <p class="p-comment__paragraph">Ỏ em thích bánh gấu lắm luôn ấy hihi!!!</p>
-
-                                                        <a class="p-comment__reply">Trả lời</a>
-                                                    </div>
-                                                </div>
-                                                <!--====== End - Comment ======-->
-                                                <ol class="comment-children">
-                                                    <li>
-
-                                                        <!--====== Comment ======-->
-                                                        <div class="d-meta__p-comment" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px;">
-
-                                                            <div class="p-comment__wrap1">
-                                                                <div class="aspect aspect--square p-comment__img-wrap">
-
-                                                                    <img src="images/blog/avatar-2.jpg" alt="" style="width: 80px; height: 80px;"></div>
-                                                            </div>
-                                                            <div class="p-comment__wrap2">
-
-                                                                <span class="p-comment__author">VanLH</span>
-
-                                                                <span class="p-comment__timestamp">
-
-                                                                    <a href="#">
-
-                                                                        <span>22 Tháng 11 2024 lúc 4:55pm</span></a></span>
-                                                                <p class="p-comment__paragraph">Thích mê thích mê</p>
-
-                                                                <a class="p-comment__reply">Trả lời</a>
-                                                            </div>
-                                                        </div>
-                                                        <!--====== End - Comment ======-->
-                                                        <ol class="comment-children">
-                                                            <li>
-
-                                                                <!--====== Comment ======-->
-                                                                <div class="d-meta__p-comment" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px;">
-
-                                                                    <div class="p-comment__wrap1">
-                                                                        <div class="aspect aspect--square p-comment__img-wrap">
-
-                                                                            <img src="images/blog/avatar-3.jpg" alt="" style="width: 80px; height: 80px;"></div>
-                                                                    </div>
-                                                                    <div class="p-comment__wrap2">
-
-                                                                        <span class="p-comment__author">Zen</span>
-
-                                                                        <span class="p-comment__timestamp">
-
-                                                                            <a href="#">
-
-                                                                                <span>23 Tháng 11 2022 lúc 2:15pm</span></a></span>
-                                                                        <p class="p-comment__paragraph">Món ăn tuổi thơ của tuiiiii</p>
-
-                                                                        <a class="p-comment__reply">Trả lời</a>
-                                                                    </div>
-                                                                </div>
-                                                                <!--====== End - Comment ======-->
-                                                                <ol class="comment-children">
-                                                                    <li>
-
-                                                                        <!--====== Comment ======-->
-                                                                        <div class="d-meta__p-comment" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px;">
-
-                                                                            <div class="p-comment__wrap1">
-                                                                                <div class="aspect aspect--square p-comment__img-wrap">
-
-                                                                                    <img src="images/blog/avatar-4.jpg" alt="" style="width: 80px; height: 80px;"></div>
-                                                                            </div>
-                                                                            <div class="p-comment__wrap2">
-
-                                                                                <span class="p-comment__author">Claud</span>
-
-                                                                                <span class="p-comment__timestamp">
-
-                                                                                    <a href="#">
-
-                                                                                        <span>23 Tháng 11 2024 lúc 6:55pm</span></a></span>
-                                                                                <p class="p-comment__paragraph">Đã ăn thử hạt và nước của shop. Rất hài lòng vè chất lượng sản phẩm cũng như chăm sóc khách hàng tốt. Sẽ tiếp tục ủng hộ</p>
-
-                                                                                <a class="p-comment__reply">Trả lời</a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!--====== End - Comment ======-->
-                                                                            <li>
-
-                                                                                <!--====== Comment ======-->
-                                                                                <div class="d-meta__p-comment" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px;">
-
-                                                                                    <div class="p-comment__wrap1">
-                                                                                        <div class="aspect aspect--square p-comment__img-wrap">
-
-                                                                                            <img src="images/blog/avatar-5.jpg" style="width: 80px; height: 80px;" alt=""></div>
-                                                                                    </div>
-                                                                                    <div class="p-comment__wrap2">
-
-                                                                                        <span class="p-comment__author">BabyZen123</span>
-
-                                                                                        <span class="p-comment__timestamp">
-
-                                                                                            <a href="#">
-
-                                                                                                <span>23 Tháng 11 2024 lúc 3:55pm</span></a></span>
-                                                                                        <p class="p-comment__paragraph">Yêu Snacko</p>
-
-                                                                                        <a class="p-comment__reply">Trả lời</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <!--====== End - Comment ======-->
-                                                                            </li>
-                                                                            <li>
-
-                                                                                <!--====== Comment ======-->
-                                                                                <div class="d-meta__p-comment" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px;">
-
-                                                                                    <div class="p-comment__wrap1">
-                                                                                        <div class="aspect aspect--square p-comment__img-wrap">
-
-                                                                                            <img src="images/blog/avatar.jpg" alt="" style="width: 80px; height: 80px;">
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="p-comment__wrap2">
-
-                                                                                        <span class="p-comment__author">VanLam</span>
-
-                                                                                        <span class="p-comment__timestamp">
-
-                                                                                            <a href="#">
-
-                                                                                                <span>22 Tháng 11 2024 lúc 7:30pm</span></a></span>
-                                                                                        <p class="p-comment__paragraph">Ước gì được chụp hình cùng sóc Shock nhỉ</p>
-
-                                                                                        <a class="p-comment__reply">Trả lời</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <!--====== End - Comment ======-->
-                                                                            </li>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-                                                        </ol>
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                        </ol>
+                                            <img class="aspect__img" src="images/blog/post-13.jpg" alt=""></a>
+                                        <!--====== End - Image Code ======-->
                                     </div>
-                                    <span class="d-meta__text-2 u-s-m-b-6">Tham gia trò chuyện</span>
-                                    <span class="d-meta__text-3 u-s-m-b-16">Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu *</span>
-                                    <form class="respond__form" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
-                                        <div class="respond__group">
-                                            <div class="u-s-m-b-15" style="display: flex; flex-direction: column; align-items: center;">
-                                                <label class="gl-label" for="comment" style="text-align: center;">Bình luận *</label>
-                                                <textarea class="text-area text-area--primary-style" id="comment" style="width: 100%; border: 1px solid #644535; border-radius: 5px; text-align: center;"></textarea>
-                                            </div>
+                                    <div class="bp__info-wrap">
+                                        <div class="bp__stat">
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__publish-date">
+
+                                                    <a href="blog-left-sidebar.html">
+
+                                                        <span>21 November 2024</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__author">
+
+                                                    <a href="blog-left-sidebar.html">Mai Tran</a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__comment">
+
+                                                    <a href="blog-detail.html"><i class="far fa-comments u-s-m-r-4"></i>
+
+                                                        <span>8</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__category">
+
+                                                    <a href="blog-left-sidebar.html">Bánh gấu</a>
+
+                                                    <a href="blog-left-sidebar.html">Hạt</a>
+
+                                                    <a href="blog-left-sidebar.html">Nước</a></span></span></div>
+
+                                        <span class="bp__h1">
+
+                                            <a href="blog-detail-2.html">GIẢM GIÁ TĂNG KHỐI LƯỢNG!!!</a></span>
+
+                                        <span class="bp__h2">Hạt, nước và bánh gấu tại Snacko</span>
+                                        <div class="blog-t-w">
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Bánh gấu</a>
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Giảm giá</a>
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Tăng 10% khối lượng</a></div>
+                                        <p class="bp__p">🐻TĂNG 10% GIÁ VẪN SIÊU ƯU ĐÃI ✨
+                                            <BR>🤒Đợt Sale cuối cùng của Shock trước khi sập tiệm kết môn! Mấy bà hong đọc nhầm đâu, vì là đợt sale cuối nên giá lần này sẽ nóng bỏng tay. </br>
+                                            <br>💣Với mỗi Combo Đầu gấu, giá giảm chỉ còn 25.000đ. Nhưng đó vẫn chưa phải là tin chấn động nhất vì Shock sẽ tăng 10% trọng lượng cho mỗi đơn bánh gấu. </br>
+                                            <br>💐Combo lần này hết là không thể mua lại, do đó mấy bà ai chưa chốt đơn thì nhanh tay nhanh tay nhé! </br>
+                                            ------------------------------------------------------
+                                            <br>Liên hệ với Snacko qua: </br>
+                                            <br>📌Facebook: Ăn vặt cùng Snacko </br>
+                                            <br>📌Số điện thoại: 0386439956 (Thùy Linh) </br>
+                                            <br>📌Gmail: anvatcungsnacko@gmail.com </br>
+                                            <br>#snacko #anvat #banhgau #ngucoc #nutrition </br>
+                                        <div class="gl-l-r">
                                             <div>
-                                                <p class="u-s-m-b-30">
-                                                    <label class="gl-label" for="responder-name">Tên *</label>
-                                                    <input class="input-text input-text--primary-style" type="text" id="responder-name" style="width: 100%; border: 1px solid #644535; border-radius: 5px;">
-                                                </p>
-                                                <p class="u-s-m-b-30">
-                                                    <label class="gl-label" for="responder-email">EMAIL *</label>
-                                                    <input class="input-text input-text--primary-style" type="text" id="responder-email" style="width: 100%; border: 1px solid #644535; border-radius: 5px;">
-                                                </p>
-                                            </div>
+
+                                                <span class="bp__read-more">
+
+                                                    <a href="https://www.facebook.com/share/p/12HPHQKrLTp/">ĐỌC THÊM</a></span></div>
+                                            <ul class="bp__social-list">
+                                                <li>
+
+                                                    <a class="s-fb--color" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-tw--color" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-insta--color" href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-wa--color" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-gplus--color" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            </ul>
                                         </div>
-                                        <div style="display: flex; justify-content: center;">
-                                            <button class="btn btn--e-brand-shadow" type="submit">Đăng bình luận</button>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="bp u-s-m-b-30">
+                                <div class="bp__wrap">
+                                    <div class="bp__thumbnail">
+
+                                        <!--====== Gallery Code ======-->
+                                        <div class="slider-fouc">
+                                            <div class="owl-carousel post-gallery">
+                                                <div>
+
+                                                    <a href="blog-detail.html">
+
+                                                        <img class="u-img-fluid" src="images/blog/post-1.jpg" alt=""></a></div>
+                                                <div>
+
+                                                    <a href="blog-detail.html">
+
+                                                        <img class="u-img-fluid" src="images/blog/post-2.jpg" alt=""></a></div>
+                                                <div>
+
+                                                    <a href="blog-detail.html">
+
+                                                        <img class="u-img-fluid" src="images/blog/post-3.jpg" alt=""></a></div>
+                                            </div>
+                                        </div>
+                                        <!--====== End - Gallery Code ======-->
+                                    </div>
+                                    <div class="bp__info-wrap">
+                                        <div class="bp__stat">
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__publish-date">
+
+                                                    <a href="blog-left-sidebar.html">
+
+                                                        <span>13 November 2024</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__author">
+
+                                                    <a href="blog-left-sidebar.html">Admin</a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__comment">
+
+                                                    <a href="blog-detail.html"><i class="far fa-comments u-s-m-r-4"></i>
+
+                                                        <span>16</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__category">
+
+                                                    <a href="blog-left-sidebar.html">Bánh gấu</a>
+
+                                                    <a href="blog-left-sidebar.html">Giảm giá</a>
+
+                                                    <a href="blog-left-sidebar.html">Snacko</a></span></span></div>
+
+                                        <span class="bp__h1">
+
+                                            <a href="blog-detail-2.html">🐻TĂNG KHỐI LƯỢNG GIẢM GIÁ BÁN</a></span>
+
+                                        <span class="bp__h2">GIẢM GIÁ SỐC CUỐI KỲ</span>
+                                        <div class="blog-t-w">
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Bánh Gấu/a>
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Giảm giá</a>
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Tăng khối lượng</a></div>
+                                        <p class="bp__p"><br>⏳ ĐẾM NGƯỢC 26 GIỜ KẾT THÚC ƯU ĐÃI </br>
+                                            <br> 🕓 Mom nào còn chưa chốt sale đợt này của Shock thì rốp rẻng nha. Shock gia trưởng không muốn nói nhiều đâu đó!</br></p>
+                                        <div class="gl-l-r">
+                                            <div>
+
+                                                <span class="bp__read-more">
+
+                                                    <a href="blog-detail-2.html">ĐỌC THÊM</a></span></div>
+                                            <ul class="bp__social-list">
+                                                <li>
+
+                                                    <a class="s-fb--color" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-tw--color" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-insta--color" href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-wa--color" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-gplus--color" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bp u-s-m-b-30">
+                                <div class="bp__wrap">
+                                    <div class="bp__thumbnail" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                                        <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                            <source src="images/blog/video-1.mp4">
+                                          </video>
+                                    </div>
+                                    <div class="bp__info-wrap">
+                                        <div class="bp__stat">
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__publish-date">
+
+                                                    <a href="blog-left-sidebar.html">
+
+                                                        <span>12 November 2024</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__author">
+
+                                                    <a href="blog-left-sidebar.html">Ngọc</a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__comment">
+
+                                                    <a href="blog-detail.html"><i class="far fa-comments u-s-m-r-4"></i>
+
+                                                        <span>99</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__category">
+
+                                                    <a href="blog-left-sidebar.html">Video</a>
+
+                                                    <a href="blog-left-sidebar.html">Mua bánh gấu đi mọi người ơi</a></span></span></div>
+
+                                        <span class="bp__h1">
+
+                                            <a href="blog-detail.html">🚨 KHẨN CẤP: SALE SẬP SÀN COMBO ĐẦU GẤU!</a></span>
+
+                                        <span class="bp__h2"><br>❗ Đặt Combo Đầu Gấu ngay để giải cứu nhân viên của Snacko </br>
+                                            <br>❗ Nhanh tay Joke done trước khi nhân viên của tụi mình khóc trôi tòa nhà B1 nháaa </br></span>
+                                        <div class="blog-t-w">
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Sasalele</a>
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">Bánh gấu</a></div>
+                                        <p class="bp__p">
+                                            <br>Liên hệ với Snacko qua:</br>
+                                            <br>📌Facebook: Ăn vặt cùng Snacko </br>
+                                            <br>📌Số điện thoại: 0386439956 (Thùy Linh) </br>
+                                            <br>📌Gmail: anvatcungsnacko@gmail.com</br>
+                                        </p>
+                                        <div class="gl-l-r">
+                                            <div>
+
+                                                <span class="bp__read-more">
+
+                                                    <a href="https://www.facebook.com/share/v/18SFGA9SQ9/">ĐỌC THÊM</a></span></div>
+                                            <ul class="bp__social-list">
+                                                <li>
+
+                                                    <a class="s-fb--color" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-tw--color" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-insta--color" href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-wa--color" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-gplus--color" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bp u-s-m-b-30">
+                                <div class="bp__wrap">
+                                    <div class="image-container"> 
+                                        <img src="images/blog/post-14.jpg" alt="Image 1"> 
+                                        <img src="images/blog/post-15.jpg" alt="Image 2"> 
+                                        <img src="images/blog/post-16.jpg" alt="Image 3"> 
+                                        <img src="images/blog/post-17.jpg" alt="Image 4"> 
+                                    </div>
+                                    <div class="bp__info-wrap">
+                                        <div class="bp__stat">
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__publish-date">
+
+                                                    <a href="blog-left-sidebar.html">
+
+                                                        <span>2 November 2024</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__author">
+
+                                                    <a href="blog-left-sidebar.html">MaiTran</a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__comment">
+
+                                                    <a href="blog-detail.html"><i class="far fa-comments u-s-m-r-4"></i>
+
+                                                        <span>15</span></a></span></span>
+
+                                            <span class="bp__stat-wrap">
+
+                                                <span class="bp__category">
+
+                                                    <a href="blog-left-sidebar.html">feedback</a>
+
+                                                    <a href="blog-left-sidebar.html">Snacko</a></span></span></div>
+
+                                        <span class="bp__h1">
+
+                                            <a href="blog-detail.html">🍓 [GÓC FEEDBACK] NGƯỜI ẤY LÀ AI? AI SẼ ĐƯỢC SHOCK SHIP HÀNG TẬN NƠI? 🍓
+                                            </a></span>
+
+                                        <span class="bp__h2">Hình ảnh feedback nè</span>
+                                        <div class="blog-t-w">
+
+                                            <a class="gl-tag btn--e-transparent-hover-brand-b-2" href="blog-left-sidebar.html">FEEDBACK</a></div>
+                                        <p class="bp__p">
+                                            <br>🌹Trong tuần vừa qua, Snacko chúng mình rất vui khi nhận được sự ủng hộ nhiệt tình từ các bạn ngoan xinh iu của Shock. Để bày tỏ lòng biết ơn, Snacko xin giới thiệu chương trình đặc biệt mang tên “Shock Ship Hàng”. Tại đây, chúng mình đã chọn ra 4 đơn hàng may mắn nhất sẽ được bạn Sóc đáng yêu giao hàng tận tay và viết thiệp cảm ơn. </br>
+                                            <br>🌹Còn bạn, bạn đã thử sản phẩm của Snacko chưa? Nếu chưa, đừng ngần ngại mà hãy nhanh tay inbox cho tiệm nha. Biết đâu bạn sẽ trở thành vị khách may mắn tiếp theo được Shock giao hàng tận cửa! 😉 </br>
+                                            <br> 🐿Bây giờ, mời bạn cùng Snacko xem lại những vị khách may mắn trong chương trình “Shock Ship Hàng” trong tuần vừa rồi nhé!</br>
+                                            <br>#snacko #anvat #ngucoc #nutrition </br>
+                                        </p>
+                                        <div class="gl-l-r">
+                                            <div>
+
+                                                <span class="bp__read-more">
+
+                                                    <a href="https://www.facebook.com/share/p/19vJcJ1JR4/">ĐỌC THÊM</a></span></div>
+                                            <ul class="bp__social-list">
+                                                <li>
+
+                                                    <a class="s-fb--color" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-tw--color" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-insta--color" href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-wa--color" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                <li>
+
+                                                    <a class="s-gplus--color" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -1106,188 +1178,164 @@
         <!--====== End - App Content ======-->
 
 
-                <!--====== Main Footer ======-->
-                <footer>
-                    <div class="outer-footer">
-                        <div class="container">
+        <!--====== Main Footer ======-->
+        <footer>
+            <div class="outer-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="outer-footer__content u-s-m-b-40">
+
+                                <span class="outer-footer__content-title">Contact Us</span>
+                                <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+
+                                    <span>4247 Ashford Drive Virginia VA-20006 USA</span></div>
+                                <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+
+                                    <span>(+0) 900 901 904</span></div>
+                                <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+
+                                    <span>contact@domain.com</span></div>
+                                <div class="outer-footer__social">
+                                    <ul>
+                                        <li>
+
+                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li>
+
+                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li>
+
+                                            <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a></li>
+                                        <li>
+
+                                            <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li>
+
+                                            <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-6 col-md-6">
                                     <div class="outer-footer__content u-s-m-b-40">
-        
-                                        <span class="outer-footer__content-title">Liên hệ với chúng tôi</span>
-                                        <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
-        
-                                            <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, Thành phố Hồ Chí Minh</span>
-                                        </div>
-                                        <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
-        
-                                            <span>038 xxx xx xx</span>
-                                        </div>
-                                        <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
-        
-                                            <span>anvatcungsnacko@gmail.com</span>
-                                        </div>
-                                        <div class="outer-footer__social">
+
+                                        <span class="outer-footer__content-title">Information</span>
+                                        <div class="outer-footer__list-wrap">
                                             <ul>
                                                 <li>
-        
-                                                    <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a>
-                                                </li>
+
+                                                    <a href="cart.html">Cart</a></li>
                                                 <li>
-        
-                                                    <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
-                                                </li>
+
+                                                    <a href="dashboard.html">Account</a></li>
                                                 <li>
-        
-                                                    <a class="s-youtube--color-hover" href="#"><i
-                                                            class="fab fa-youtube"></i></a>
-                                                </li>
+
+                                                    <a href="shop-side-version-2.html">Manufacturer</a></li>
                                                 <li>
-        
-                                                    <a class="s-insta--color-hover" href="#"><i
-                                                            class="fab fa-instagram"></i></a>
-                                                </li>
+
+                                                    <a href="dash-payment-option.html">Finance</a></li>
                                                 <li>
-        
-                                                    <a class="s-gplus--color-hover" href="#"><i
-                                                            class="fab fa-google-plus-g"></i></a>
-                                                </li>
+
+                                                    <a href="shop-side-version-2.html">Shop</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="outer-footer__content u-s-m-b-40">
-        
-                                                <span class="outer-footer__content-title">Thông tin</span>
-                                                <div class="outer-footer__list-wrap">
-                                                    <ul>
-                                                        <li>
-        
-                                                            <a href="cart.html">Giỏ hàng</a>
-                                                        </li>
-                                                        <li>
-        
-                                                            <a href="dashboard.html">Tài khoản</a>
-                                                        </li>
-        
-                                                        <li>
-        
-                                                            <a href="dash-payment-option.html">Thanh toán </a>
-                                                        </li>
-                                                        <li>
-        
-                                                            <a href="shop-side-version-2.html">Cửa hàng</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="outer-footer__content u-s-m-b-40">
-                                                <div class="outer-footer__list-wrap">
-        
-                                                    <span class="outer-footer__content-title">Cửa hàng Snacko</span>
-                                                    <ul>
-                                                        <li>
-        
-                                                            <a href="about.html">Về chúng tôi</a>
-                                                        </li>
-                                                        <li>
-        
-                                                            <a href="contact.html">Liên hệ</a>
-                                                        </li>
-                                                        <li>
-        
-                                                            <a href="index.html">Bản đồ</a>
-                                                        </li>
-                                                        <li>
-        
-                                                            <a href="dash-my-order.html">Giao hàng</a>
-                                                        </li>
-                                                        <li>
-        
-                                                            <a href="shop-side-version-2.html">Cửa hàng</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-12">
-                                    <div class="outer-footer__content">
-        
-                                        <span class="outer-footer__content-title">Nhận thông tin mới nhất của Shop</span>
-                                        <form class="newsletter">
-                                            <div class="u-s-m-b-15">
-                                                <div class="radio-box newsletter__radio">
-        
-                                                    <input type="radio" id="male" name="gender">
-                                                    <div class="radio-box__state radio-box__state--primary">
-        
-                                                        <label class="radio-box__label" for="male">Nam</label>
-                                                    </div>
-                                                </div>
-                                                <div class="radio-box newsletter__radio">
-        
-                                                    <input type="radio" id="female" name="gender">
-                                                    <div class="radio-box__state radio-box__state--primary">
-        
-                                                        <label class="radio-box__label" for="female">Nữ</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="newsletter__group">
-        
-                                                <label for="newsletter"></label>
-        
-                                                <input class="input-text input-text--only-white" type="text" id="newsletter"
-                                                    placeholder="Nhập email của bạn">
-        
-                                                <button class="btn btn--e-brand newsletter__btn" type="submit">Đăng ký</button>
-                                            </div>
-        
-                                            <span class="newsletter__text">Đăng ký email để nhận thông tin sớm nhất về khuyến
-                                                mãi, sản phẩm mới và giảm giá dành riêng cho bạn.</span>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lower-footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="lower-footer__content">
-                                        <div class="lower-footer__copyright">
-        
-                                            <span>Copyright © 2018</span>
-        
-                                            <a href="index.html">Reshop</a>
-        
-                                            <span>All Right Reserved</span>
-                                        </div>
-                                        <div class="lower-footer__payment">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="outer-footer__content u-s-m-b-40">
+                                        <div class="outer-footer__list-wrap">
+
+                                            <span class="outer-footer__content-title">Our Company</span>
                                             <ul>
-                                                <li><i class="fab fa-cc-stripe"></i></li>
-                                                <li><i class="fab fa-cc-paypal"></i></li>
-                                                <li><i class="fab fa-cc-mastercard"></i></li>
-                                                <li><i class="fab fa-cc-visa"></i></li>
-                                                <li><i class="fab fa-cc-discover"></i></li>
-                                                <li><i class="fab fa-cc-amex"></i></li>
+                                                <li>
+
+                                                    <a href="about.html">About us</a></li>
+                                                <li>
+
+                                                    <a href="contact.html">Contact Us</a></li>
+                                                <li>
+
+                                                    <a href="index.html">Sitemap</a></li>
+                                                <li>
+
+                                                    <a href="dash-my-order.html">Delivery</a></li>
+                                                <li>
+
+                                                    <a href="shop-side-version-2.html">Store</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="outer-footer__content">
+
+                                <span class="outer-footer__content-title">Join our Newsletter</span>
+                                <form class="newsletter">
+                                    <div class="u-s-m-b-15">
+                                        <div class="radio-box newsletter__radio">
+
+                                            <input type="radio" id="male" name="gender">
+                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                <label class="radio-box__label" for="male">Male</label></div>
+                                        </div>
+                                        <div class="radio-box newsletter__radio">
+
+                                            <input type="radio" id="female" name="gender">
+                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                <label class="radio-box__label" for="female">Female</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="newsletter__group">
+
+                                        <label for="newsletter"></label>
+
+                                        <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Enter your Email">
+
+                                        <button class="btn btn--e-brand newsletter__btn" type="submit">SUBSCRIBE</button></div>
+
+                                    <span class="newsletter__text">Subscribe to the mailing list to receive updates on promotions, new arrivals, discount and coupons.</span>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </footer>
+                </div>
             </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="lower-footer__content">
+                                <div class="lower-footer__copyright">
+
+                                    <span>Copyright © 2018</span>
+
+                                    <a href="index.html">Reshop</a>
+
+                                    <span>All Right Reserved</span></div>
+                                <div class="lower-footer__payment">
+                                    <ul>
+                                        <li><i class="fab fa-cc-stripe"></i></li>
+                                        <li><i class="fab fa-cc-paypal"></i></li>
+                                        <li><i class="fab fa-cc-mastercard"></i></li>
+                                        <li><i class="fab fa-cc-visa"></i></li>
+                                        <li><i class="fab fa-cc-discover"></i></li>
+                                        <li><i class="fab fa-cc-amex"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <!--====== End - Main App ======-->
 
 
@@ -1330,5 +1378,3 @@
     </noscript>
 </body>
 </html>
-
-

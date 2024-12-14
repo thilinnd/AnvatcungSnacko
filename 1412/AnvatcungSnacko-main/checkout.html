@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="images/icon.png" rel="shortcut icon">
+    <title>Snacko - Nghỉ giải lao, bào snack ko?</title>
+
+    <!--====== Google Font ======-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+    <!--====== Vendor Css ======-->
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!--====== Utility-Spacing ======-->
+    <link rel="stylesheet" href="css/utility.css">
+
+    <!--====== App ======-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="config" style="background-color:#f5f5dc">
+    <div class="preloader is-active">
+        <div class="preloader__wrap">
+            <img class="preloader__img" src="images/preloader.png" alt="">
+        </div>
+    </div>
+
+    <!--====== Main App ======-->
+    <div id="app" >
+     <!--====== Main Header ======-->
+     <header class="header--style-1">
+
+        <!--====== Nav 1 ======-->
+        <nav class="primary-nav primary-nav-wrapper--border">
+            <div class="container">
+
+                <!--====== Primary Nav ======-->
+                <div class="primary-nav">
+
+                    <!--====== Main Logo ======-->
+                    <a class="main-logo" href="index.html">
+                        <img src="images/logo/logo.png" alt="">
+                    </a>
+                    <!--====== End - Main Logo ======-->
+
+                    <!--====== Search Form ======-->
+                    <form class="main-form">
+                        <label for="main-search"></label>
+                        <input class="input-text input-text--border-radius input-text--style-1" type="text"
+                            id="main-search" placeholder="Tìm Kiếm">
+                        <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button>
+                    </form>
+                    <!--====== End - Search Form ======-->
+
+                    <!--====== Dropdown Main plugin ======-->
+                    <div class="menu-init" id="navigation">
+                        <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs"
+                            type="button"></button>
+
+                        <!--====== Menu ======-->
+                        <div class="ah-lg-mode">
+                            <span class="ah-close">✕ Đóng</span>
+
+                            <!--====== List ======-->
+                            <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                                <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"
+                                    title="Tài Khoản">
+                                    <a>
+                                        <i class="far fa-user-circle"></i>
+                                    </a>
+
+                                    <!--====== Dropdown ======-->
+                                    <span class="js-menu-toggle"></span>
+                                    <ul style="width:120px">
+                                        <li>
+                                            <a href="dashboard.html">
+                                                <i class="fas fa-user-circle u-s-m-r-6"></i>
+                                                <span>Tài Khoản</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="signup.html">
+                                                <i class="fas fa-user-plus u-s-m-r-6"></i>
+                                                <span>Đăng Ký</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="signin.html">
+                                                <i class="fas fa-lock u-s-m-r-6"></i>
+                                                <span>Đăng Nhập</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="signup.html">
+                                                <i class="fas fa-lock-open u-s-m-r-6"></i>
+                                                <span>Đăng Xuất</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--====== End - Dropdown ======-->
+
+                                </li>
+                                <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"
+                                    title="Cài Đặt">
+                                    <a>
+                                        <i class="fas fa-user-cog"></i>
+                                    </a>
+
+                                    <!--====== Dropdown ======-->
+                                    <span class="js-menu-toggle"></span>
+                                    <ul style="width:120px">
+                                        <li class="has-dropdown has-dropdown--ul-right-100">
+                                            <a>Ngôn Ngữ
+                                                <i class="fas fa-angle-down u-s-m-l-6"></i>
+                                            </a>
+
+                                            <!--====== Dropdown ======-->
+                                            <span class="js-menu-toggle"></span>
+                                            <ul style="width:120px">
+                                                <li>
+                                                    <a class="u-c-brand">ENGLISH</a>
+                                                </li>
+                                                <li>
+                                                    <a>ARABIC</a>
+                                                </li>
+                                                <li>
+                                                    <a>FRANCAIS</a>
+                                                </li>
+                                                <li>
+                                                    <a>ESPANOL</a>
+                                                </li>
+                                            </ul>
+                                            <!--====== End - Dropdown ======-->
+
+                                        </li>
+                                        <li class="has-dropdown has-dropdown--ul-right-100">
+                                            <a>Tiền Tệ
+                                                <i class="fas fa-angle-down u-s-m-l-6"></i>
+                                            </a>
+
+                                            <!--====== Dropdown ======-->
+                                            <span class="js-menu-toggle"></span>
+                                            <ul style="width:225px">
+                                                <li>
+                                                    <a class="u-c-brand">$ - US DOLLAR</a>
+                                                </li>
+                                                <li>
+                                                    <a>£ - BRITISH POUND STERLING</a>
+                                                </li>
+                                                <li>
+                                                    <a>€ - EURO</a>
+                                                </li>
+                                            </ul>
+                                            <!--====== End - Dropdown ======-->
+
+                                        </li>
+                                    </ul>
+                                    <!--====== End - Dropdown ======-->
+
+                                </li>
+                                <li data-tooltip="tooltip" data-placement="left" title="Liên hệ">
+                                    <a href="tel:+0900901904">
+                                        <i class="fas fa-phone-volume"></i>
+                                    </a>
+                                </li>
+                                <li data-tooltip="tooltip" data-placement="left" title="Mail">
+                                    <a href="mailto:contact@domain.com">
+                                        <i class="far fa-envelope"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!--====== End - List ======-->
+
+                        </div>
+                        <!--====== End - Menu ======-->
+
+                    </div>
+                    <!--====== End - Dropdown Main plugin ======-->
+
+                </div>
+                <!--====== End - Primary Nav ======-->
+
+            </div>
+        </nav>
+        <!--====== End - Nav 1 ======-->
+
+        <!--====== Nav 2 ======-->
+        <nav class="secondary-nav-wrapper">
+            <div class="container">
+
+                <!--====== Secondary Nav ======-->
+                <div class="secondary-nav">
+
+                    <!--====== Dropdown Main plugin ======-->
+                    <div class="menu-init" id="navigation1">
+                        <button class="btn btn--icon toggle-mega-text toggle-button" type="button">M</button>
+
+                        <!--====== Menu ======-->
+                        <div class="ah-lg-mode">
+                            <span class="ah-close">✕ Đóng</span>
+
+                            <!--====== List ======-->
+                            <ul class="ah-list">
+                                <li class="has-dropdown">
+                                    <span class="mega-text">Menu</span>
+
+                                    <!--====== Mega Menu ======-->
+                                    <span class="js-menu-toggle"></span>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-wrap">
+                                            <div class="mega-menu-list">
+                                                <ul>
+                                                    <li class="js-active">
+                                                        <a href="shop-grid-left.html">
+                                                            <i class="fas fa-tv u-s-m-r-6"></i>
+                                                            <span>Bánh gấu</span>
+                                                        </a>
+                                                        <span class="js-menu-toggle js-toggle-mark"></span>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-grid-left.html">
+                                                            <i class="fas fa-female u-s-m-r-6"></i>
+                                                            <span>Hạt sấy</span>
+                                                        </a>
+                                                        <span class="js-menu-toggle"></span>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-grid-left.html">
+                                                            <i class="fas fa-male u-s-m-r-6"></i>
+                                                            <span>Nước ngọt</span>
+                                                        </a>
+                                                        <span class="js-menu-toggle"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!--====== Bánh gấu ======-->
+                                            <div class="mega-menu-content js-active">
+
+                                                <!--====== Mega Menu Row ======-->
+                                                <div class="row">
+                                                    <div class="col-lg-4 mega-image">
+                                                        <div class="mega-list-title">
+                                                            <a>Bánh gấu truyền thống</a>
+                                                            <a class="u-d-block" href="shop-grid-left.html">
+                                                                <img class="u-img-fluid u-d-block"
+                                                                    src="images\header\banh-gau-truyen-thong.jpg"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 mega-image">
+                                                        <div class="mega-list-title">
+                                                            <a>Bánh gấu Matcha</a>
+                                                            <a class="u-d-block" href="">
+                                                                <img class="u-img-fluid u-d-block"
+                                                                    src="images\header\banh-gau-matcha.jpg"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 mega-image">
+                                                        <div class="mega-list-title">
+                                                            <a>Bánh gấu Socola</a>
+                                                            <a class="u-d-block" href="shop-grid-left.html">
+                                                                <img class="u-img-fluid u-d-block"
+                                                                    src="images\header\banh-gau-socola.jpg"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--====== End - Mega Menu Row ======-->
+                                            </div>
+                                            <!--====== End - Bánh gấu ======-->
+
+                                            <!--====== Hạt ======-->
+                                            <div class="mega-menu-content">
+                                                
+                                                <!--====== Mega Menu Row ======-->
+                                                <div class="row">
+                                                    <div class="col-lg-4 mega-image">
+                                                        <div class="mega-list-title">
+                                                            <a>Hạt sấy giòn</a>
+                                                            <a class="u-d-block" href="shop-grid-left.html">
+                                                                <img class="u-img-fluid u-d-block"
+                                                                    src="images\header\hat-say-gion.jpg"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 mega-image">
+                                                        <div class="mega-list-title">
+                                                            <a>Đậu sấy giòn</a>
+                                                            <a class="u-d-block" href="shop-grid-left.html">
+                                                                <img class="u-img-fluid u-d-block"
+                                                                    src="images\header\dau-say-gion.jpg"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 mega-image">
+                                                        <div class="mega-list-title">
+                                                            <a>Hạt sấy mix nho khô</a>
+                                                            <a class="u-d-block" href="shop-grid-left.html">
+                                                                <img class="u-img-fluid u-d-block"
+                                                                    src="images/header/hat-say-va-nho-kho.jpg"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--====== End - Mega Menu Row ======-->
+                                                
+                                            </div>
+                                            <!--====== End - HẠT ======-->
+
+                                            <!--====== Nước ngọt ======-->
+                                            <div class="mega-menu-content js-active">
+
+                                                <!--====== Mega Menu Row ======-->
+                                                <div class="container">
+                                                                                           
+                                                    <!-- Hàng 2: 2 hình -->
+                                                    <div class="row">
+                                                        <div class="col-lg-6 mega-image">
+                                                            <div class="mega-list-title">
+                                                                <a>Nước ép nho</a>
+                                                                <a class="u-d-block" href="shop-grid-left.html">
+                                                                    <img class="u-img-fluid u-d-block" src="images\header\nuoc-ep-tao.jpg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mega-image">
+                                                            <div class="mega-list-title">
+                                                                <a>Nước ép táo</a>
+                                                                <a class="u-d-block" href="shop-grid-left.html">
+                                                                    <img class="u-img-fluid u-d-block" src="images\header\nuoc-ep-nho.jpg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Hàng 1: 3 hình -->
+                                                    <div class="row">
+                                                        <div class="col-lg-4 mega-image">
+                                                            <div class="mega-list-title">
+                                                                <a>Nước tăng lực dâu</a>
+                                                                <a class="u-d-block" href="shop-grid-left.html">
+                                                                    <img class="u-img-fluid u-d-block" src="images\header\nuoc-dau.jpg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 mega-image">
+                                                            <div class="mega-list-title">
+                                                                <a>Nước tăng lực trái cây</a>
+                                                                <a class="u-d-block" href="shop-grid-left.html">
+                                                                    <img class="u-img-fluid u-d-block" src="images\header\nuoc-trai-cay.jpg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 mega-image">
+                                                            <div class="mega-list-title">
+                                                                <a>Nước tăng lực vải</a>
+                                                                <a class="u-d-block" href="shop-grid-left.html">
+                                                                    <img class="u-img-fluid u-d-block" src="images\header\nuoc-vai.jpg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                
+                                                <!--====== End - Mega Menu Row ======-->
+                                            </div>
+                                            <!--====== End - Nước ngọt ======-->
+
+                                            <!--====== No Sub Categories ======-->
+                                            <div class="mega-menu-content">
+                                                <h5>No Categories</h5>
+                                            </div>
+                                            <!--====== End - No Sub Categories ======-->
+
+                                            <!--====== No Sub Categories ======-->
+                                            <div class="mega-menu-content">
+                                                <h5>No Categories</h5>
+                                            </div>
+                                            <!--====== End - No Sub Categories ======-->
+
+                                            <!--====== No Sub Categories ======-->
+                                            <div class="mega-menu-content">
+                                                <h5>No Categories</h5>
+                                            </div>
+                                            <!--====== End - No Sub Categories ======-->
+
+                                            <!--====== No Sub Categories ======-->
+                                            <div class="mega-menu-content">
+                                                <h5>No Categories</h5>
+                                            </div>
+                                            <!--====== End - No Sub Categories ======-->
+
+                                        </div>
+                                    </div>
+                                    <!--====== End - Mega Menu ======-->
+
+                                </li>
+                            </ul>
+                            <!--====== End - List ======-->
+
+                        </div>
+                        <!--====== End - Menu ======-->
+
+                    </div>
+                    <!--====== End - Dropdown Main plugin ======-->
+
+                    <!--====== Dropdown Main plugin ======-->
+                    <div class="menu-init" id="navigation2">
+                        <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog"
+                            type="button"></button>
+
+                        <!--====== Menu ======-->
+                        <div class="ah-lg-mode">
+                            <span class="ah-close">✕ Đóng</span>
+
+                            <!--====== List ======-->
+                            <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
+                                <li>
+                                    <a href="shop-grid-left.html">SHOP</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">VỀ SNACKO</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">LIÊN HỆ</a>
+                                </li>
+                                <li>
+                                    <a href="blog-left-sidebar.html">BLOG</a>
+                                </li>
+                                
+                                
+                            </ul>
+                            <!--====== End - List ======-->
+
+                        </div>
+                        <!--====== End - Menu ======-->
+
+                    </div>
+                    <!--====== End - Dropdown Main plugin ======-->
+
+                    <!--====== Dropdown Main plugin ======-->
+                    <div class="menu-init" id="navigation3">
+                        <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-shopping-bag toggle-button-shop" type="button"></button>
+                        <span class="total-item-round">0</span> <!-- Initially 0 -->
+                    </div>                    
+
+                        <!--====== Menu ======-->
+                        <div class="ah-lg-mode">
+                            <span class="ah-close">✕ Đóng</span>
+
+                            <!--====== List ======-->
+                            <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                                <li data-tooltip="tooltip" data-placement="left" title="Trang chủ">
+                                    <a href="index.html">
+                                        <i class="fas fa-home u-c-brand"></i>
+                                    </a>
+                                </li>
+                                <li data-tooltip="tooltip" data-placement="left" title="Mục yêu thích">
+                                    <a href="wishlist.html">
+                                        <i class="far fa-heart"></i>
+                                    </a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a class="mini-cart-shop-link" href="javascript:void(0);" onmouseover="updateMiniCart()" onmouseout="hideMiniCart()">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span class="total-item-round" id="mini-cart-count">0</span> <!-- Số lượng sản phẩm sẽ xuất hiện ở đây -->
+                                    </a>
+                                    <div id="mini-cart" style="display: none; position: absolute; top: 50px; right: 10px; background-color: white; border: 1px solid #ccc; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); padding: 10px; z-index: 1000;"></div>
+                                    
+                                    <script>
+                                        // Hàm để hiển thị mini cart
+                                        function showMiniCart() {
+                                            document.getElementById('mini-cart').style.display = 'block';
+                                        }
+                                    
+                                        // Hàm để ẩn mini cart
+                                        function hideMiniCart() {
+                                            document.getElementById('mini-cart').style.display = 'none';
+                                        }
+                                    </script>
+                                    
+                                    
+                                    <!--====== Dropdown ======-->
+                                    <span class="js-menu-toggle"></span>
+                                    <div class="mini-cart">
+
+                                       <!--====== Mini Product Container ======-->
+<div id="mini-cart" class="mini-product-container gl-scroll u-s-m-b-15">
+    <!-- Nội dung sản phẩm động sẽ được cập nhật ở đây -->
+</div>
+<!--====== End - Mini Product Container ======-->
+
+<!--====== Mini Product Statistics ======-->
+<div class="mini-product-stat">
+    <div class="mini-total">
+        <span class="subtotal-text">TỔNG CỘNG</span>
+        <span class="subtotal-value" id="total-cart">0đ</span> <!-- Thêm id để cập nhật tổng cộng -->
+    </div>
+    <div class="mini-action">
+        <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH THANH TOÁN</a>
+        <a class="mini-link btn--e-transparent-secondary-b-2" href="cart.html">XEM GIỎ HÀNG</a>
+    </div>
+</div>
+<!--====== End - Mini Product Statistics ======-->
+
+
+                                    </div>
+                                    <!--====== End - Dropdown ======-->
+
+                                </li>
+                            </ul>
+                            <!--====== End - List ======-->
+
+                        </div>
+                        <!--====== End - Menu ======-->
+
+                    </div>
+                    <!--====== End - Dropdown Main plugin ======-->
+
+                </div>
+                <!--====== End - Secondary Nav ======-->
+
+            </div>
+        </nav>
+        <!--====== End - Nav 2 ======-->
+
+    </header>
+    <!--====== End - Main Header ======-->
+        <!--====== App Content ======-->
+        <div class="app-content">
+
+            <!--====== Section 1 ======-->
+            <div class="u-s-p-y-60">
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="breadcrumb">
+                            <div class="breadcrumb__wrap">
+                                <ul class="breadcrumb__list">
+                                    <li class="has-separator">
+
+                                        <a href="index.html">Trang chủ</a></li>
+                                    <li class="is-marked">
+
+                                        <a href="checkout.html">Thanh toán</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====== End - Section 1 ======-->
+
+
+            <!--====== Section 2 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="checkout-msg-group">
+                                    <div class="msg u-s-m-b-30">
+
+                                        <span class="msg__text">Khách hàng cũ?
+
+                                            <a class="gl-link" href="#return-customer" data-toggle="collapse">Nhấn vào đây để đăng nhập</a></span>
+                                        <div class="collapse" id="return-customer" data-parent="#checkout-msg-group">
+                                            <div class="l-f u-s-m-b-16">
+
+                                                <span class="gl-text u-s-m-b-16">Nếu quý khách đã có tài khoản. Xin vui lòng đăng nhập.</span>
+                                                <form class="l-f__form">
+                                                    <div class="gl-inline">
+                                                        <div class="u-s-m-b-15">
+
+                                                            <label class="gl-label" for="login-email">E-MAIL *</label>
+
+                                                            <input class="input-text input-text--primary-style" type="text" id="login-email" placeholder="Điền Email" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                                        <div class="u-s-m-b-15">
+
+                                                            <label class="gl-label" for="login-password">Mật khẩu *</label>
+
+                                                            <input class="input-text input-text--primary-style" type="text" id="login-password" placeholder="Điền mật khẩu" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                                    </div>
+                                                    <div class="gl-inline">
+                                                        <div class="u-s-m-b-15" style="text-align: center;">
+                                                            <button class="btn btn--e-transparent-brand-b-2" type="submit">Đăng nhập</button>
+                                                        </div>
+                                                        <div class="u-s-m-b-15" style="text-align: center;">
+                                                            <a class="gl-link" href="lost-password.html">Quên mật khẩu?</a>
+                                                        </div>
+                                                    </div>                                                    
+
+                                                    <!--====== Check Box ======-->
+                                                    <div class="check-box">
+
+                                                        <input type="checkbox" id="remember-me">
+                                                        <div class="check-box__state check-box__state--primary">
+
+                                                            <label class="check-box__label" for="remember-me">Ghi nhớ đăng nhập</label></div>
+                                                    </div>
+                                                    <!--====== End - Check Box ======-->
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="msg">
+
+                                        <span class="msg__text">Có mã giảm giá?
+
+                                            <a class="gl-link" href="#have-coupon" data-toggle="collapse">Nhấn vào đây để nhập mã của bạn</a></span>
+                                        <div class="collapse" id="have-coupon" data-parent="#checkout-msg-group">
+                                            <div class="c-f u-s-m-b-16">
+                                                <span class="gl-text u-s-m-b-16">Mã giảm giá của bạn.</span>
+                                                <form class="c-f__form">
+                                                    <div class="u-s-m-b-16">
+                                                        <div class="u-s-m-b-15">
+                                                            <label for="coupon"></label>
+                                                            <select class="input-text input-text--primary-style" id="coupon-select" style="width: 100%; border: 1px solid #644535; border-radius: 5px; padding: 10px;" onchange="applyDiscount()"> 
+                                                                <option value="0">Chọn mã giảm giá</option> 
+                                                                <option value="5">Giảm Giá 5%</option> 
+                                                                <option value="10">Giảm Giá 10%</option> 
+                                                                <option value="15">Giảm Giá 15%</option> 
+                                                            </select>
+                                                        </div>
+                                                        <div class="u-s-m-b-15" style="margin-top: 15px;"> <!-- Thêm margin-top để tạo khoảng cách -->
+                                                            <button class="btn btn--e-transparent-brand-b-2" type="submit">Gửi</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 2 ======-->
+
+
+            <!--====== Section 3 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="checkout-f">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                <h1 class="checkout-f__h1" style="text-align: center;">Thông tin vận chuyển</h1>
+                                    <form class="checkout-f__delivery">
+                                        <div class="u-s-m-b-30">
+                                            <div class="u-s-m-b-15">
+
+                                                <!--====== Check Box ======-->
+                                                <div class="check-box">
+
+                                                    <input type="checkbox" id="get-address">
+                                                    <div class="check-box__state check-box__state--primary">
+
+                                                        <label class="check-box__label" for="get-address">Sử dụng địa chỉ giao hàng và thanh toán mặc định từ tài khoản</label></div>
+                                                </div>
+                                                <!--====== End - Check Box ======-->
+                                            </div>
+
+                                            <!--====== First Name, Last Name ======-->
+                                            <div class="gl-inline">
+                                                <div class="u-s-m-b-15" >
+
+                                                    <label class="gl-label" for="billing-fname">Họ *</label>
+
+                                                    <input class="input-text input-text--primary-style" type="text" id="billing-fname" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                                <div class="u-s-m-b-15">
+
+                                                    <label class="gl-label" for="billing-lname">Tên *</label>
+
+                                                    <input class="input-text input-text--primary-style" type="text" id="billing-lname" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                            </div>
+                                            <!--====== End - First Name, Last Name ======-->
+
+
+                                            <!--====== E-MAIL ======-->
+                                            <div class="u-s-m-b-15">
+
+                                                <label class="gl-label" for="billing-email">E-MAIL *</label>
+
+                                                <input class="input-text input-text--primary-style" type="text" id="billing-email" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                            <!--====== End - E-MAIL ======-->
+
+
+                                            <!--====== PHONE ======-->
+                                            <div class="u-s-m-b-15">
+
+                                                <label class="gl-label" for="billing-phone">Số điện thoại *</label>
+
+                                                <input class="input-text input-text--primary-style" type="text" id="billing-phone" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                            <!--====== End - PHONE ======-->
+
+
+                                            <!--====== Street Address ======-->
+                                            <div class="u-s-m-b-15">
+
+                                                <label class="gl-label" for="billing-street">Tên đường *</label>
+
+                                                <input class="input-text input-text--primary-style" type="text" id="billing-street" placeholder="Tên đường và số nhà" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                            <div class="u-s-m-b-15">
+
+                                                <label for="billing-street-optional"></label>
+
+                                                <input class="input-text input-text--primary-style" type="text" id="billing-street-optional" placeholder="Căn hộ, phòng suite, v.v. (tùy chọn)" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                            <!--====== End - Street Address ======-->
+
+
+                                            <!--====== Country ======-->
+                                            <div class="u-s-m-b-15">
+
+                                                <!--====== Select Box ======-->
+
+                                                <label class="gl-label" for="billing-country">Quốc gia *</label><select class="select-box select-box--primary-style" id="billing-country" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
+                                                    <option selected value="">Chọn quốc gia</option>
+                                                    <option value="uae">Việt Nam</option>
+                                                    <option value="uk">United Kingdom (UK)</option>
+                                                    <option value="us">United States (US)</option>
+                                                </select>
+                                                <!--====== End - Select Box ======-->
+                                            </div>
+                                            <!--====== End - Country ======-->
+
+
+                                            <!--====== Town / City ======-->
+                                            <div class="u-s-m-b-15">
+                                                <label class="gl-label" for="billing-town-city">Tỉnh/ Thành Phố *</label>
+                                                <select class="input-text input-text--primary-style" id="billing-town-city" data-bill="" 
+                                                    style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
+                                                    <option value="">Chọn Tỉnh/ Thành Phố</option>
+                                                    <option value="Hanoi">Hà Nội</option>
+                                                    <option value="HoChiMinh">TP. Hồ Chí Minh</option>
+                                                    <option value="Danang">Đà Nẵng</option>
+                                                </select>
+                                            </div>                                            
+                                            <!--====== End - Town / City ======-->
+
+
+                                            <!--====== STATE/PROVINCE ======-->
+                                            <div class="u-s-m-b-15">
+
+                                                <!--====== Select Box ======-->
+
+                                                <label class="gl-label" for="billing-state">Quận/Huyện *</label><select class="select-box select-box--primary-style" id="billing-state" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
+                                                    <option selected value="">Chọn Quận/Huyện</option>
+                                                    <option value="al">Quận 10</option>
+                                                    <option value="al">Quận 3</option>
+                                                    <option value="ny">Quận 5</option>
+                                                </select>
+                                                <!--====== End - Select Box ======-->
+                                            </div>
+                                            <!--====== End - STATE/PROVINCE ======-->
+
+
+                                            <!--====== ZIP/POSTAL ======-->
+                                            <div class="u-s-m-b-15">
+
+                                                <label class="gl-label" for="billing-zip">Mã bưu chính *</label>
+
+                                                <input class="input-text input-text--primary-style" type="text" id="billing-zip" placeholder="Mã bưu chính" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></div>
+                                            <!--====== End - ZIP/POSTAL ======-->
+                                            <div class="u-s-m-b-10">
+
+                                                <!--====== Check Box ======-->
+                                                <div class="check-box">
+
+                                                    <input type="checkbox" id="make-default-address" data-bill="">
+                                                    
+                                                </div>
+                                                <!--====== End - Check Box ======-->
+                                            </div>
+                                            <div class="u-s-m-b-10">
+
+                                                <a class="gl-link" href="#create-account" data-toggle="collapse">Tạo tài khoản mới?</a></div>
+                                            <div class="collapse u-s-m-b-15" id="create-account">
+
+                                                <span class="gl-text u-s-m-b-15">Tạo một tài khoản bằng cách nhập thông tin bên dưới. Nếu bạn là khách hàng quay lại, vui lòng đăng nhập ở đầu trang.</span>
+                                                <div>
+
+                                                    <label class="gl-label" for="reg-password">Mật khẩu *</label>
+
+                                                    <input class="input-text input-text--primary-style" type="text" data-bill id="reg-password"></div>
+                                            </div>
+                                            <div class="u-s-m-b-10">
+
+                                                <label class="gl-label" for="order-note">Ghi chú đơn hàng</label><textarea class="text-area text-area--primary-style" id="order-note" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;"></textarea></div>
+                                                <div style="display: flex; justify-content: center;">
+                                                    <button class="btn btn--e-brand-b-2" type="submit" style="display: inline-block; width: auto;">LƯU</button>
+                                                </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-6">                                    
+                                    <h1 class="checkout-f__h1" style="text-align: center">TÓM TẮT ĐƠN HÀNG</h1>
+                                    <!--====== Order Summary ======-->
+                                    <div class="o-summary">
+                                        <!--====== Section Intro ======-->
+    <div class="section__intro u-s-m-b-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section__text-wrap">
+                        <h1 class="section__heading u-c-secondary">GIỎ HÀNG</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== End - Section Intro ======-->
+
+   <!--====== Section Content ======-->
+<div class="section__content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 u-s-m-b-30">
+                <div class="table-responsive">
+                    <table class="table-p">
+                        <tbody id="cart-table" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 150px;">
+                            <!-- Các sản phẩm sẽ được render tại đây từ JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== End - Section Content-->
+
+
+                                        <div class="o-summary__section u-s-m-b-30" style="border: 1px solid #644535;">
+                                            <div class="o-summary__box">
+                                                <h1 class="checkout-f__h1">VẬN CHUYỂN & THANH TOÁN</h1>
+                                                <div class="ship-b">
+                                                    <span class="ship-b__text">Vận chuyển tới:</span>
+                                                    <div class="ship-b__box u-s-m-b-10">
+                                                        <p class="ship-b__p">279 NGUYỄN TRI PHƯƠNG P5 Q10 TP. HCM VIỆT NAM (+84) 768563004</p>
+                                                        <a class="ship-b__edit btn--e-transparent-platinum-b-2" data-modal="modal" data-modal-id="#edit-ship-address" >Sửa</a>
+                                                    </div>
+                                                    <div class="ship-b__box">
+                                                        <span class="ship-b__text">Hóa đơn đến địa chỉ thanh toán mặc định</span>
+                                                        <a class="ship-b__edit btn--e-transparent-platinum-b-2" data-modal="modal" data-modal-id="#edit-ship-address">Sửa</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                        <div class="o-summary__section u-s-m-b-30">
+                                            <div class="o-summary__box" style="border: 1px solid #644535;"> 
+                                                <table class="o-summary__table"> 
+                                                    <tbody> 
+                                                        <tr> 
+                                                            <td>VẬN CHUYỂN</td> 
+                                                            <td>0.00đ</td> 
+                                                        </tr> 
+                                                        <tr> 
+                                                            <td>THUẾ</td>
+                                                            <td>0.00đ</td> 
+                                                        </tr> 
+                                                        <tr> 
+                                                            <td>TỔNG GIÁ TRỊ ĐƠN HÀNG</td> 
+                                                            <td id="total-cart-value">0đ</td> <!-- Thêm id để cập nhật tổng giá trị đơn hàng --> </tr> 
+                                                        <tr> 
+                                                            <td>GIẢM GIÁ</td>
+                                                            <td id="discount-value">0.00đ</td> <!-- Thêm id để cập nhật giá trị giảm giá --> </tr> 
+                                                        <tr> 
+                                                            <td>THÀNH TIỀN</td> 
+                                                            <td id="final-total-value">0.00đ</td> <!-- Thêm id để cập nhật thành tiền --> </tr> 
+                                                    </tbody> 
+                                                </table> 
+                                            </div>
+                                            
+                                            <!-- Inline JavaScript --> 
+                                             <script> 
+                                             document.addEventListener('DOMContentLoaded', function () { 
+                                                const cart = JSON.parse(localStorage.getItem('cart')) || []; 
+                                                const totalCartValue = document.getElementById('total-cart-value'); 
+                                                const discountValue = document.getElementById('discount-value'); 
+                                                const finalTotalValue = document.getElementById('final-total-value'); 
+                                                const couponSelect = document.getElementById('coupon-select'); 
+                                                let total = 0; cart.forEach((item) => { total += item.price * item.quantity; }); 
+                                                totalCartValue.textContent = `${total.toLocaleString()}đ`; 
+                                                couponSelect.addEventListener('change', function () { applyDiscount(); }); 
+                                                function applyDiscount() { 
+                                                    const discountPercentage = parseFloat(couponSelect.value); 
+                                                    const discount = total * (discountPercentage / 100); 
+                                                    const finalTotal = total - discount; 
+                                                    discountValue.textContent = `${discount.toLocaleString()}đ`; 
+                                                    finalTotalValue.textContent = `${finalTotal.toLocaleString()}đ`; } }); 
+                                            </script>
+                                            
+                                        </div>
+                                        <div class="o-summary__section u-s-m-b-30">
+                                            <div class="o-summary__box"style="border: 1px solid #644535;">
+                                                <h1 class="checkout-f__h1">THÔNG TIN THANH TOÁN</h1>
+                                                <form class="checkout-f__payment">
+                                                    <div class="u-s-m-b-10">
+
+                                                        <!--====== Radio Box ======-->
+                                                        <div class="radio-box">
+
+                                                            <input type="radio" id="cash-on-delivery" name="payment">
+                                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                                <label class="radio-box__label" for="cash-on-delivery">Thanh toán khi nhận hàng</label></div>
+                                                        </div>
+                                                        <!--====== End - Radio Box ======-->
+
+                                                        <span class="gl-text u-s-m-t-6">Thanh toán khi nhận hàng. (Dịch vụ này chỉ khả dụng ở một số quốc gia)</span>
+                                                    </div>
+                                                    <div class="u-s-m-b-10">
+
+                                                        <!--====== Radio Box ======-->
+                                                        <div class="radio-box">
+
+                                                            <input type="radio" id="direct-bank-transfer" name="payment">
+                                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                                <label class="radio-box__label" for="direct-bank-transfer">Chuyển khoản ngân hàng</label></div>
+                                                        </div>
+                                                        <!--====== End - Radio Box ======-->
+
+                                                        <span class="gl-text u-s-m-t-6">Thanh toán trực tiếp vào tài khoản ngân hàng của chúng tôi. Vui lòng sử dụng Mã đơn hàng của bạn làm tham chiếu thanh toán. Đơn hàng của bạn sẽ không được giao cho đến khi tiền được chuyển vào tài khoản của chúng tôi.</span>
+                                                    </div>
+                                                    <div class="u-s-m-b-10">
+
+                                                        <!--====== Radio Box ======-->
+                                                        <div class="radio-box">
+
+                                                            <input type="radio" id="pay-with-check" name="payment">
+                                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                                <label class="radio-box__label" for="pay-with-check">Trả bằng séc</label></div>
+                                                        </div>
+                                                        <!--====== End - Radio Box ======-->
+
+                                                        <span class="gl-text u-s-m-t-6">Vui lòng gửi séc đến Tên cửa hàng, Đường phố cửa hàng, Thị trấn cửa hàng, Tiểu bang/Quận cửa hàng, Mã bưu chính cửa hàng.</span>
+                                                    </div>
+                                                    <div class="u-s-m-b-10">
+
+                                                        <!--====== Radio Box ======-->
+                                                        <div class="radio-box">
+
+                                                            <input type="radio" id="pay-with-card" name="payment">
+                                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                                <label class="radio-box__label" for="pay-with-card">Thanh toán bằng thẻ tín dụng/ghi nợ</label></div>
+                                                        </div>
+                                                        <!--====== End - Radio Box ======-->
+
+                                                        <span class="gl-text u-s-m-t-6">Thẻ tín dụng quốc tế phải đủ điều kiện để sử dụng trong phạm vi Hoa Kỳ.</span>
+                                                    </div>
+                                                    <div class="u-s-m-b-10">
+
+                                                        <!--====== Radio Box ======-->
+                                                        <div class="radio-box">
+
+                                                            <input type="radio" id="pay-pal" name="payment">
+                                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                                <label class="radio-box__label" for="pay-pal">Pay Pal</label></div>
+                                                        </div>
+                                                        <!--====== End - Radio Box ======-->
+
+                                                        <span class="gl-text u-s-m-t-6">Khi bạn nhấp vào "Đặt hàng" bên dưới, chúng tôi sẽ chuyển bạn đến trang web Paypal để thiết lập thông tin thanh toán.</span>
+                                                    </div>
+                                                    <div class="u-s-m-b-15">
+
+                                                        <!--====== Check Box ======-->
+                                                        <div class="check-box">
+
+                                                            <input type="checkbox" id="term-and-condition">
+                                                            <div class="check-box__state check-box__state--primary">
+
+                                                                <label class="check-box__label" for="term-and-condition">Tôi đồng ý với</label></div>
+                                                        </div>
+                                                        <!--====== End - Check Box ======-->
+
+                                                        <a class="gl-link">Điều khoản dịch vụ.</a>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: center;">
+                                                        <button class="btn btn--e-brand-b-2" type="submit" onclick="navigateToSuccess()" style="display: inline-block; width: auto;">ĐẶT HÀNG</button>
+                                                    </div>
+
+                                                        <script>
+                                                        function navigateToSuccess() 
+                                                        {
+                                                        window.location.href = 'checkout-success.html';
+                                                        }
+                                                        </script>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--====== End - Order Summary ======-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 3 ======-->
+        </div>
+        <!--====== End - App Content ======-->
+
+<!--====== Section Intro ======-->
+<div class="section__intro u-s-m-b-46" style="background-color: #f5f5dc;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section__text-wrap">
+                    <h1 class="section__heading u-c-secondary u-s-m-b-12">SẢN PHẨM MUA CÙNG</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== End - Section Intro ======-->
+<!--====== Section Content ======-->
+<div class="section__content" style="background-color: #f5f5dc;">
+<div class="container">
+    <div class="slider-fouc">
+        <div class="owl-carousel product-slider" data-item="4">
+            <div class="u-s-m-b-30">
+                <div class="product-o product-o--hover-on">
+                    <div class="product-o__wrap">
+
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="pd-nuoc-vai.html">
+
+                            <img class="aspect__img" src="images/product/electronic/product8.jpg" alt=""></a>
+                        <div class="product-o__action-wrap">
+                            <ul class="product-o__action-list">
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh sản phẩm"><i class="fas fa-search-plus"></i></a></li>
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng"><i class="fas fa-plus-circle"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào Mục yêu thích"><i class="fas fa-heart"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email tôi khi giá giảm"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <span class="product-o__category">
+
+                        <a href="shop-grid-left.html">Nước ngọt</a></span>
+
+                    <span class="product-o__name">
+
+                        <a href="pd-nuoc-vai.html">T-rexx Vải</a></span>
+                    <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                        <span class="product-o__review">(20)</span></div>
+
+                    <span class="product-o__price">5.000 đ
+
+                        <span class="product-o__discount">10.000 đ</span></span>
+                </div>
+            </div>
+            <div class="u-s-m-b-30">
+                <div class="product-o product-o--hover-on">
+                    <div class="product-o__wrap">
+
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="pd-nuoc-trai-cay.html">
+
+                            <img class="aspect__img" src="images/product/electronic/product7.jpg" alt=""></a>
+                        <div class="product-o__action-wrap">
+                            <ul class="product-o__action-list">
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh sản phẩm"><i class="fas fa-search-plus"></i></a></li>
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng"><i class="fas fa-plus-circle"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào Mục yêu thích"><i class="fas fa-heart"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email tôi khi giá giảm"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <span class="product-o__category">
+
+                        <a href="shop-grid-left.html">Nước ngọt</a></span>
+
+                    <span class="product-o__name">
+
+                        <a href="pd-nuoc-trai-cay.html">T-rexx Trái cây</a></span>
+                    <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                        <span class="product-o__review">(20)</span></div>
+
+                    <span class="product-o__price">5.000 đ
+
+                        <span class="product-o__discount">10.000 đ</span></span>
+                </div>
+            </div>
+            <div class="u-s-m-b-30">
+                <div class="product-o product-o--hover-on">
+                    <div class="product-o__wrap">
+
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="pd-nuoc-ep-tao.html">
+
+                            <img class="aspect__img" src="images/product/electronic/product10.jpg" alt=""></a>
+                        <div class="product-o__action-wrap">
+                            <ul class="product-o__action-list">
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh sản phẩm"><i class="fas fa-search-plus"></i></a></li>
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng"><i class="fas fa-plus-circle"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào Mục yêu thích"><i class="fas fa-heart"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email tôi khi giá giảm"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <span class="product-o__category">
+
+                        <a href="shop-grid-left.html">Nước ngọt</a></span>
+
+                    <span class="product-o__name">
+
+                        <a href="pd-nuoc-ep-tao.html">Nước ép táo</a></span>
+                    <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                        <span class="product-o__review">(20)</span></div>
+
+                    <span class="product-o__price">5.000 đ
+
+                        <span class="product-o__discount">10.000 đ</span></span>
+                </div>
+            </div>
+            <div class="u-s-m-b-30">
+                <div class="product-o product-o--hover-on">
+                    <div class="product-o__wrap">
+
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="pd-nuoc-ep-nho.html">
+
+                            <img class="aspect__img" src="images/product/electronic/product11.jpg" alt=""></a>
+                        <div class="product-o__action-wrap">
+                            <ul class="product-o__action-list">
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh sản phẩm"><i class="fas fa-search-plus"></i></a></li>
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng"><i class="fas fa-plus-circle"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào Mục yêu thích"><i class="fas fa-heart"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email tôi khi giá giảm"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <span class="product-o__category">
+
+                        <a href="shop-grid-left.html">Nước ngọt</a></span>
+
+                    <span class="product-o__name">
+
+                        <a href="pd-nuoc-ep-nho.html">Nước ép nho</a></span>
+                    <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                        <span class="product-o__review">(20)</span></div>
+
+                    <span class="product-o__price">5.000 đ
+
+                        <span class="product-o__discount">10.000 đ</span></span>
+                </div>
+            </div>
+            <div class="u-s-m-b-30">
+                <div class="product-o product-o--hover-on">
+                    <div class="product-o__wrap">
+
+                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                            <img class="aspect__img" src="images/product/electronic/product9.jpg" alt=""></a>
+                        <div class="product-o__action-wrap">
+                            <ul class="product-o__action-list">
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh sản phẩm"><i class="fas fa-search-plus"></i></a></li>
+                                <li>
+
+                                    <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng"><i class="fas fa-plus-circle"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào Mục yêu thích"><i class="fas fa-heart"></i></a></li>
+                                <li>
+
+                                    <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email tôi khi giá giảm"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <span class="product-o__category">
+
+                        <a href="shop-grid-left.html">Nước ngọt</a></span>
+
+                    <span class="product-o__name">
+
+                        <a href="pd-nuoc-dau.html">T-rexx Dâu</a></span>
+                    <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                        <span class="product-o__review">(20)</span></div>
+
+                    <span class="product-o__price">5.000 đ
+
+                        <span class="product-o__discount">10.000 đ</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--====== End - Section Content ======-->
+        <footer>
+            <div class="outer-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="outer-footer__content u-s-m-b-40">
+                                <span class="outer-footer__content-title">Liên Hệ</span>
+                                <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+                                    <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, Hồ Chí Minh</span>
+                                </div>
+                                <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+                                    <span>(+84) 38 643 9956</span>
+                                </div>
+                                <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+                                    <span>anvatcungsnacko@gmail.com</span>
+                                </div>
+                                <div class="outer-footer__social">
+                                    <ul>
+                                        <li>
+                                            <a class="s-fb--color-hover"
+                                                href="https://www.facebook.com/anvatcung.snacko"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-youtube--color-hover" href="#"><i
+                                                    class="fab fa-youtube"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-insta--color-hover" href="#"><i
+                                                    class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="s-gplus--color-hover" href="#"><i
+                                                    class="fab fa-google-plus-g"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="outer-footer__content u-s-m-b-40">
+                                        <span class="outer-footer__content-title">Thông Tin</span>
+                                        <div class="outer-footer__list-wrap">
+                                            <ul>
+                                                <li>
+                                                    <a href="cart.html">Giỏ Hàng</a>
+                                                </li>
+                                                <li>
+                                                    <a href="dashboard.html">Tài Khoản</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop-side-version-2.html">Nhà Sản Xuất</a>
+                                                </li>
+                                                <li>
+                                                    <a href="dash-payment-option.html">Thanh Toán</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop-side-version-2.html">Cửa Hàng</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="outer-footer__content u-s-m-b-40">
+                                        <div class="outer-footer__list-wrap">
+                                            <span class="outer-footer__content-title">Snacko</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="about.html">Về Snacko</a>
+                                                </li>
+                                                <li>
+                                                    <a href="contact.html">Liên Hệ</a>
+                                                </li>
+                                                <li>
+                                                    <a href="index.html">Bản Đồ</a>
+                                                </li>
+                                                <li>
+                                                    <a href="dash-my-order.html">Giao Hàng</a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop-side-version-2.html">Cửa Hàng</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="outer-footer__content">
+                                <span class="outer-footer__content-title">Bản Tin Điện Tử</span>
+                                <form class="newsletter">
+                                    <div class="u-s-m-b-15">
+                                        <div class="radio-box newsletter__radio">
+                                            <input type="radio" id="male" name="gender">
+                                            <div class="radio-box__state radio-box__state--primary">
+                                                <label class="radio-box__label" for="male">Nam</label>
+                                            </div>
+                                        </div>
+                                        <div class="radio-box newsletter__radio">
+                                            <input type="radio" id="female" name="gender">
+                                            <div class="radio-box__state radio-box__state--primary">
+                                                <label class="radio-box__label" for="female">Nữ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="newsletter__group">
+                                        <label for="newsletter"></label>
+                                        <input class="input-text input-text--only-white" type="text" id="newsletter"
+                                            placeholder="Nhập Email Của Bạn">
+                                        <button class="btn btn--e-brand newsletter__btn" type="submit">ĐĂNG KÝ</button>
+                                    </div>
+                                    <span class="newsletter__text">Đăng ký để nhận thông tin về khuyến mãi, sản phẩm mới
+                                        và phiếu giảm giá.</span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="lower-footer__content">
+                                <div class="lower-footer__copyright">
+                                    <span>Copyright © 2024</span>
+                                    <a href="index.html">Snacko</a>
+                                    <span>All Right Reserved</span>
+                                </div>
+                                <div class="lower-footer__payment">
+                                    <ul>
+                                        <li><i class="fab fa-cc-stripe"></i></li>
+                                        <li><i class="fab fa-cc-paypal"></i></li>
+                                        <li><i class="fab fa-cc-mastercard"></i></li>
+                                        <li><i class="fab fa-cc-visa"></i></li>
+                                        <li><i class="fab fa-cc-discover"></i></li>
+                                        <li><i class="fab fa-cc-amex"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--====== Modal Section ======-->
+
+        <!--====== Unsubscribe or Subscribe Newsletter ======-->
+        <div class="modal fade" id="dash-newsletter">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal--shadow">
+                    <div class="modal-body">
+                        <form class="d-modal__form">
+                            <div class="u-s-m-b-15">
+                                <h1 class="gl-modal-h1">Đăng Ký Bản Tin</h1>
+                                <span class="gl-modal-text">Tôi đã đọc và hiểu</span>
+                                <a class="d_modal__link" href="dashboard.html">Chính Sách Bảo Mật Của Snacko</a>
+                            </div>
+                            <div class="gl-modal-btn-group">
+                                <button class="btn btn--e-brand-b-2" type="submit">ĐĂNG KÝ</button>
+                                <button class="btn btn--e-grey-b-2" type="button" data-dismiss="modal">HỦY</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====== Unsubscribe or Subscribe Newsletter ======-->
+        
+        <!--====== End - Modal Section ======-->
+
+    </div>
+    <!--====== End - Main App ======-->
+
+    <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
+    <script>
+        window.ga = function () {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!--====== Vendor Js ======-->
+    <script src="js/vendor.js"></script>
+
+    <!--====== jQuery Shopnav plugin ======-->
+    <script src="js/jquery.shopnav.js"></script>
+
+    <!--====== App ======-->
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+    <!--====== Noscript ======-->
+    <noscript>
+        <div class="app-setting">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="app-setting__wrap">
+                            <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
+                            <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a
+                                JavaScript-capable browser.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+</body>
+
+</html>
+
+
+
+
