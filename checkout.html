@@ -633,9 +633,6 @@
                                                                 <option value="15">Giảm Giá 15%</option> 
                                                             </select>
                                                         </div>
-                                                        <div class="u-s-m-b-15" style="margin-top: 15px;"> <!-- Thêm margin-top để tạo khoảng cách -->
-                                                            <button class="btn btn--e-transparent-brand-b-2" type="submit">Gửi</button>
-                                                        </div>
                                                     </div>
                                                 </form>
                                             </div>
@@ -880,31 +877,45 @@
                                                         <tr> 
                                                             <td>GIẢM GIÁ</td>
                                                             <td id="discount-value">0.00đ</td> <!-- Thêm id để cập nhật giá trị giảm giá --> </tr> 
-                                                        <tr> 
-                                                            <td>THÀNH TIỀN</td> 
-                                                            <td id="final-total-value">0.00đ</td> <!-- Thêm id để cập nhật thành tiền --> </tr> 
-                                                    </tbody> 
-                                                </table> 
-                                            </div>
-                                            
-                                            <!-- Inline JavaScript --> 
-                                             <script> 
-                                             document.addEventListener('DOMContentLoaded', function () { 
-                                                const cart = JSON.parse(localStorage.getItem('cart')) || []; 
-                                                const totalCartValue = document.getElementById('total-cart-value'); 
-                                                const discountValue = document.getElementById('discount-value'); 
-                                                const finalTotalValue = document.getElementById('final-total-value'); 
-                                                const couponSelect = document.getElementById('coupon-select'); 
-                                                let total = 0; cart.forEach((item) => { total += item.price * item.quantity; }); 
-                                                totalCartValue.textContent = `${total.toLocaleString()}đ`; 
-                                                couponSelect.addEventListener('change', function () { applyDiscount(); }); 
-                                                function applyDiscount() { 
-                                                    const discountPercentage = parseFloat(couponSelect.value); 
-                                                    const discount = total * (discountPercentage / 100); 
-                                                    const finalTotal = total - discount; 
-                                                    discountValue.textContent = `${discount.toLocaleString()}đ`; 
-                                                    finalTotalValue.textContent = `${finalTotal.toLocaleString()}đ`; } }); 
-                                            </script>
+                                                            <tr>
+                                                                <td>THÀNH TIỀN</td>
+                                                                <td id="final-total-value">0.00đ</td> <!-- Thêm id để cập nhật thành tiền -->
+                                                            </tr>
+                                                            </tbody>
+                                                            </table>
+                                                            </div>
+                                                            
+                                                            <!-- Inline JavaScript -->
+                                                            <script>
+                                                                document.addEventListener('DOMContentLoaded', function () {
+                                                                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                                                                    const totalCartValue = document.getElementById('total-cart-value');
+                                                                    const discountValue = document.getElementById('discount-value');
+                                                                    const finalTotalValue = document.getElementById('final-total-value');
+                                                                    const couponSelect = document.getElementById('coupon-select');
+                                                                    
+                                                                    let total = 0;
+                                                                    cart.forEach((item) => {
+                                                                        total += item.price * item.quantity;
+                                                                    });
+                                                                    
+                                                                    totalCartValue.textContent = `${total.toLocaleString()}đ`;
+                                                                    finalTotalValue.textContent = `${total.toLocaleString()}đ`; // Cập nhật thành tiền mặc định bằng tổng giá trị
+                                                            
+                                                                    couponSelect.addEventListener('change', function () {
+                                                                        applyDiscount();
+                                                                    });
+                                                            
+                                                                    function applyDiscount() {
+                                                                        const discountPercentage = parseFloat(couponSelect.value) || 0; // Lấy giá trị giảm giá hoặc 0 nếu không có
+                                                                        const discount = total * (discountPercentage / 100);
+                                                                        const finalTotal = total - discount;
+                                                                        discountValue.textContent = `${discount.toLocaleString()}đ`;
+                                                                        finalTotalValue.textContent = `${finalTotal.toLocaleString()}đ`;
+                                                                    }
+                                                                });
+                                                            </script>
+                                                            
                                             
                                         </div>
                                         <div class="o-summary__section u-s-m-b-30">
@@ -996,15 +1007,12 @@
                                                         <a class="gl-link">Điều khoản dịch vụ.</a>
                                                     </div>
                                                     <div style="display: flex; justify-content: center;">
-                                                        <button class="btn btn--e-brand-b-2" type="submit" onclick="navigateToSuccess()" style="display: inline-block; width: auto;">ĐẶT HÀNG</button>
-                                                    </div>
-
+                                                        <button class="btn btn--e-brand-b-2" type="button" onclick="navigateToSuccess()" style="display: inline-block; width: auto;">ĐẶT HÀNG</button>
                                                         <script>
-                                                        function navigateToSuccess() 
-                                                        {
-                                                        window.location.href = 'checkout-success.html';
-                                                        }
-                                                        </script>
+                                                            function navigateToSuccess() {
+                                                                window.location.href = 'checkout-success.html';
+                                                            }
+                                                        </script>                                                                                                               
                                                 </form>
                                             </div>
                                         </div>
