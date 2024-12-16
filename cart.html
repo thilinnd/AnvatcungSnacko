@@ -792,7 +792,7 @@
 
 
    <!--====== Section Content ======-->
-   <div class="section__content" style="border: 1px solid #644535;">
+   <div class="section__content">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 u-s-m-b-30">
@@ -803,34 +803,52 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="col-lg-12">
+            </div><div class="col-lg-12">
                 <div class="route-box">
                     <div class="route-box__g1">
-                        <a class="route-box__link" href="shop-grid-left.html"><i
-                                class="fas fa-long-arrow-alt-left"></i>
-                            <span>TIẾP TỤC MUA SẮM</span></a>
+                        <a class="route-box__link" href="shop-grid-left.html"><i class="fas fa-long-arrow-alt-left"></i>
+                            <span>TIẾP TỤC MUA SẮM</span>
+                        </a>
                     </div>
                     <div class="route-box__g2">
-                        <a class="route-box__link" href="empty-cart.html" onclick="clearCartAndRedirect(event)"><i class="fas fa-trash"></i>
-                            <span>XÓA GIỎ HÀNG</span></a>
-                       
-                        <script>
-                            function clearCartAndRedirect(event) {
-                                event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ a
-                               
-                                removeAllItems(); // Gọi hàm xóa tất cả sản phẩm trong giỏ hàng
-                               
-                                // Chuyển hướng đến trang empty cart
-                                window.location.href = 'empty-cart.html';
-                            }
-                        </script>
-                       
-                        <a class="route-box__link" href="cart.html"><i class="fas fa-sync"></i>
-                            <span>CẬP NHẬT GIỎ HÀNG</span></a>
+                        <!-- XÓA GIỎ HÀNG -->
+                        <a class="route-box__link" href="empty-cart.html" onclick="clearCartAndRedirect(event)">
+                            <i class="fas fa-trash"></i>
+                            <span>XÓA GIỎ HÀNG</span>
+                        </a>
+                        <!-- CẬP NHẬT GIỎ HÀNG -->
+                        <a class="route-box__link" href="cart.html">
+                            <i class="fas fa-sync"></i>
+                            <span>CẬP NHẬT GIỎ HÀNG</span>
+                        </a>
                     </div>
                 </div>
             </div>
+            
+            <script>
+                function removeAllItems() {
+                    // Xóa dữ liệu trong localStorage (nếu giỏ hàng được lưu tại đây)
+                    localStorage.removeItem('cart');
+            
+                    // Nếu sử dụng sessionStorage:
+                    // sessionStorage.removeItem('cart');
+            
+                    // Gửi yêu cầu đến server để xóa giỏ hàng (nếu cần thiết):
+                    // fetch('/api/cart/clear', { method: 'POST' });
+                    console.log("Giỏ hàng đã được xóa");
+                }
+            
+                function clearCartAndRedirect(event) {
+                    event.preventDefault(); // Ngăn hành động mặc định của link
+            
+                    // Gọi hàm xóa giỏ hàng
+                    removeAllItems();
+            
+                    // Chuyển hướng người dùng đến trang giỏ hàng trống
+                    window.location.href = 'empty-cart.html';
+                }
+            </script>
+            
         </div>
     </div>
 </div>
