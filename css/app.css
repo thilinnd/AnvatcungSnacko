@@ -2474,7 +2474,7 @@ input::-ms-clear {
 .banner-bg {
   padding: 7em 0;
   position: relative;
-  background: #f5f5dc url(../images/banners/banner-bg.jpg) repeat fixed center center;
+  background: url(../images/banners/banner-bg.jpg) repeat fixed center center;
   background-size: cover; }
   .banner-bg__wrap {
     text-align: center; }
@@ -6059,7 +6059,28 @@ s
 
 .hero-slide {
   background: center center/cover no-repeat; }
-  .hero-slide--1 {
+  .hero-slide {
+    position: relative;
+    background: center center/cover no-repeat;
+  }
+  
+  .hero-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); 
+    z-index: 1;
+  }
+  
+  .hero-slide .slider-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-slide--1 { 
     background-image: url(../images/slider/slide-1.jpg); }
   .hero-slide--2 {
     background-image: url(../images/slider/slide-2.jpg); }
@@ -6171,7 +6192,7 @@ s
   margin-right: 4px;
   border-radius: 50%;
   background-color: transparent;
-  transition: background 0.8s ease-out; }
+  transition: transform 0.5s ease, opacity 0.5s ease; }
   .owl-carousel#testimonial-slider button.owl-dot:last-child {
     margin-right: 0; }
   .owl-carousel#testimonial-slider button.owl-dot.active, .owl-carousel#testimonial-slider button.owl-dot:hover {
@@ -6220,32 +6241,33 @@ s
 .owl-item.active .content-span-1 {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft; }
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+           }
 
 .owl-item.active .content-span-2 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft; }
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn; }
 
 .owl-item.active .content-span-3 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft; }
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;}
 
 .owl-item.active .content-span-4 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft; }
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;}
 
 .owl-item.active .shop-now-link {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft; }
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;}
 
 .product-slider, .tab-slider {
   position: static; }
