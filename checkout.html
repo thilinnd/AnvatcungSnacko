@@ -892,44 +892,102 @@
                                             <!--====== Country ======-->
                                             <div class="u-s-m-b-15">
 
-                                                <!--====== Select Box ======-->
+                                               <!--====== Select Box ======-->
+<div>
+    <label class="gl-label" for="billing-country">Quốc gia *</label>
+    <select class="select-box select-box--primary-style" id="billing-country" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;" onchange="updateProvinces()">
+        <option selected value="">Chọn quốc gia</option>
+        <option value="vn">Việt Nam</option>
+        <option value="uk">United Kingdom (UK)</option>
+        <option value="us">United States (US)</option>
+    </select>
+</div>
+<!--====== End - Select Box ======-->
 
-                                                <label class="gl-label" for="billing-country">Quốc gia *</label><select class="select-box select-box--primary-style" id="billing-country" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
-                                                    <option selected value="">Chọn quốc gia</option>
-                                                    <option value="uae">Việt Nam</option>
-                                                    <option value="uk">United Kingdom (UK)</option>
-                                                    <option value="us">United States (US)</option>
-                                                </select>
-                                                <!--====== End - Select Box ======-->
-                                            </div>
-                                            <!--====== End - Country ======-->
+<!--====== Town / City ======-->
+<div class="u-s-m-b-15">
+    <label class="gl-label" for="billing-town-city">Tỉnh/ Thành Phố *</label>
+    <select class="input-text input-text--primary-style" id="billing-town-city" data-bill="" 
+        style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;" onchange="updateDistricts()">
+        <option value="">Chọn Tỉnh/ Thành Phố</option>
+    </select>
+</div>
+<!--====== End - Town / City ======-->
 
+<!--====== STATE/PROVINCE ======-->
+<div class="u-s-m-b-15">
+    <label class="gl-label" for="billing-state">Quận/Huyện *</label>
+    <select class="select-box select-box--primary-style" id="billing-state" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
+        <option selected value="">Chọn Quận/Huyện</option>
+    </select>
+</div>
+<!--====== End - STATE/PROVINCE ======-->
 
-                                            <!--====== Town / City ======-->
-                                            <div class="u-s-m-b-15">
-                                                <label class="gl-label" for="billing-town-city">Tỉnh/ Thành Phố *</label>
-                                                <select class="input-text input-text--primary-style" id="billing-town-city" data-bill="" 
-                                                    style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
-                                                    <option value="">Chọn Tỉnh/ Thành Phố</option>
-                                                    <option value="Hanoi">Hà Nội</option>
-                                                    <option value="HoChiMinh">TP. Hồ Chí Minh</option>
-                                                    <option value="Danang">Đà Nẵng</option>
-                                                </select>
-                                            </div>                                            
-                                            <!--====== End - Town / City ======-->
+<script>
+    function updateProvinces() {
+        const country = document.getElementById('billing-country').value;
+        const provinceSelect = document.getElementById('billing-town-city');
+        provinceSelect.innerHTML = '<option value="">Chọn Tỉnh/ Thành Phố</option>'; // Reset options
 
+        if (country === 'vn') {
+            provinceSelect.innerHTML += '<option value="HoChiMinh">TP. Hồ Chí Minh</option>';
+            provinceSelect.innerHTML += '<option value="Hanoi">Hà Nội</option>';
+            provinceSelect.innerHTML += '<option value="DongNai">Đồng Nai</option>';
+        } else if (country === 'uk') {
+            provinceSelect.innerHTML += '<option value="London">London</option>';
+            provinceSelect.innerHTML += '<option value="Manchester">Manchester</option>';
+            provinceSelect.innerHTML += '<option value="Birmingham">Birmingham</option>';
+        } else if (country === 'us') {
+            provinceSelect.innerHTML += '<option value="NewYork">New York</option>';
+            provinceSelect.innerHTML += '<option value="California">California</option>';
+            provinceSelect.innerHTML += '<option value="Texas">Texas</option>';
+        }
+    }
+    function updateDistricts() {
+        const province = document.getElementById('billing-town-city').value;
+        const districtSelect = document.getElementById('billing-state');
+        districtSelect.innerHTML = '<option value="">Chọn Quận/Huyện</option>'; // Reset options
 
-                                            <!--====== STATE/PROVINCE ======-->
-                                            <div class="u-s-m-b-15">
+        if (province === 'HoChiMinh') {
+            districtSelect.innerHTML += '<option value="Quan1">Quận 1</option>';
+            districtSelect.innerHTML += '<option value="Quan3">Quận 3</option>';
+            districtSelect.innerHTML += '<option value="Quan10">Quận 10</option>';
+        } else if (province === 'DongNai') {
+            districtSelect.innerHTML += '<option value="LongThanh">Huyện Long Thành</option>';
+            districtSelect.innerHTML += '<option value="BienHoa">TP. Biên Hòa</option>';
+            districtSelect.innerHTML += '<option value="LongKhanh">TP. Long Khánh</option>';
+        } else if (province === 'Hanoi') {
+            districtSelect.innerHTML += '<option value="HoanKiem">Quận Hoàn Kiếm</option>';
+            districtSelect.innerHTML += '<option value="BaDinh">Quận Ba Đình</option>';
+            districtSelect.innerHTML += '<option value="ThanhXuan">Quận Thanh Xuân</option>';
+        } else if (province === 'London') {
+            districtSelect.innerHTML += '<option value="Camden">Camden</option>';
+            districtSelect.innerHTML += '<option value="Greenwich">Greenwich</option>';
+            districtSelect.innerHTML += '<option value="Hackney">Hackney</option>';
+        } else if (province === 'Manchester') {
+            districtSelect.innerHTML += '<option value="Didsbury">Didsbury</option>';
+            districtSelect.innerHTML += '<option value="Ancoats">Ancoats</option>';
+            districtSelect.innerHTML += '<option value="Chorlton">Chorlton</option>';
+        } else if (province === 'Birmingham') {
+            districtSelect.innerHTML += '<option value="Edgbaston">Edgbaston</option>';
+            districtSelect.innerHTML += '<option value="SellyOak">Selly Oak</option>';
+            districtSelect.innerHTML += '<option value="Handsworth">Handsworth</option>';
+        } else if (province === 'NewYork') {
+            districtSelect.innerHTML += '<option value="Manhattan">Manhattan</option>';
+            districtSelect.innerHTML += '<option value="Brooklyn">Brooklyn</option>';
+            districtSelect.innerHTML += '<option value="Queens">Queens</option>';
+        } else if (province === 'California') {
+            districtSelect.innerHTML += '<option value="LosAngeles">Los Angeles County</option>';
+            districtSelect.innerHTML += '<option value="SanDiego">San Diego County</option>';
+            districtSelect.innerHTML += '<option value="Orange">Orange County</option>';
+        } else if (province === 'Texas') {
+            districtSelect.innerHTML += '<option value="Harris">Harris County</option>';
+            districtSelect.innerHTML += '<option value="Dallas">Dallas County</option>';
+            districtSelect.innerHTML += '<option value="Travis">Travis County</option>';
+        }
+    }
+</script>
 
-                                                <!--====== Select Box ======-->
-
-                                                <label class="gl-label" for="billing-state">Quận/Huyện *</label><select class="select-box select-box--primary-style" id="billing-state" data-bill="" style="border: 1px solid #644535; border-radius: 5px; padding: 10px; width: 100%;">
-                                                    <option selected value="">Chọn Quận/Huyện</option>
-                                                    <option value="al">Quận 10</option>
-                                                    <option value="al">Quận 3</option>
-                                                    <option value="ny">Quận 5</option>
-                                                </select>
                                                 <!--====== End - Select Box ======-->
                                             </div>
                                             <!--====== End - STATE/PROVINCE ======-->
@@ -1674,7 +1732,6 @@
 </body>
 
 </html>
-
 
 
 

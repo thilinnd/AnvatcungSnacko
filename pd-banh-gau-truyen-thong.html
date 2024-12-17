@@ -91,6 +91,87 @@
         .close-btn:hover {
             background-color: darkred;
         }
+
+        @media (max-width: 550px) {
+    .rev-f2__table-wrap {
+        overflow-x: auto; 
+    }
+
+    .rev-f2__table,
+    .rev-f2__table thead,
+    .rev-f2__table tbody,
+    .rev-f2__table th,
+    .rev-f2__table td,
+    .rev-f2__table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .rev-f2__table thead {
+        display: none; 
+    }
+
+    .rev-f2__table td {
+        position: relative; 
+        border: 1px solid #644535;
+        text-align: center;
+        padding: 10px;
+        background-color: #fef9f9;
+    }
+
+    
+    .rev-f2__table td:nth-child(1)::before {
+        content: "\f005"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #39B54A; 
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .rev-f2__table td:nth-child(2)::before {
+        content: "\f005 \f005"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #39B54A;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .rev-f2__table td:nth-child(3)::before {
+        content: "\f005 \f005 \f005"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #39B54A;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .rev-f2__table td:nth-child(4)::before {
+        content: "\f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #39B54A;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .rev-f2__table td:nth-child(5)::before {
+        content: "\f005 \f005 \f005 \f005 \f123"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #39B54A;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .radio-box {
+        margin: 5px 0; 
+    }
+}
+
+
+
     </style>
 </head>
 
