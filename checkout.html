@@ -1222,107 +1222,90 @@
                                             <div class="o-summary__box" style="border: 1px solid #644535;">
                                                 <h1 class="checkout-f__h1">THÔNG TIN THANH TOÁN</h1>
                                                 <form class="checkout-f__payment">
-                                                    <div class="u-s-m-b-10">
-                                                        <!-- Payment Options (Checkbox style - Single Selection enforced) -->
-                                                        <div class="check-box">
-                                                            <input type="checkbox" id="payment-cod" name="payment"
-                                                                value="COD" onclick="selectOnlyThis(this)">
-                                                            <div class="check-box__state check-box__state--primary">
-                                                                <label class="check-box__label" for="payment-cod">Thanh
-                                                                    toán khi nhận hàng (COD)</label>
-                                                            </div>
-                                                        </div>
-                                                        <span class="gl-text u-s-m-t-6">Thanh toán khi nhận hàng. (Dịch
-                                                            vụ này chỉ khả dụng ở một số khu vực)</span>
-                                                    </div>
+    <!-- COD -->
+    <div class="u-s-m-b-10" style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn--e-brand-b-2 payment-option" data-method="COD">
+            Thanh toán khi nhận hàng (COD)
+        </button>
+    </div>
+    <span class="gl-text u-s-m-t-6" style="display: block; text-align: center;">
+        Thanh toán khi nhận hàng. (Dịch vụ này chỉ khả dụng ở một số khu vực)
+    </span>
 
-                                                    <div class="u-s-m-b-10">
-                                                        <div class="check-box">
-                                                            <input type="checkbox" id="payment-momo" name="payment"
-                                                                value="MOMO" onclick="selectOnlyThis(this)">
-                                                            <div class="check-box__state check-box__state--primary">
-                                                                <label class="check-box__label" for="payment-momo">Thanh
-                                                                    toán qua MoMo</label>
-                                                            </div>
-                                                        </div>
-                                                        <span class="gl-text u-s-m-t-6">Quét mã QR để thanh toán bằng ví
-                                                            MoMo.</span>
-                                                    </div>
+    <!-- MoMo -->
+    <div class="u-s-m-b-10" style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn--e-brand-b-2 payment-option" data-method="MOMO">
+            Thanh toán qua MoMo
+        </button>
+    </div>
+    <span class="gl-text u-s-m-t-6" style="display: block; text-align: center;">
+        Quét mã QR để thanh toán bằng ví MoMo.
+    </span>
 
-                                                    <div class="u-s-m-b-10">
-                                                        <div class="check-box">
-                                                            <input type="checkbox" id="payment-vnpay" name="payment"
-                                                                value="VNPAY" onclick="selectOnlyThis(this)">
-                                                            <div class="check-box__state check-box__state--primary">
-                                                                <label class="check-box__label"
-                                                                    for="payment-vnpay">Thanh toán qua VNPay</label>
-                                                            </div>
-                                                        </div>
-                                                        <span class="gl-text u-s-m-t-6">Thanh toán qua cổng VNPay an
-                                                            toàn và nhanh chóng.</span>
-                                                    </div>
+    <!-- VNPay -->
+    <div class="u-s-m-b-10" style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn--e-brand-b-2 payment-option" data-method="VNPAY">
+            Thanh toán qua VNPay
+        </button>
+    </div>
+    <span class="gl-text u-s-m-t-6" style="display: block; text-align: center;">
+        Thanh toán qua cổng VNPay an toàn và nhanh chóng.
+    </span>
 
-                                                    <div class="u-s-m-b-10">
-                                                        <div class="check-box">
-                                                            <input type="checkbox" id="payment-paypal" name="payment"
-                                                                value="PAYPAL" onclick="selectOnlyThis(this)">
-                                                            <div class="check-box__state check-box__state--primary">
-                                                                <label class="check-box__label"
-                                                                    for="payment-paypal">Thanh toán qua PayPal</label>
-                                                            </div>
-                                                        </div>
-                                                        <span class="gl-text u-s-m-t-6">Bạn sẽ được chuyển đến PayPal để
-                                                            hoàn tất thanh toán.</span>
-                                                    </div>
+    <!-- PayPal -->
+    <div class="u-s-m-b-10" style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn--e-brand-b-2 payment-option" data-method="PAYPAL">
+            Thanh toán qua PayPal
+        </button>
+    </div>
+    <span class="gl-text u-s-m-t-6" style="display: block; text-align: center;">
+        Bạn sẽ được chuyển đến PayPal để hoàn tất thanh toán.
+    </span>
 
-                                                    <!-- Terms and Conditions -->
-                                                    <div class="u-s-m-b-15">
-                                                        <div class="check-box">
-                                                            <input type="checkbox" id="term-and-condition">
-                                                            <div class="check-box__state check-box__state--primary">
-                                                                <label class="check-box__label"
-                                                                    for="term-and-condition">Tôi đồng ý với</label>
-                                                            </div>
-                                                        </div>
-                                                        <a class="gl-link" href="#">Điều khoản dịch vụ.</a>
-                                                    </div>
+    <!-- Hidden input để lưu phương thức thanh toán -->
+    <input type="hidden" id="selected-payment-method" name="payment_method" value="">
+</form>
 
-                                                    <!-- Submit Button -->
-                                                    <div style="display: flex; justify-content: center;">
-                                                        <button class="btn btn--e-brand-b-2" type="button"
-                                                            onclick="submitCheckout()"
-                                                            style="display: inline-block; width: auto;">ĐẶT
-                                                            HÀNG</button>
-                                                    </div>
+<!-- Script -->
+<script>
+    const paymentButtons = document.querySelectorAll('.payment-option');
+    const hiddenInput = document.getElementById('selected-payment-method');
 
-                                                    <!-- JS to handle single-checkbox selection -->
-                                                    <script>
-                                                        function selectOnlyThis(checkbox) {
-                                                            const checkboxes = document.querySelectorAll('input[name="payment"]');
-                                                            checkboxes.forEach((cb) => {
-                                                                if (cb !== checkbox) cb.checked = false;
-                                                            });
-                                                        }
+    paymentButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Bỏ chọn tất cả
+            paymentButtons.forEach(btn => btn.classList.remove('btn--selected'));
+            // Chọn nút hiện tại
+            this.classList.add('btn--selected');
+            hiddenInput.value = this.getAttribute('data-method');
 
-                                                        function submitCheckout() {
-                                                            const selectedPayment = document.querySelector('input[name="payment"]:checked');
-                                                            const agreedTerms = document.getElementById('term-and-condition').checked;
+            // Tùy chỉnh hành vi theo phương thức
+            switch (hiddenInput.value) {
+                case "VNPAY":
+                    window.location.href = "vnpay_payment.php";
+                    break;
+                case "MOMO":
+                    alert("Chuyển sang thanh toán MoMo...");
+                    break;
+                case "PAYPAL":
+                    alert("Chuyển sang thanh toán PayPal...");
+                    break;
+                case "COD":
+                    window.location.href = "checkout-success.html";
+                    break;
+            }
+        });
+    });
+</script>
 
-                                                            if (!selectedPayment) {
-                                                                alert("Vui lòng chọn một phương thức thanh toán.");
-                                                                return;
-                                                            }
+                                                <style>
+                                                    .btn--selected {
+                                                        border: 2px solid #0b5ed7 !important;
+                                                        background-color: #e7f1ff !important;
+                                                        color: #0b5ed7 !important;
+                                                    }
+                                                </style>
 
-                                                            if (!agreedTerms) {
-                                                                alert("Bạn cần đồng ý với điều khoản dịch vụ để tiếp tục.");
-                                                                return;
-                                                            }
-
-                                                            // Chuyển hướng đến trang thành công
-                                                            window.location.href = 'checkout-success.html';
-                                                        }
-                                                    </script>
-                                                </form>
 
                                             </div>
                                         </div>
